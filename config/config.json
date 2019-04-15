@@ -3,8 +3,8 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "exampledb",
+    "password": "P0SlavDu2",
+    "database": "stray_pets_db",
     "host": "localhost",
     "dialect": "mysql"
   },
