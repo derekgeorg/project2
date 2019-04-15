@@ -1,0 +1,24 @@
+<input type="text" id="email" placeholder="email">
+<input type="password" id="password" placeholder="password">
+<button id="signupButton">Sign Up</button>
+
+<script>
+    $("#signupButton").on("click", function(e){
+        e.preventDefault();
+
+        let email = $("#email").val();
+        let password = $("#password").val();
+
+        $.ajax("/signup", {
+            type: "POST",
+            data: {
+                email: email,
+                password: password
+            }
+        }).then(function(res){
+            console.log(res);
+        })
+    })
+
+
+</script>
