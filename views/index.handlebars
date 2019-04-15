@@ -1,30 +1,144 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <h1>StrayTX</h1>
+    </div>
+
+    <div class="col-md-8"></div>
+
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary" id="logIn">Log In</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Search our database</h3>
+      <form>
+        <div class="form-group">
+          <label for="breedSearch">Breed</label>
+          <input type="text" class="form-control" id="breedSearch" placeholder="Breed">
+        </div>
+
+        <div class="form-group">
+          <label for="colorSearch">Main Color</label>
+          <select class="form-control" id="colorSearch">
+            <option>Black</option>
+            <option>Brown</option>
+            <option>Grey</option>
+            <option>White</option>
+            <option>Golden</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sexSearch">Sex</label>
+          <input type="text" class="form-control" id="sexSearch" placeholder="Sex">
+        </div>
+
+        <div class="form-group">
+          <label for="ageSearch">Age</label>
+          <input type="number" class="form-control" id="ageSearch" placeholder="Age">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="searchSubmit">Submit</button>
+      </form>    
+    </div>
+  
+    <div class="col-md-4">
+      <h3>Submit lost pet</h3>
+      <form>
+        <div class="form-group">
+          <label for="breedLost">Breed</label>
+          <input type="text" class="form-control" id="breedLost" placeholder="Breed">
+        </div>
+
+        <div class="form-group">
+          <label for="colorLost">Main Color</label>
+          <select class="form-control" id="colorLost">
+            <option>Black</option>
+            <option>Brown</option>
+            <option>Grey</option>
+            <option>White</option>
+            <option>Golden</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sexLost">Sex</label>
+          <input type="text" class="form-control" id="sexLost" placeholder="Sex">
+        </div>
+
+        <div class="form-group">
+          <label for="ageLost">Age</label>
+          <input type="number" class="form-control" id="ageLost" placeholder="Age">
+        </div>
+
+        <div class="form-group">
+          <label for="imgLost">Breed</label>
+          <input type="text" class="form-control" id="imgLost" placeholder="Image URL">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="lostSubmit">Submit</button>
+      </form> 
+    </div>
+
+    <div class="col-md-4">
+      <h3>Submit found pet</h3>
+      <form>
+        <div class="form-group">
+          <label for="breedFound">Breed</label>
+          <input type="text" class="form-control" id="breedFound" placeholder="Breed">
+        </div>
+
+        <div class="form-group">
+          <label for="colorFound">Main Color</label>
+          <select class="form-control" id="colorFound">
+            <option>Black</option>
+            <option>Brown</option>
+            <option>Grey</option>
+            <option>White</option>
+            <option>Golden</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sexFound">Sex</label>
+          <input type="text" class="form-control" id="sexFound" placeholder="Sex">
+        </div>
+
+        <div class="form-group">
+          <label for="ageFound">Age</label>
+          <input type="number" class="form-control" id="ageFound" placeholder="Age">
+        </div>
+
+        <div class="form-group">
+          <label for="imgFound">Image URL</label>
+          <input type="text" class="form-control" id="imgFound" placeholder="Image URL">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="foundSubmit">Submit</button>
+      </form> 
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 modal" id="modal">
+      <div class="modal-content">
+        <form>
           <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
           </div>
+
           <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
           </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
+  
+          <button type="submit" class="btn btn-primary" id="loginSubmit">Submit</button>
         </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
+      </div>          
     </div>
   </div>
 </div>
