@@ -8,6 +8,18 @@ const db = require("./models");
 const app = express();
 let PORT = process.env.PORT || 3000;
 
+if (process.env.JAWSDB_URL){
+    var connection = mysql.createConnection(process.env.JAWSDB_URL); 
+}
+else {
+    var connection = mysql.createConnection({
+        host: "localhost",
+        user: "root",
+        password: "",
+        database: "stray_pets_db"
+    })
+}
+
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
