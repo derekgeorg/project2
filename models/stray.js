@@ -17,18 +17,18 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "Looks Like": DataTypes.STRING,
+        "Looks Like": {type: DataTypes.STRING},
         "Color": {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "Sex": DataTypes.STRING,
+        "Sex": {type: DataTypes.STRING},
         "Age": {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "Reunited": DataTypes.STRING,
-        "Image Link": DataTypes.STRING,
+        "Reunited": {type: DataTypes.STRING},
+        "Image Link": {type: DataTypes.STRING},
     }, {});
     Stray.associate = function (models) {
         // associations can be defined here

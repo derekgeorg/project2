@@ -8,24 +8,25 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
-            "Found Location": {
+            "Lost Location": {
+                type: Sequelize.STRING,
                 allowNull: false
             },
             "Lost Date": {
-                type: DataTypes.STRING,
+                type: Sequelize.STRING,
                 allowNull: false
             },
             "Type": {
-                type: DataTypes.STRING,
+                type: Sequelize.STRING,
                 allowNull: false
             },
-            "Looks Like": DataTypes.STRING,
+            "Looks Like": {type: Sequelize.STRING},
             "Color": {
-                type: DataTypes.STRING,
+                type: Sequelize.STRING,
                 allowNull: false
             },
-            "Sex": DataTypes.STRING,
-            "Age": DataTypes.STRING,
+            "Sex": {type: Sequelize.STRING},
+            "Age": {type: Sequelize.STRING},
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE

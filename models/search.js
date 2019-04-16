@@ -1,7 +1,13 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
     const Search = sequelize.define("Search", {
-        "Found Location": {
+        id: {
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true,
+            type: Sequelize.INTEGER
+        },
+        "Lost Location": {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -13,13 +19,13 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "Looks Like": DataTypes.STRING,
+        "Looks Like": {type: DataTypes.STRING},
         "Color": {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "Sex": DataTypes.STRING,
-        "Age": DataTypes.STRING
+        "Sex": {type: DataTypes.STRING},
+        "Age": {type: DataTypes.STRING}
     }, {});
     Search.associate = function (models) {
         // associations can be defined here

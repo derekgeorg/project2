@@ -9,33 +9,41 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             "Found Location": {
-                type: DataTypes.STRING,
+                type: Sequelize.STRING,
                 allowNull: false
             },
             "At AAC": {
-                type: DataTypes.BOOLEAN,
+                type: Sequelize.BOOLEAN,
                 allowNull: false
             },
             "Intake Date": {
-                type: DataTypes.STRING,
+                type: Sequelize.STRING,
                 allowNull: false
             },
             "Type": {
-                type: DataTypes.STRING,
+                type: Sequelize.STRING,
                 allowNull: false
             },
-            "Looks Like": DataTypes.STRING,
+            "Looks Like": { 
+                type: Sequelize.STRING 
+            },
             "Color": {
-                type: DataTypes.STRING,
+                type: Sequelize.STRING,
                 allowNull: false
             },
-            "Sex": DataTypes.STRING,
+            "Sex": {
+                type: Sequelize.STRING
+            },
             "Age": {
-                type: DataTypes.STRING,
+                type: Sequelize.STRING,
                 allowNull: false
             },
-            "Reunited": DataTypes.STRING,
-            "Image Link": DataTypes.STRING,
+            "Reunited": {
+                type: Sequelize.STRING
+            },
+            "Image Link": {
+                type: Sequelize.STRING
+            },
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE
