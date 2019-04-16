@@ -35,10 +35,7 @@ module.exports = {
                 allowNull: false
             },
             "Reunited": DataTypes.STRING,
-            "Image Link": {
-                type: DataTypes.STRING,
-                allowNull: true
-            },
+            "Image Link": DataTypes.STRING,
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE
