@@ -21,10 +21,10 @@ module.exports = function(app) {
         });
     });
     
-    // Create a new stray
-    app.post("/api/strays", function(req, res) {
-        db.Stray.create(req.body).then(function(dbStray) {
-            res.json(dbStray);
+    // Create a new lost pet
+    app.post("/api/lost-pet", function(req, res) {
+        db.Stray.create(req.body).then(function(dbStrays) {
+            res.json(dbStrays);
         });
     });
  
