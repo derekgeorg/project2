@@ -13,7 +13,7 @@ const bcrypt = require("bcrypt");
 
 //This file is essentially a module that allows sequelize to create a user in a users table with sequelize specifications(uniqueness) and 
 //validaitons (checking if it is in email format). 
-module.exports = function(sequelize, DataTypes){
+module.exports = function (sequelize, DataTypes) {
     let User = sequelize.define("User", {
         email: {
             type: DataTypes.STRING,
@@ -29,14 +29,21 @@ module.exports = function(sequelize, DataTypes){
         }
     });
 
+    User.associate = function (models) {
+        User.hasMany(models.Search, {
+            foreignKey: "UserId",
+            onDelete: "CASCADE"
+        });
+    };
+
     //This uses bcrypt's compacre function to check a literal/plain text password against its 'salted' counterpart
     //Not sure what is returned exactly, maybe true/false
-    User.prototype.validPassword = function(password) {
+    User.prototype.validPassword = function (password) {
         return bcrypt.compareSync(password, this.password);
     };
 
     //This hook is a function called before creating the user and hashes the password with salt
-    User.addHook("beforeCreate", function(user){
+    User.addHook("beforeCreate", function (user) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
     });
     return User;
