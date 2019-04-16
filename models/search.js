@@ -1,12 +1,6 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
     const Search = sequelize.define("Search", {
-        id: {
-            allowNull: false,
-            autoIncrement: true,
-            primaryKey: true,
-            type: Sequelize.INTEGER
-        },
         "Lost Location": {
             type: DataTypes.STRING,
             allowNull: false
@@ -26,7 +20,10 @@ module.exports = (sequelize, DataTypes) => {
         },
         "Sex": {type: DataTypes.STRING},
         "Age": {type: DataTypes.STRING}
-    }, {});
+    }, {
+        // don't add the timestamp attributes (updatedAt, createdAt)
+        timestamps: false,
+    });
     Search.associate = function (models) {
         // associations can be defined here
         Search.belongsTo(models.User, {

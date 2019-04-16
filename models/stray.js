@@ -27,9 +27,15 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "Reunited": {type: DataTypes.STRING},
+        "Reunited": {
+            type: DataTypes.STRING,
+            defaultValue: false
+        },
         "Image Link": {type: DataTypes.STRING},
-    }, {});
+    }, {
+        // don't add the timestamp attributes (updatedAt, createdAt)
+        timestamps: false,
+    });
     Stray.associate = function (models) {
         // associations can be defined here
     };

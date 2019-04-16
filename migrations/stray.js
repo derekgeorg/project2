@@ -24,8 +24,8 @@ module.exports = {
                 type: Sequelize.STRING,
                 allowNull: false
             },
-            "Looks Like": { 
-                type: Sequelize.STRING 
+            "Looks Like": {
+                type: Sequelize.STRING
             },
             "Color": {
                 type: Sequelize.STRING,
@@ -39,18 +39,11 @@ module.exports = {
                 allowNull: false
             },
             "Reunited": {
-                type: Sequelize.STRING
+                type: Sequelize.STRING,
+                defaultValue: false
             },
             "Image Link": {
                 type: Sequelize.STRING
-            },
-            createdAt: {
-                allowNull: false,
-                type: Sequelize.DATE
-            },
-            updatedAt: {
-                allowNull: false,
-                type: Sequelize.DATE
             }
         });
     },
