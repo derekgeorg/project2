@@ -17,22 +17,17 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "Looks Like": {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
+        "Looks Like": DataTypes.STRING,
         "Color": {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "Sex": {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
+        "Sex": DataTypes.STRING,
         "Age": {
             type: DataTypes.STRING,
             allowNull: false
         },
+        "Reunited": DataTypes.STRING,
         "Image Link": {
             type: DataTypes.STRING,
             allowNull: true
