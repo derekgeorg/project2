@@ -22,6 +22,8 @@ module.exports = function(app) {
         res.render("signup", req);
     });
 
+    //this authCheck function either redirects to home if not auth (determined by whether a session id exists for the user)
+    //or lets the authorized user continue(next()) to the handlebar generated user page
     app.get("/user", authCheck, function(req, res) {
         res.render("user", req);
     });
