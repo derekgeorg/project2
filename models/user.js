@@ -27,17 +27,14 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         }
-    }, {
-        classMethods: {
-            associate: function (models) {
-                User.hasMany(models.Search, {
-                    foreignKey: "UserId",
-                    onDelete: "CASCADE"
-                });
-            }
-        }
-    }
-    );
+    });
+
+    User.associate = function (models) {
+        User.hasMany(models.Search, {
+            foreignKey: "UserId",
+            onDelete: "CASCADE"
+        });
+    };
 
     //This uses bcrypt's compacre function to check a literal/plain text password against its 'salted' counterpart
     //Not sure what is returned exactly, maybe true/false
