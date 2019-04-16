@@ -23,6 +23,10 @@ module.exports = (sequelize, DataTypes) => {
     }, {});
     Search.associate = function (models) {
         // associations can be defined here
+        Search.belongsTo(models.User, {
+            foreignKey: "UserId",
+            onDelete: "CASCADE"
+        });
     };
     return Search;
 };
