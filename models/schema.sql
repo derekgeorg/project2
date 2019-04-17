@@ -24,10 +24,5 @@ USE stray_pets_db;
 -- (255)
 -- );
 
-<<<<<<< HEAD
-SELECT *
-FROM strays;
-=======
 -- SELECT *
 -- FROM strays;
->>>>>>> master
