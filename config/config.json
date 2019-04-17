@@ -1,11 +1,11 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "P0SlavDu2",
     "database": "stray_pets_db",
     "host": "localhost",
-    "dialect": "mysql",
-    "port" : 8889
+    "dialect": "mysql"
+
   },
   "test": {
     "username": "root",
