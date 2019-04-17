@@ -29,7 +29,7 @@ module.exports = function(app) {
         //         // Age: req.body.age
         //     }
         // }).then(function(dbStrays) {
-            res.render("search", {example: data});
+        res.render("search", {example: data});
         // });
     });
 
