@@ -1,0 +1,89 @@
+{{>nav}}
+<!-- Main Container with tab links -->
+<div class="card text-center">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="/search">Search pets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/lost">Lost pets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/found">Found pet</a>
+            </li>
+        </ul>
+    </div>
+    <!-- Insert search Div -->
+    {{!-- <div class="card-body">
+                <img id="logo-center" src="./assets/img/LogoMakr_0serJn.png" width="auto" height="100" alt="">
+            <h5 class="card-text">Helping lost pets find their way home.</h5>
+            <a href="#" class="btn btn-primary">New Search</a>
+            <br> <br>--}}
+    <div class="container" id="searchDiv"> 
+        <form>
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="Pet type">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="Color">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="Sex">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- Search results display cards -->
+    <div class="container" id="resultsDiv">
+        <div class="row">
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img id="imgLink"
+                                src="https://images.unsplash.com/photo-1475954704693-ac6850a71ee0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+                                class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title" id="petColor">Black/White</h5>
+                                <p class="card-text" id="petLooksLike">Pitbull Mix</p>
+                                <p class="card-text"><small class="text-muted">M | 3 months</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img id="imgLink"
+                                src="https://images.unsplash.com/photo-1443806798002-651c462956ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80"
+                                class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title" id="petColor">Red/Black</h5>
+                                <p class="card-text" id="petLooksLike">Yorkshire Terrier/Miniature Schnauzer</p>
+                                <p class="card-text"><small class="text-muted" id="petSex">F | 5 years</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+    </div>
+</div>
+</div>
+</div>
+
+</div>
