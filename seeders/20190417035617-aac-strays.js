@@ -3787,11 +3787,7 @@ module.exports = {
             looks_like: "Pointer Mix",
             age: "4 months",
             intake_date: "2019-04-16T00:00:00"
-        }], {
-            image: {
-                type: new Sequelize.JSON()
-            }
-        });
+        }], {});
     },
 
     down: (queryInterface, Sequelize) => {
