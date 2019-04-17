@@ -31,7 +31,11 @@ $(function () {
     });
 
     //submit lost pet
+    $("#lostSubmit").on("click", function (event) {
+        var lostSearch = {
 
+        }
+    };
 
     //submit found pet
 });
