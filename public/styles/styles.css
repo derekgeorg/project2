@@ -2,10 +2,41 @@ h5 {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
+
+/* Header Styling */
+
+#titleRow {
+  padding-bottom: 10px;
+  border-bottom: 2px solid blue;
+}
+
+/* Sign In / Create Account Dropdown Styling */
+
+#createAccountDropdown, #signInDropdown {
+  background-color: orange;
+}
+
+.dropdown-menu {
+  width: 250px;
+}
+
+/* Jumbotron Styling */
+.jumbotron {
+  margin: auto;
+}
+
+#jumbotronRow {
+  margin-top: 80px;
+}
+
+#jumbotronImage {
+  height: 80px;
+  width: auto;
+}
+
 p {
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
-
 }
 
 #petColor {
