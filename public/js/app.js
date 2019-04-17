@@ -39,7 +39,7 @@ $(function () {
             age: $("#ageLost").val().trim()
         };
 
-        $.ajax("/api/strays", {
+        $.ajax("/api/lost-pet", {
             type: "POST",
             data: lostSearch
         }).then(function (response) {
@@ -49,4 +49,21 @@ $(function () {
         });
     });
     //submit found pet
+    $("#lostSubmit").on("click", function (event) {
+        var lostSearch = {
+            breed: $("#breedLost").val().trim(),
+            color: $("#colorLost").val().trim(),
+            sex: $("#sexLost").val().trim(),
+            age: $("#ageLost").val().trim()
+        };
+
+        $.ajax("/api/found-pet", {
+            type: "POST",
+            data: lostSearch
+        }).then(function (response) {
+            console.log("Submitting new lost pet");
+
+            window.location.href = "/";
+        });
+    });
 });
