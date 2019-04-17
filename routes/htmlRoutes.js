@@ -49,9 +49,22 @@ module.exports = function(app) {
             });
         });
     });
+    
+    app.get("/search", function(req, res) {
+        res.render("search");
+    });
+
+    app.get("/lost", function(req, res) {
+        res.render("lost");
+    });
+
+    app.get("/found", function(req, res) {
+        res.render("found");
+    });
 
     // Render 404 page for any unmatched routes
     app.get("*", function(req, res) {
         res.render("404");
     });
 };
+
