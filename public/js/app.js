@@ -33,9 +33,20 @@ $(function () {
     //submit lost pet
     $("#lostSubmit").on("click", function (event) {
         var lostSearch = {
+            breed: $("#breedLost").val().trim(),
+            color: $("#colorLost").val().trim(),
+            sex: $("#sexLost").val().trim(),
+            age: $("#ageLost").val().trim()
+        };
 
-        }
-    };
+        $.ajax("/api/strays", {
+            type: "POST",
+            data: lostSearch
+        }).then(function (response) {
+            console.log("Submitting new lost pet");
 
+            window.location.href = "/";
+        });
+    });
     //submit found pet
 });
