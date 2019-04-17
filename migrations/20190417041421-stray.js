@@ -16,28 +16,12 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
-            image: {
-                type: Sequelize.JSON,
-                /*
-                type: Sequelize.TEXT,
-                get: function () {
-                    return JSON.parse(this.getDataValue("image"));
-                },
-                set: function (image) {
-                    this.setDataValue("image", JSON.stringify(image));
-                }
-                */
-                get ( image ) {
-                    return typeof this.getDataValue(image) === "string" ? JSON.parse(this.getDataValue(image)) : this.getDataValue(image);
-                }
-            },
+            image: Sequelize.JSON,
             at_aac: Sequelize.BOOLEAN,
             color: Sequelize.STRING,
             sex: Sequelize.STRING,
             animal_id: Sequelize.STRING,
-            location: {
-                type: Sequelize.JSON
-            },
+            location: Sequelize.JSON,
             type: Sequelize.STRING,
             looks_like: Sequelize.STRING,
             age: Sequelize.STRING,
