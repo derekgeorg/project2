@@ -23,7 +23,17 @@ module.exports = function(app) {
     
     // Create a new lost pet
     app.post("/api/lost-pet", function(req, res) {
-        db.Stray.create(req.body).then(function(dbStrays) {
+        db.Stray.create({
+            "Found Location": req.body["Found Location"],
+            "At AAC": req.body["At AAC"],
+            "Intake Date": req.body["Intake Date"],
+            "Type": req.body.Type,
+            "Looks Like": req.body["Looks Like"],
+            "Color": req.body.Color,
+            "Sex": req.body.Sex,
+            "Age": req.body.Age,
+            "Image Link": req.body.["Image Link"]
+        }).then(function(dbStrays) {
             res.json(dbStrays);
         });
     });
