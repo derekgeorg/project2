@@ -1,41 +1,42 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
     const Stray = sequelize.define("Stray", {
-        "Found Location": {
-            type: DataTypes.STRING,
-            allowNull: false
+        id: {
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true,
+            type: DataTypes.INTEGER
         },
-        "At AAC": {
-            type: DataTypes.BOOLEAN,
-            allowNull: false
+        image: {
+            type: Sequelize.JSON,
+            /*
+            type: Sequelize.TEXT,
+            get: function () {
+                return JSON.parse(this.getDataValue("image"));
+            },
+            set: function (image) {
+                this.setDataValue("image", JSON.stringify(image))
+            }
+            */
+            get(image) {
+                return typeof this.getDataValue(image) === "string" ? JSON.parse(this.getDataValue(image)) : this.getDataValue(image);
+            }
         },
-        "Intake Date": {
-            type: DataTypes.STRING,
-            allowNull: false
+        at_aac: DataTypes.BOOLEAN,
+        color: DataTypes.STRING,
+        sex: DataTypes.STRING,
+        animal_id: DataTypes.STRING,
+        location: {
+            type: DataTypes.JSON
         },
-        "Type": {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        "Looks Like": {type: DataTypes.STRING},
-        "Color": {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        "Sex": {type: DataTypes.STRING},
-        "Age": {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        "Reunited": {
-            type: DataTypes.STRING,
-            defaultValue: false
-        },
-        "Image Link": {type: DataTypes.STRING},
+        type: DataTypes.STRING,
+        looks_like: DataTypes.STRING,
+        age: DataTypes.STRING,
+        intake_date: DataTypes.DATE
     }, {
-        // don't add the timestamp attributes (updatedAt, createdAt)
-        timestamps: false,
-    });
+            // don't add the timestamp attributes (updatedAt, createdAt)
+            timestamps: false,
+        });
     Stray.associate = function (models) {
         // associations can be defined here
     };
