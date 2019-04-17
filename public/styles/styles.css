@@ -60,6 +60,10 @@ p {
   float: right;
 }
 
+.dropdown {
+  display: inline-block;
+}
+
 /* .card.mb-3{
   border: none;
 } */
