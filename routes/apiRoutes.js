@@ -32,7 +32,7 @@ module.exports = function(app) {
             "Color": req.body.Color,
             "Sex": req.body.Sex,
             "Age": req.body.Age,
-            "Image Link": req.body.["Image Link"]
+            "Image Link": req.body["Image Link"]
         }).then(function(dbStrays) {
             res.json(dbStrays);
         });
