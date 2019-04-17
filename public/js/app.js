@@ -31,7 +31,7 @@ $(function () {
     });
 
     //submit lost pet
-    
+
 
     //submit found pet
 });
