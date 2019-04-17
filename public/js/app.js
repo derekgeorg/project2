@@ -71,6 +71,12 @@ $(function () {
     //submit found pet
     $("#foundSubmit").on("click", function (event) {
 
+        $("#SubmitModal").show();
+        $(".close").on("click", function () {
+            $("#SubmitModal").hide();
+        });
+
+        event.preventDefault();
 
         var foundSearch = {
             breed: $("#breedFound").val().trim(),
@@ -79,18 +85,11 @@ $(function () {
             age: $("#ageFound").val().trim()
         };
 
-        $.ajax("/api/found-pet", {
-            type: "POST",
-            data: foundSearch
-        }).then(function (response) {
-            console.log("Submitting new found pet");
-
-
-            $("#SubmitModal").show();
-            $(".close").on("click", function () {
-                $("#SubmitModal").hide();
-            });
-
-        });
+        // $.ajax("/api/found-pet", {
+        //     type: "POST",
+        //     data: foundSearch
+        // }).then(function (response) {
+        //     console.log("Submitting new found pet");
+        // });
     });
 });
