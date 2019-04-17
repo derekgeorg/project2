@@ -1,6 +1,14 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
     const Search = sequelize.define("Search", {
+        UserId: {
+            type: DataTypes.INTEGER,
+            onDelete: "CASCADE",
+            references: {
+                model: "Users",
+                key: "id"
+            }
+        },
         "Lost Location": {
             type: DataTypes.STRING,
             allowNull: false
