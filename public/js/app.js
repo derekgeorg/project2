@@ -1,6 +1,9 @@
 $(function () {
+
+
     //search database
     $("#searchSubmit").on("click", function (event) {
+
         var newSearch = {
             breed: $("#breedSearch").val().trim(),
             color: $("#colorSearch").val().trim(),
@@ -32,24 +35,43 @@ $(function () {
 
     //submit lost pet
     $("#lostSubmit").on("click", function (event) {
-        var lostSearch = {
-            breed: $("#breedLost").val().trim(),
-            color: $("#colorLost").val().trim(),
-            sex: $("#sexLost").val().trim(),
-            age: $("#ageLost").val().trim()
-        };
 
-        $.ajax("/api/lost-pet", {
-            type: "POST",
-            data: lostSearch
-        }).then(function (response) {
-            console.log("Submitting new lost pet");
+        console.log($("#breedLost").val().trim());
+        console.log($("#colorLost").val().trim());
+        console.log($("#sexLost").val().trim());
+        console.log($("#ageLost").val().trim());
 
-            window.location.href = "/";
+        $("#SubmitModal").show();
+        $(".close").on("click", function () {
+            $("#SubmitModal").hide();
         });
+
+        event.preventDefault();
+
+        // var lostSearch = {
+        //     breed: $("#breedLost").val().trim(),
+        //     color: $("#colorLost").val().trim(),
+        //     sex: $("#sexLost").val().trim(),
+        //     age: $("#ageLost").val().trim()
+        // };
+
+        // $.ajax("/api/lost-pet", {
+        //     type: "POST",
+        //     data: lostSearch
+        // }).then(function (response) {
+        //     console.log("Submitting new lost pet");
+
+        //     $("#SubmitModal").show();
+        //     $(".close").on("click", function () {
+        //         $("#SubmitModal").hide();
+        //     });
+
+        // });
     });
     //submit found pet
     $("#foundSubmit").on("click", function (event) {
+
+
         var foundSearch = {
             breed: $("#breedFound").val().trim(),
             color: $("#colorFound").val().trim(),
@@ -63,7 +85,12 @@ $(function () {
         }).then(function (response) {
             console.log("Submitting new found pet");
 
-            window.location.href = "/";
+
+            $("#SubmitModal").show();
+            $(".close").on("click", function () {
+                $("#SubmitModal").hide();
+            });
+
         });
     });
 });
