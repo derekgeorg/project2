@@ -16,7 +16,7 @@ $(function () {
 
             // for (var i = 0; i < data.length; i++) {
             //     var searchDiv = $("<div class='searchDiv'></div>");
-            //     var p1 = $("<p>").html("<span id='descriptionHeader'>Found Location: </span>" + data[i]["Found Location"]);
+            // var p1 = $("<p>").html("<span id='descriptionHeader'>Found Location: </span>" + data[i]["Found Location"]);
             //     var p2 = $("<p>").html("<span id='descriptionHeader'>At AAC: </span>" + data[i]["At AAC"]);
             //     var p3 = $("<p>").html("<span id='descriptionHeader'>Intake Date: </span>" + data[i]["Intake Date"]);
             //     var p4 = $("<p>").html("<span id='descriptionHeader'>Type: </span>" + data[i]["Type"]);
@@ -31,6 +31,7 @@ $(function () {
     });
 
     //submit lost pet
+    
 
     //submit found pet
 });
