@@ -18,11 +18,11 @@ module.exports = (sequelize, DataTypes) => {
         age: DataTypes. STRING,  
         intake_date: DataTypes.DATE
     }, {
-        // don't add the timestamp attributes (updatedAt, createdAt)
+    // don't add the timestamp attributes (updatedAt, createdAt)
         timestamps: false,
     });
     Stray.associate = function (models) {
-        // associations can be defined here
+    // associations can be defined here
     };
     return Stray;
 };
