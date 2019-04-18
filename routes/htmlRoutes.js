@@ -54,7 +54,7 @@ module.exports = function (app) {
     });
 
     app.get("/search", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/search.html"));
+        res.render("search");
     });
 
     app.get("/lost", function (req, res) {
