@@ -2,7 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
     const Stray = sequelize.define("Stray", {
         "Found Location": {
-            type: DataTypes.JSON,
+            type: DataTypes.STRING,
             allowNull: false
         },
         "At AAC": {
@@ -31,13 +31,13 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             defaultValue: false
         },
-        "Image Link": {type: DataTypes.JSON},
+        "Image Link": {type: DataTypes.STRING},
     }, {
-        // don't add the timestamp attributes (updatedAt, createdAt)
+    // don't add the timestamp attributes (updatedAt, createdAt)
         timestamps: false,
     });
-    // Stray.associate = function (models) {
-    //     // associations can be defined here
-    // };
+    Stray.associate = function (models) {
+    // associations can be defined here
+    };
     return Stray;
 };
