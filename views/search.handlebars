@@ -81,7 +81,7 @@
     <!-- Search results display cards -->
     <div class="container" id="resultsDiv">
         <div class="row">
-            <div class="col">
+            <div class="col-md-6">
                 {{#each pet}}
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
@@ -94,7 +94,7 @@
                                 <p>iframes are not supported by your browser.</p>
                             </iframe>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-6">
                             <div class="card-body">
                                 <h5 class="card-title" id="petColor">{{color}}</h5>
                                 <p class="card-text" id="petLooksLike">{{looks_like}}</p>
@@ -107,7 +107,7 @@
                 </div>
                 {{/each}}
             </div>
-            {{!-- <div class="col">
+            <div class="col">
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
@@ -125,7 +125,7 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
         </div>
     </div>
     <div>
