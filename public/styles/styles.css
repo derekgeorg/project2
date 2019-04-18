@@ -2,7 +2,7 @@ html {
   height: 100%;
 }
 
-body {
+#index {
   background-image: url(../assets/img/dogbackground.jpg);
   background-repeat: no-repeat;
   background-position: center bottom;
