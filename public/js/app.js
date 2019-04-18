@@ -34,6 +34,10 @@ $(document).ready((function () {
         });
     });
 
+    $("#searchPageButton").on("click", function(e) {
+        document.location.replace("/api/strays");
+    }); 
+
     //search database
     $("#searchSubmit").on("click", function (event) {
 
