@@ -87,7 +87,7 @@
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <iframe id="imgLink"
-                                src={{"Image Link"}}
+                                src={{image.url}}
                                 class="card-img" 
                                 alt="search results pet picture"
                                 scrolling="no">
@@ -96,9 +96,9 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title" id="petColor">{{"Color"}}</h5>
-                                <p class="card-text" id="petLooksLike">{{"Looks Like"}}</p>
-                                <p class="card-text"><small class="text-muted">{{"Sex"}} | {{"Age"}}</small>
+                                <h5 class="card-title" id="petColor">{{color}}</h5>
+                                <p class="card-text" id="petLooksLike">{{looks_like}}</p>
+                                <p class="card-text"><small class="text-muted">{{sex}} | {{age}}</small>
                                 </p>
                             </div>
                         </div>
