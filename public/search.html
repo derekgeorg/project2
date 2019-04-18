@@ -15,14 +15,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">    
     <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
-    <link rel="shortcut icon" type="image/png" href="assets/img/straytx_favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="./public/assets/img/straytx_favicon.png"/>
     <script src="/public/js/app.js"></script>
 </head>
 
+
+
 <body>
-    <!-- Top Nav bar with logo and Login button -->
+
     <div class="topnav">
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="index.html">
@@ -33,15 +35,15 @@
             </div>
         </nav>
     </div>
-      <!-- main Tabs Div includes List tab and Map tab-->      
+        <!-- main Tabs Div includes List tab and Map tab-->      
     <div class="card text-center">
         <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
                 <li class="nav-item">
-                    <a class="nav-link" href="search.html">Search pets</a>
+                    <a class="nav-link active" href="search.html">Search pets</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="lost.html">Lost pet</a>
+                    <a class="nav-link" href="lost.html">Lost pet</a>
                 </li>
                 <li class="nav-item">
                         <a class="nav-link" href="found.html">Found pet</a>
@@ -52,65 +54,10 @@
             <img src="https://s0.2mdn.net/9032025/PURI_BEN_ben-petfinder2019_premium-line-2019_Save_Now_728x90_Banner_JPG.JPG">
         </div>
     </div>
-
+        
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>Submit lost pet</h3>
-                <form>
-                    <div class="form-group">
-                        <label for="breedLost">Breed</label>
-                        <input type="text" class="form-control" id="breedLost" placeholder="Breed">
-                    </div>
-              
-                    <div class="form-group">
-                        <label for="colorLost">Main Color</label>
-                        <select class="form-control" id="colorLost">
-                          <option>Black</option>
-                          <option>Brown</option>
-                          <option>Grey</option>
-                          <option>White</option>
-                          <option>Golden</option>
-                        </select>
-                    </div>
-              
-                    <div class="form-group">
-                        <label for="sexLost">Sex</label>
-                        <input type="text" class="form-control" id="sexLost" placeholder="Sex">
-                    </div>
-              
-                    <div class="form-group">
-                        <label for="ageLost">Age</label>
-                        <input type="number" class="form-control" id="ageLost" placeholder="Age">
-                    </div>
-              
-                    <div class="form-group">
-                        <label for="imgLost">Image URL</label>
-                        <input type="text" class="form-control" id="imgLost" placeholder="Image URL">
-                    </div>
-              
-                    <button type="submit" class="btn btn-primary" id="lostSubmit">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
 
-    <div id="submitModal" class="modal animated zoomIn">
-        <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h3 class="modalHeadline">Sucess</h3>
-            <form class="modalForm">
-                <div class="form-group">
-                    <label for="signInEmail">Your pet has been submitted!</label>
-                </div>
-            
-                <div class="text-center">                       
-                    <button class="btn btn-primary" id="searchPageButton">Home</button>                
-                </div> 
-            </form>
-        </div>
     </div>
-
 
     <footer>
         <div class="subFooter">
@@ -133,8 +80,6 @@
             </div>
         </div> 
     </footer>
-
-    <script src="./js/app.js"></script>
 
 </body>
 

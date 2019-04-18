@@ -16,10 +16,10 @@
                 <a class="nav-link active" href="/search">Search pets</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="lost.html">Lost pets</a>
+                <a class="nav-link" href="/lost">Lost pets</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="found.html">Found pet</a>
+                <a class="nav-link" href="/found">Found pet</a>
             </li>
         </ul>
     </div>
@@ -32,16 +32,16 @@
     <div class="container" id="searchDiv"> 
         <form class="form-inline">
             <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
-            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref1">
+            <select class="custom-select my-1 mr-sm-2" id="petType">
                 <option selected>Pet type</option>
-                <option value="1">Dog</option>
-                <option value="2">Cat</option>
+                <option value="Dog">Dog</option>
+                <option value="Cat">Cat</option>
             </select>
-            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref2">
+            <select class="custom-select my-1 mr-sm-2" id="petColor">
                 <option selected>Color</option>
-                <option value="1">White</option>
-                <option value="2">Black</option>
-                <option value="2">Gold</option>
+                <option value="White">White</option>
+                <option value="Black">Black</option>
+                <option value="Gold">Gold</option>
             </select>
         
         
@@ -50,7 +50,7 @@
                 <label class="custom-control-label" for="customControlInline">Remember my search</label>
             </div>
         
-            <button type="submit" class="btn btn-primary my-1" id="sub-btn">Submit</button>
+            <button type="submit" class="btn btn-primary my-1" id="searchSubmit">Submit</button>
 </form>
         {{!-- <form>
             <div class="row"> --}}
@@ -103,7 +103,6 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
                 {{/each}}
             </div>
@@ -174,14 +173,14 @@
 
             let type = $("#petType").val();
             let color = $("#petColor").val();
-            let sex = $("#petSex").val();
+            //let sex = $("#petSex").val();
 
             $.ajax("/api/search", {
-                type: "GET",
+                type: "POST",
                 data: {
                     type: type,
-                    color: color,
-                    sex: sex
+                    color: color
+                    //sex: sex
                 }
             }).then(function(res){
                 console.log(res);
