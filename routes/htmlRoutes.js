@@ -8,8 +8,15 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 
+    app.get("/dummy", function(req, res) {
+        db.Stray.findAll({}).then(function(dbStrays) {
+            // res.json(dbStrays);
+            res.render("search", {pet: dbStrays});
+        });
+    });
+
     app.post("/login", passport.authenticate("local"), function (req, res) {
-        res.redirect("/api/strays");
+        res.status(200).json({url:"/api/strays"});
     });
 
     app.get("/logout", function(req, res) {
@@ -23,7 +30,7 @@ module.exports = function (app) {
             email: req.body.email,
             password: req.body.password
         }).then(function () {
-            res.redirect("/api/strays");
+            res.status(200).json({url:"/api/strays"});
         });
     });
 

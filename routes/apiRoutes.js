@@ -20,7 +20,15 @@ let data = [
     }
 ];
 
-module.exports = function (app) {
+module.exports = function(app) {
+    // Get all strays
+    app.get("/api/strays", authCheck, function(req, res) {
+        db.Stray.findAll({}).then(function(dbStrays) {
+            // res.json(dbStrays);
+            res.render("search", {pet: dbStrays});
+        });
+    });
+    
     //WILL ASSUME THAT THE MODEL IS Stray
     app.get("/api/search", authCheck, function (req, res) {
         db.Stray.findAll({
@@ -68,16 +76,22 @@ module.exports = function (app) {
             where: {
                 id: req.body.id
             }
-        }).then(function (dbStrays) {
-            res.json(dbStrays);
         });
     });
 
-
-    // Get all strays
-    app.get("/api/strays", authCheck, function(req, res) {
-        db.Stray.findAll({}).then(function(dbStrays) {
-            res.render("search", dbStrays);
+    app.post("/api/search", authCheck, function(req, res){
+        db.Stray.findAll({
+            where: {
+                //allowing only one option will be limiting maybe implement a filter by category
+                type: req.body.type,
+                color: req.body.color,
+                sex: req.body.sex
+            }
+        }).then(function(dbStrays) {
+            res.json(dbStrays);
+            // res.render("search", {pet: dbStrays});
+        }).then(function (dbStrays) {
+            res.json(dbStrays);
         });
     });
 

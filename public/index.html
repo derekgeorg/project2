@@ -132,8 +132,7 @@
                         password: password
                     }
                 }).then(function(res){
-                    console.log(res);
-                    res.redirect("/api/search");
+                    document.location.replace(res.url);
                 });
             });
 
@@ -142,7 +141,6 @@
 
                 let email = $("#signInEmail").val();
                 let password = $("#signInPassword").val();
-
                 $.ajax("/login", {
                     type: "POST",
                     data: {
@@ -151,7 +149,7 @@
                     }
                 }).then(function(res){
                     console.log(res);
-                    res.redirect("/api/search");
+                    document.location.replace(res.url);
                 });
             });
 
