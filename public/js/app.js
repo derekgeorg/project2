@@ -44,6 +44,7 @@ $(function () {
         console.log($("#colorLost").val().trim());
         console.log($("#sexLost").val().trim());
         console.log($("#ageLost").val().trim());
+        console.log(("#imgLost").val().trim());
 
         event.preventDefault();
 
@@ -51,7 +52,8 @@ $(function () {
             looks_like: $("#breedLost").val().trim(),
             color: $("#colorLost").val().trim(),
             sex: $("#sexLost").val().trim(),
-            age: $("#ageLost").val().trim()
+            age: $("#ageLost").val().trim(),
+            image: $("#imgLost").val().trim()
         };
 
         $.ajax("/api/lost-pet", {
@@ -60,10 +62,11 @@ $(function () {
         }).then(function (response) {
             console.log("Submitting new lost pet");
 
-            $("#breedLost").val().trim("");
-            $("#colorLost").val().trim("");
-            $("#sexLost").val().trim("");
-            $("#ageLost").val().trim("");
+            $("#breedLost").val("");
+            $("#colorLost").val("");
+            $("#sexLost").val("");
+            $("#ageLost").val("");
+            $("#imgLost").val("");
 
             $("#SubmitModal").show();
             $(".close").on("click", function () {
@@ -87,7 +90,8 @@ $(function () {
             looks_like: $("#breedFound").val().trim(),
             color: $("#colorFound").val().trim(),
             sex: $("#sexFound").val().trim(),
-            age: $("#ageFound").val().trim()
+            age: $("#ageFound").val().trim(),
+            image: $("#imgLost").val().trim()
         };
 
         $.ajax("/api/found-pet", {
@@ -95,10 +99,11 @@ $(function () {
             data: foundSearch
         }).then(function (response) {
             console.log("Submitting new found pet");
-            $("#breedFound").val().trim("");
-            $("#colorFound").val().trim("");
-            $("#sexFound").val().trim("");
-            $("#ageFound").val().trim("");
+            $("#breedFound").val("");
+            $("#colorFound").val("");
+            $("#sexFound").val("");
+            $("#ageFound").val("");
+            $("#imgLost").val("");
 
             $("#SubmitModal").show();
             $(".close").on("click", function () {
