@@ -5,7 +5,7 @@ $(function () {
     $("#searchSubmit").on("click", function (event) {
 
         var newSearch = {
-            breed: $("#breedSearch").val().trim(),
+            type: $("#breedSearch").val().trim(),
             color: $("#colorSearch").val().trim(),
             sex: $("#sexSearch").val().trim(),
             age: $("#ageSearch").val().trim()
