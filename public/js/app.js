@@ -1,10 +1,9 @@
 $(function () {
 
     // When the user clicks anywhere outside of the modal, close it
-    $(window).on("click", function(){
+    $(window).on("click", function () {
         $("#SubmitModal").hide();
     });
-
 
     //search database
     $("#searchSubmit").on("click", function (event) {
@@ -45,11 +44,7 @@ $(function () {
         console.log($("#colorLost").val().trim());
         console.log($("#sexLost").val().trim());
         console.log($("#ageLost").val().trim());
-
-        $("#SubmitModal").show();
-        $(".close").on("click", function () {
-            $("#SubmitModal").hide();
-        });
+        console.log(("#imgLost").val().trim());
 
         event.preventDefault();
 
@@ -57,7 +52,8 @@ $(function () {
             looks_like: $("#breedLost").val().trim(),
             color: $("#colorLost").val().trim(),
             sex: $("#sexLost").val().trim(),
-            age: $("#ageLost").val().trim()
+            age: $("#ageLost").val().trim(),
+            image: $("#imgLost").val().trim()
         };
 
         $.ajax("/api/lost-pet", {
@@ -65,6 +61,12 @@ $(function () {
             data: lostSearch
         }).then(function (response) {
             console.log("Submitting new lost pet");
+
+            $("#breedLost").val("");
+            $("#colorLost").val("");
+            $("#sexLost").val("");
+            $("#ageLost").val("");
+            $("#imgLost").val("");
 
             $("#SubmitModal").show();
             $(".close").on("click", function () {
@@ -76,11 +78,11 @@ $(function () {
 
     //submit found pet
     $("#foundSubmit").on("click", function (event) {
+        console.log($("#breedFound").val().trim());
+        console.log($("#colorFound").val().trim());
+        console.log($("#sexFound").val().trim());
+        console.log($("#ageFound").val().trim());
 
-        $("#SubmitModal").show();
-        $(".close").on("click", function () {
-            $("#SubmitModal").hide();
-        });
 
         event.preventDefault();
 
@@ -88,7 +90,8 @@ $(function () {
             looks_like: $("#breedFound").val().trim(),
             color: $("#colorFound").val().trim(),
             sex: $("#sexFound").val().trim(),
-            age: $("#ageFound").val().trim()
+            age: $("#ageFound").val().trim(),
+            image: $("#imgLost").val().trim()
         };
 
         $.ajax("/api/found-pet", {
@@ -96,6 +99,16 @@ $(function () {
             data: foundSearch
         }).then(function (response) {
             console.log("Submitting new found pet");
+            $("#breedFound").val("");
+            $("#colorFound").val("");
+            $("#sexFound").val("");
+            $("#ageFound").val("");
+            $("#imgLost").val("");
+
+            $("#SubmitModal").show();
+            $(".close").on("click", function () {
+                $("#SubmitModal").hide();
+            });
         });
     });
 });
