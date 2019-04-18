@@ -7,7 +7,7 @@
                 <button class="btn btn-sm btn-outline-secondary" id="login-btn" type="button">Logout</button>
             </div>
         </nav>
-    </div>
+</div>
 <!-- Main Container with tab links -->
 <div class="card text-center">
     <div class="card-header">
@@ -30,10 +30,41 @@
             <a href="#" class="btn btn-primary">New Search</a>
             <br> <br>--}}
     <div class="container" id="searchDiv"> 
-        <form>
-            <div class="row">
-                <div class="col-md-4">
+        <form class="form-inline">
+            <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref1">
+                <option selected>Pet type</option>
+                <option value="1">Dog</option>
+                <option value="2">Cat</option>
+            </select>
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref2">
+                <option selected>Color</option>
+                <option value="1">White</option>
+                <option value="2">Black</option>
+                <option value="2">Golden</option>
+            </select>
+        
+        
+            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                <label class="custom-control-label" for="customControlInline">Remember my search</label>
+            </div>
+        
+            <button type="submit" class="btn btn-primary my-1" id="sub-btn">Submit</button>
+</form>
+        {{!-- <form>
+            <div class="row"> --}}
+                {{!-- <div class="col-md-4">
                     <input type="text" class="form-control" id="petType" placeholder="Pet type">
+                </div> --}}
+                {{!-- <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="petType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Pet type
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button">Dog</button>
+                    <button class="dropdown-item" type="button">Cat</button>
+                </div>
                 </div>
                 <div class="col-md-4">
                     <input type="text" class="form-control" id="petColor" placeholder="Color">
@@ -42,8 +73,10 @@
                     <input type="text" class="form-control" id="petSex" placeholder="Sex">
                 </div>
             </div>
+            <div class="col-md-4">
             <button type="submit" class="btn btn-primary">Search</button>
-        </form>
+            </div>
+        </form> --}}
     </div>
     <!-- Search results display cards -->
     <div class="container" id="resultsDiv">
@@ -91,10 +124,64 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Sex</th>
+                <th scope="col">Looks Like</th>
+                <th scope="col">Color</th>
+                <th scope="col">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Intact Female</th>
+                <td>Snowshoe Mix</td>
+                <td>Seal Point</td>
+                <td>http://petharbor.com/get_image.asp?RES=Detail&ID=A792513&LOCATION=ASTN</td>
+            </tr>
+            <tr>
+                <th scope="row">Male</th>
+                <td>Yorkshire Terrier/Miniature Schnauzer</td>
+                <td>Red/Black</td>
+                <td>http://petharbor.com/get_image.asp?RES=Detail&ID=A792513&LOCATION=ASTN</td>
+            </tr>
+            <tr>
+                <th scope="row">Female</th>
+                <td>Pitbull/Mix</td>
+                <td>Black/White</td>
+                <td>http://petharbor.com/get_image.asp?RES=Detail&ID=A792513&LOCATION=ASTN
+</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div class="addspace">
+        <img src="https://s0.2mdn.net/9032025/PURI_BEN_ben-petfinder2019_premium-line-2019_Save_Now_728x90_Banner_JPG.JPG">
     </div>
 </div>
 </div>
-</div>
-
-</div>
+{{>footer}}
+{{!-- <footer>
+    <div class="subFooter">
+        <div class="subFooter-inner-social">
+            <ul class="hr-sc-bar" id="hrArray">
+                <li class="socialIcon"><i class="fab fa-instagram fa-2x"></i></li>
+                <li class="socialIcon"><i class="fab fa-facebook-square fa-2x"></i></li>
+                <li class="socialIcon"><i class="fab fa-twitter-square fa-2x"></i></li>
+            </ul>
+        </div>
+    </div>    
+    <div class="subFooter2">
+        <div class="subFooter-inner-body">
+            <p class="subFooter-copyright">© 2019
+                StrayTX
+            </p>
+            <p class='subFooter-trademark'>
+                All trademarks are owned by G6 Incorporated.
+            </p>
+        </div>
+    </div> 
+</footer> --}}

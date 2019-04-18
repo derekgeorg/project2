@@ -1,0 +1,124 @@
+#searchDiv {
+    margin-top: 20px;
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+
+}
+
+#searchForm {
+    width: auto;
+}
+
+/* #inlineFormCustomSelectPref1 {
+    margin-left: 10px;
+
+} */
+
+#sub-btn {
+    margin-left: 30px;
+}
+
+#inlineFormCustomSelectPref2 {
+    margin-left: 30px;
+}
+
+#customControlInline {
+    margin-left: 30px;
+}
+
+#petColor {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#petLooksLike {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.topnav a {
+    float: left;
+}
+.topnav-right {
+    float: right;
+}
+
+/* .card.mb-3{
+    border: none;
+} */
+
+.card-text {
+    margin-bottom: 25px;
+}
+
+#logo-center {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.addspace {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #1330e1;
+    height: auto;
+}
+
+#hrArray {
+    list-style: none;
+    margin-top: 20px;
+}
+
+
+.hr-sc-bar {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.socialIcon {
+    display: inline;
+    padding: 15px;
+}
+
+.subFooter-copyright {
+    color: white;
+    text-align: center;
+}
+
+.subFooter-trademark {
+    color: white;
+    text-align: center;
+}
+
+.subFooter-inner-body {
+    margin-bottom: 20px;
+}
+
+.subFooter {
+    border-bottom: 1px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+}
+
+.subFooter2 {
+    margin-top: 5px;
+    padding: 15px;
+}
