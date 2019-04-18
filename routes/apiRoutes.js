@@ -1,4 +1,19 @@
 var db = require("../models");
+let data = [
+    {
+        "id": 40,
+        "Found Location": "9302 S 1ST ST\nAUSTIN 78748\n(30.169864, -97.801524)",
+        "At AAC": false,
+        "Intake Date": "4/10/2019",
+        "Type": "Cat",
+        "Looks Like": "Snowshoe Mix",
+        "Color": "Seal Point",
+        "Sex": "Intact Female",
+        "Age": "4 weeks",
+        "Reunited": "0",
+        "Image Link": "http://petharbor.com/get_image.asp?RES=Detail&ID=A744019&LOCATION=ASTN"
+    }
+];
 
 module.exports = function(app) {
 //WILL ASSUME THAT THE MODEL IS Stray
@@ -13,7 +28,7 @@ module.exports = function(app) {
                 // Age: req.body.age
             }
         }).then(function(dbStrays) {
-            res.json(dbStrays);
+            res.render("index", {example: data});
         });
     });
 
