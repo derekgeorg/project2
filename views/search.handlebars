@@ -4,7 +4,7 @@
                 <img src="./assets/img/LogoMakr_0serJn.png" width="auto" height="40" alt="">
             </a>
             <div class="topnav-right">
-                <button class="btn btn-sm btn-outline-secondary" id="login-btn" type="button">Logout</button>
+                <button class="btn btn-sm btn-outline-secondary" id="logout" type="button">Logout</button>
             </div>
         </nav>
     </div>
@@ -49,7 +49,7 @@
     <div class="container" id="resultsDiv">
         <div class="row">
             <div class="col">
-                {{#each example}}
+                {{#each pet}}
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
@@ -70,7 +70,7 @@
                 </div>
                 {{/each}}
             </div>
-            <div class="col">
+            {{!-- <div class="col">
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <div class="row">
@@ -109,15 +109,14 @@
             let sex = $("#petSex").val();
 
             $.ajax("/api/search", {
-                type: "POST",
+                type: "GET",
                 data: {
                     type: type,
                     color: color,
                     sex: sex
                 }
             }).then(function(res){
-                console.log("searching");
-                //res.redirect("/user");
+                console.log(res);
             });
         });
 
@@ -127,6 +126,7 @@
             $.ajax("/logout", {
                 type: "GET"
             }).then(function(){
+                location.reload();
                 console.log("You are no longer signed in")
             });
         });

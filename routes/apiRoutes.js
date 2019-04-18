@@ -22,10 +22,11 @@ module.exports = function(app) {
     // Get all strays
     app.get("/api/strays", authCheck, function(req, res) {
         db.Stray.findAll({}).then(function(dbStrays) {
-            res.render("search", dbStrays);
+            // res.json(dbStrays);
+            res.render("search", {pet: dbStrays});
         });
     });
-
+    
     app.get("/api/search", authCheck, function(req, res){
         db.Stray.findAll({
             where: {
@@ -35,10 +36,25 @@ module.exports = function(app) {
                 sex: req.body.sex
             }
         }).then(function(dbStrays) {
-            res.render("search", {searchResults: dbStrays});
+            res.json(dbStrays);
+            // res.render("search", {pet: dbStrays});
         });
     });
     
+    app.post("/api/search", authCheck, function(req, res){
+        db.Stray.findAll({
+            where: {
+                //allowing only one option will be limiting maybe implement a filter by category
+                type: req.body.type,
+                color: req.body.color,
+                sex: req.body.sex
+            }
+        }).then(function(dbStrays) {
+            res.json(dbStrays);
+            // res.render("search", {pet: dbStrays});
+        });
+    });
+
     // Create a new lost pet
     app.post("/api/lost-pet", authCheck, function(req, res) {
         db.Stray.create({
