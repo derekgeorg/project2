@@ -118,6 +118,43 @@
                     $("#signInModal").hide();
                 });
             });
+
+            $("#createAccountSubmit").on("click", function(e){
+                e.preventDefault();
+
+                let email = $("#createEmail").val();
+                let password = $("#createPassword").val();
+
+                $.ajax("/signup", {
+                    type: "POST",
+                    data: {
+                        email: email,
+                        password: password
+                    }
+                }).then(function(res){
+                    console.log(res);
+                    res.redirect("/api/search");
+                });
+            });
+
+            $("#signInSubmit").on("click", function(e){
+                e.preventDefault();
+
+                let email = $("#signInEmail").val();
+                let password = $("#signInPassword").val();
+
+                $.ajax("/login", {
+                    type: "POST",
+                    data: {
+                        email: email,
+                        password: password
+                    }
+                }).then(function(res){
+                    console.log(res);
+                    res.redirect("/api/search");
+                });
+            });
+
         });
     </script>
 </body>

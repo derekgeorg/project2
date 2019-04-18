@@ -42,7 +42,7 @@
                     <input type="text" class="form-control" id="petSex" placeholder="Sex">
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Search</button>
+            <button id ="searchSubmit" type="submit" class="btn btn-primary">Search</button>
         </form>
     </div>
     <!-- Search results display cards -->
@@ -54,14 +54,14 @@
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <img id="imgLink"
-                                src={{"Image Link"}}
+                                src={{"image"}}
                                 class="card-img" alt="search results pet picture">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title" id="petColor">{{"Color"}}</h5>
-                                <p class="card-text" id="petLooksLike">{{"Looks Like"}}</p>
-                                <p class="card-text"><small class="text-muted">{{"Sex"}} | {{"Age"}}</small>
+                                <h5 class="card-title" id="petColor">{{"color"}}</h5>
+                                <p class="card-text" id="petLooksLike">{{"looks_like"}}</p>
+                                <p class="card-text"><small class="text-muted">{{"sex"}} | {{"age"}}</small>
                                 </p>
                             </div>
                         </div>
@@ -98,3 +98,39 @@
 </div>
 
 </div>
+<script>
+    $(document).ready(function(){
+
+        $("#searchSubmit").on("click", function(e){
+            e.preventDefault();
+
+            let type = $("#petType").val();
+            let color = $("#petColor").val();
+            let sex = $("#petSex").val();
+
+            $.ajax("/api/search", {
+                type: "POST",
+                data: {
+                    type: type,
+                    color: color,
+                    sex: sex
+                }
+            }).then(function(res){
+                console.log("searching");
+                //res.redirect("/user");
+            });
+        });
+
+        $("#logout").on("click", function(e){
+            e.preventDefault();
+
+            $.ajax("/logout", {
+                type: "GET"
+            }).then(function(){
+                console.log("You are no longer signed in")
+            });
+        });
+    });
+
+
+</script>

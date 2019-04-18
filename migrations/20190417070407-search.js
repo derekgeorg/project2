@@ -1,6 +1,14 @@
 "use strict";
+
 module.exports = {
     up: (queryInterface, Sequelize) => {
+        /*
+          Add altering commands here.
+          Return a promise to correctly handle asynchronicity.
+    
+          Example:
+          return queryInterface.createTable('users', { id: Sequelize.INTEGER });
+        */
         return queryInterface.createTable("Searches", {
             id: {
                 allowNull: false,
@@ -8,28 +16,36 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
-            "Lost Location": {
+            lost_location: {
                 type: Sequelize.STRING,
                 allowNull: false
             },
-            "Lost Date": {
+            intake_date: {
                 type: Sequelize.STRING,
                 allowNull: false
             },
-            "Type": {
+            type: {
                 type: Sequelize.STRING,
                 allowNull: false
             },
-            "Looks Like": {type: Sequelize.STRING},
-            "Color": {
+            looks_like: { type: Sequelize.STRING },
+            color: {
                 type: Sequelize.STRING,
                 allowNull: false
             },
-            "Sex": {type: Sequelize.STRING},
-            "Age": {type: Sequelize.STRING},
+            sex: { type: Sequelize.STRING },
+            age: { type: Sequelize.STRING },
         });
     },
+
     down: (queryInterface, Sequelize) => {
+        /*
+          Add reverting commands here.
+          Return a promise to correctly handle asynchronicity.
+    
+          Example:
+          return queryInterface.dropTable('users');
+        */
         return queryInterface.dropTable("Searches");
     }
 };
