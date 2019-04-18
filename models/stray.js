@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        image: Sequelize.JSON,
+        image: DataTypes.JSON,
         at_aac:  DataTypes.BOOLEAN,  
         color: DataTypes.STRING,
         sex: DataTypes.STRING,

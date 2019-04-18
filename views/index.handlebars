@@ -1,147 +1,73 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-2">
-      <h1>StrayTX</h1>
+<!-- Top Nav bar with logo and Login button -->
+    <div class="topnav">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="./public/assets/img/LogoMakr_0serJn.png" width="auto" height="40" alt="">
+            </a>
+            <div class="topnav-right">
+                <button class="btn btn-sm btn-outline-secondary" id="login-btn" type="button">Login</button>
+            </div>
+            <!-- </form> -->
+        </nav>
     </div>
+      <!-- main Tabs Div includes List tab and Map tab-->      
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/search">Search pets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lost.html">Lost pets</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="found.html">Found pet</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+                <img id="logo-center" src="./public/assets/img/LogoMakr_0serJn.png" width="auto" height="100" alt="">
+            <h5 class="card-text">Helping lost pets find their way home.</h5>
+            <a href="#" class="btn btn-primary">New Search</a>
+            <br> <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img id="imgLink" src="https://images.unsplash.com/photo-1475954704693-ac6850a71ee0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="petColor">Black/White</h5>
+                                        <p class="card-text" id="petLooksLike">Pitbull Mix</p>
+                                        <p class="card-text"><small class="text-muted">M  |  3 months</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-    <div class="col-md-8"></div>
-
-    <div class="col-md-2">
-      <button type="button" class="btn btn-primary" id="logIn">Log In</button>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img id="imgLink" src="https://images.unsplash.com/photo-1443806798002-651c462956ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="petColor">Red/Black</h5>
+                                        <p class="card-text" id="petLooksLike">Yorkshire Terrier/Miniature Schnauzer</p>
+                                        <p class="card-text"><small class="text-muted" id="petSex">F  |  5 years</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h3>Search our database</h3>
-      <form>
-        <div class="form-group">
-          <label for="breedSearch">Breed</label>
-          <input type="text" class="form-control" id="breedSearch" placeholder="Breed">
-        </div>
-
-        <div class="form-group">
-          <label for="colorSearch">Main Color</label>
-          <select class="form-control" id="colorSearch">
-            <option>Black</option>
-            <option>Brown</option>
-            <option>Grey</option>
-            <option>White</option>
-            <option>Golden</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="sexSearch">Sex</label>
-          <input type="text" class="form-control" id="sexSearch" placeholder="Sex">
-        </div>
-
-        <div class="form-group">
-          <label for="ageSearch">Age</label>
-          <input type="number" class="form-control" id="ageSearch" placeholder="Age">
-        </div>
-
-        <button type="submit" class="btn btn-primary" id="searchSubmit">Submit</button>
-      </form>    
-    </div>
-  
-    <div class="col-md-4">
-      <h3>Submit lost pet</h3>
-      <form>
-        <div class="form-group">
-          <label for="breedLost">Breed</label>
-          <input type="text" class="form-control" id="breedLost" placeholder="Breed">
-        </div>
-
-        <div class="form-group">
-          <label for="colorLost">Main Color</label>
-          <select class="form-control" id="colorLost">
-            <option>Black</option>
-            <option>Brown</option>
-            <option>Grey</option>
-            <option>White</option>
-            <option>Golden</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="sexLost">Sex</label>
-          <input type="text" class="form-control" id="sexLost" placeholder="Sex">
-        </div>
-
-        <div class="form-group">
-          <label for="ageLost">Age</label>
-          <input type="number" class="form-control" id="ageLost" placeholder="Age">
-        </div>
-
-        <div class="form-group">
-          <label for="imgLost">Image</label>
-          <input type="text" class="form-control" id="imgLost" placeholder="Image URL">
-        </div>
-
-        <button type="submit" class="btn btn-primary" id="lostSubmit">Submit</button>
-      </form> 
-    </div>
-
-    <div class="col-md-4">
-      <h3>Submit found pet</h3>
-      <form>
-        <div class="form-group">
-          <label for="breedFound">Breed</label>
-          <input type="text" class="form-control" id="breedFound" placeholder="Breed">
-        </div>
-
-        <div class="form-group">
-          <label for="colorFound">Main Color</label>
-          <select class="form-control" id="colorFound">
-            <option>Black</option>
-            <option>Brown</option>
-            <option>Grey</option>
-            <option>White</option>
-            <option>Golden</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="sexFound">Sex</label>
-          <input type="text" class="form-control" id="sexFound" placeholder="Sex">
-        </div>
-
-        <div class="form-group">
-          <label for="ageFound">Age</label>
-          <input type="number" class="form-control" id="ageFound" placeholder="Age">
-        </div>
-
-        <div class="form-group">
-          <label for="imgFound">Image URL</label>
-          <input type="text" class="form-control" id="imgFound" placeholder="Image URL">
-        </div>
-
-        <button type="submit" class="btn btn-primary" id="foundSubmit">Submit</button>
-      </form> 
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12 modal" id="modal">
-      <div class="modal-content">
-        <form>
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-          </div>
-
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
-          </div>
-  
-          <button type="submit" class="btn btn-primary" id="loginSubmit">Submit</button>
-        </form>
-      </div>          
-    </div>
-  </div>
-</div>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>

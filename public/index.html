@@ -15,48 +15,6 @@
             <a class="navbar-brand" href="index.html">
                 <img src="assets/img/LogoMakr_0serJn.png" width="auto" height="40" alt="">
             </a>
-
-            <div class="topnav-right">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="createAccountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Create an Account
-                    </button>
-
-                    <form class="dropdown-menu p-4">
-                        <div class="form-group">
-                            <label for="exampleDropdownFormEmail2">Email address</label>
-                            <input type="email" class="form-control" id="createEmail" placeholder="email@example.com">
-                        </div>
-                
-                        <div class="form-group">
-                            <label for="exampleDropdownFormPassword2">Password</label>
-                            <input type="password" class="form-control" id="createPassword" placeholder="Password">
-                        </div>
-                                            
-                        <button type="submit" class="btn btn-primary" id="createAccountSubmit">Create Account</button>
-                    </form>
-                </div>
-        
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="signInDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sign In
-                    </button>
-
-                    <form class="dropdown-menu p-4">
-                        <div class="form-group">
-                            <label for="exampleDropdownFormEmail2">Email address</label>
-                            <input type="email" class="form-control" id="signInEmail" placeholder="email@example.com">
-                        </div>
-            
-                        <div class="form-group">
-                            <label for="exampleDropdownFormPassword2">Password</label>
-                            <input type="password" class="form-control" id="signInPassword" placeholder="Password">
-                        </div>
-                                        
-                        <button type="submit" class="btn btn-primary" id="signInSubmit">Sign in</button>
-                    </form>
-                </div>
-            </div>
         </nav>
     </div>
 
@@ -72,16 +30,83 @@
                     <p>When your pet is lost, putting up a poster just isn't enough. Sign in or create an account 
                         to search our database of lost/found pets in Austin and become reunited with your furry
                         friend faster than ever!
-                    </p>     
+                    </p>
+
+                    <button class="btn btn-secondary" type="button" id="createAccountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Create an Account
+                    </button>
+
+                    <button class="btn btn-secondary" type="button" id="signInDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sign In
+                    </button>
                 </div>
             </div>
 
             <div class="col-md-3"></div>
         </div>
+
+        <!-- Create Account Modal -->
+        <div id="createAccountModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 class="modalHeadline">Create Account</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="createEmail">Email address</label>
+                        <input type="email" class="form-control" id="createEmail" placeholder="email@example.com">
+                    </div>
+                            
+                    <div class="form-group">
+                        <label for="createPassword">Password</label>
+                        <input type="password" class="form-control" id="createPassword" placeholder="Password">
+                    </div>
+                                                        
+                    <button type="submit" class="btn btn-primary" id="createAccountSubmit"><a href="project2-results.html">Create Account</a></button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sign In Modal -->
+        <div id="signInModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 class="modalHeadline">Sign In</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="signInEmail">Email address</label>
+                        <input type="email" class="form-control" id="signInEmail" placeholder="email@example.com">
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="signInPassword">Password</label>
+                        <input type="password" class="form-control" id="signInPassword" placeholder="Password">
+                    </div>
+                                            
+                    <button type="submit" class="btn btn-primary" id="signInSubmit"><a href="project2-results.html">Sign in</a></button>
+                </form>
+            </div>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#createAccountDropdown").on("click", function(){
+                $("#createAccountModal").show();
+                $(".close").on("click", function(){
+                    $("#createAccountModal").hide();
+                });
+            });
+
+            $("#signInDropdown").on("click", function(){
+                $("#signInModal").show();
+                $(".close").on("click", function(){
+                    $("#signInModal").hide();
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

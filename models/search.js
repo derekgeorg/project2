@@ -1,6 +1,14 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
     const Search = sequelize.define("Search", {
+        UserId: {
+            type: DataTypes.INTEGER,
+            onDelete: "CASCADE",
+            references: {
+                model: "Users",
+                key: "id"
+            }
+        },
         lost_location: {
             type: DataTypes.STRING,
             allowNull: false
@@ -13,13 +21,13 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        looks_like: {type: DataTypes.STRING},
+        looks_like: { type: DataTypes.STRING },
         color: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        sex: {type: DataTypes.STRING},
-        age: {type: DataTypes.STRING}
+        sex: { type: DataTypes.STRING },
+        age: { type: DataTypes.STRING }
     }, {
         // don't add the timestamp attributes (updatedAt, createdAt)
         timestamps: false,

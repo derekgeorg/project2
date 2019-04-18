@@ -22,12 +22,15 @@ module.exports = function(app) {
         res.render("signup", req);
     });
 
+    //this authCheck function either redirects to home if not auth (determined by whether a session id exists for the user)
+    //or lets the authorized user continue(next()) to the handlebar generated user page
     app.get("/user", authCheck, function(req, res) {
+        console.log(req.user);
+        
         res.render("user", req);
     });
 
     app.post("/login", passport.authenticate("local"), function(req, res) {
-        console.log("access granted");
         res.json("/user");
     });
 
@@ -49,9 +52,22 @@ module.exports = function(app) {
             });
         });
     });
+    
+    app.get("/search", function(req, res) {
+        res.render("search");
+    });
+
+    app.get("/lost", function(req, res) {
+        res.render("lost");
+    });
+
+    app.get("/found", function(req, res) {
+        res.render("found");
+    });
 
     // Render 404 page for any unmatched routes
     app.get("*", function(req, res) {
         res.render("404");
     });
 };
+
