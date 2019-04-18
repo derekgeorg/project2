@@ -1,9 +1,42 @@
-$(function () {
+$(document).ready((function () {
 
-    // When the user clicks anywhere outside of the modal, close it
-    $(window).on("click", function () {
-        $("#SubmitModal").hide();
+    $("#createAccountSubmit").on("click", function (e) {
+        e.preventDefault();
+
+        let email = $("#createEmail").val();
+        let password = $("#createPassword").val();
+
+        $.ajax("/signup", {
+            type: "POST",
+            data: {
+                email: email,
+                password: password
+            }
+        }).then(function (res) {
+            document.location.replace(res.url);
+        });
     });
+
+    $("#signInSubmit").on("click", function (e) {
+        e.preventDefault();
+
+        let email = $("#signInEmail").val();
+        let password = $("#signInPassword").val();
+        $.ajax("/login", {
+            type: "POST",
+            data: {
+                email: email,
+                password: password
+            }
+        }).then(function (res) {
+            console.log(res);
+            document.location.replace(res.url);
+        });
+    });
+
+    $("#searchPageButton").on("click", function(e) {
+        document.location.replace("/api/strays");
+    }); 
 
     //search database
     $("#searchSubmit").on("click", function (event) {
@@ -68,10 +101,7 @@ $(function () {
             $("#ageLost").val("");
             $("#imgLost").val("");
 
-            $("#SubmitModal").show();
-            $(".close").on("click", function () {
-                $("#SubmitModal").hide();
-            });
+            $("#submitModal").modal();
 
         });
     });
@@ -82,6 +112,7 @@ $(function () {
         console.log($("#colorFound").val().trim());
         console.log($("#sexFound").val().trim());
         console.log($("#ageFound").val().trim());
+        console.log($("#imgFound").val().trim());
 
 
         event.preventDefault();
@@ -91,7 +122,7 @@ $(function () {
             color: $("#colorFound").val().trim(),
             sex: $("#sexFound").val().trim(),
             age: $("#ageFound").val().trim(),
-            image: $("#imgLost").val().trim()
+            image: $("#imgFound").val().trim()
         };
 
         $.ajax("/api/found-pet", {
@@ -103,12 +134,9 @@ $(function () {
             $("#colorFound").val("");
             $("#sexFound").val("");
             $("#ageFound").val("");
-            $("#imgLost").val("");
+            $("#imgFound").val("");
 
-            $("#SubmitModal").show();
-            $(".close").on("click", function () {
-                $("#SubmitModal").hide();
-            });
+            $("#submitModal").modal();
         });
     });
-});
+}));
