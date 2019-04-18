@@ -9,25 +9,25 @@ module.exports = (sequelize, DataTypes) => {
                 key: "id"
             }
         },
-        "Lost Location": {
+        lost_location: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "Lost Date": {
+        intake_date: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "Type": {
+        type: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "Looks Like": {type: DataTypes.STRING},
-        "Color": {
+        looks_like: { type: DataTypes.STRING },
+        color: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "Sex": {type: DataTypes.STRING},
-        "Age": {type: DataTypes.STRING}
+        sex: { type: DataTypes.STRING },
+        age: { type: DataTypes.STRING }
     }, {
         // don't add the timestamp attributes (updatedAt, createdAt)
         timestamps: false,

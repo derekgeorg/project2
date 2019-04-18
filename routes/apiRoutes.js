@@ -71,10 +71,42 @@ module.exports = function(app) {
     
     // Create a new lost pet
     app.post("/api/lost-pet", function(req, res) {
-        db.Stray.create(req.body).then(function(dbStrays) {
+        db.Stray.create({
+            // Post Image
+            // image: req.body.image,
+            sex: req.body.sex,
+            color: req.body.color,
+            // zip code ?
+            // location: req.body.location.human_address.zip,
+            type: req.body.type,
+            looks_like: req.body.looks_like,
+            age: req.body.age,
+            intake_date: req.body.intake_date,
+        }).then(function(dbStrays) {
             res.json(dbStrays);
         });
     });
+
+    // Create a new found pet
+    app.post("/api/found-pet", function(req, res) {
+        db.Stray.create({
+            // Post Image
+            // image: req.body.image,
+            sex: req.body.sex,
+            color: req.body.color,
+            // zip code ?
+            // location: req.body.location.human_address.zip,
+            type: req.body.type,
+            looks_like: req.body.looks_like,
+            age: req.body.age,
+            intake_date: req.body.intake_date,
+        }).then(function(dbStrays) {
+            res.json(dbStrays);
+        });
+    });
+
+
+
  
 
     // Delete an example by id
