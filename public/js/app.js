@@ -1,11 +1,16 @@
 $(function () {
 
+    // When the user clicks anywhere outside of the modal, close it
+    $(window).on("click", function(){
+        $("#SubmitModal").hide();
+    });
+
 
     //search database
     $("#searchSubmit").on("click", function (event) {
 
         var newSearch = {
-            type: $("#breedSearch").val().trim(),
+            looks_like: $("#breedSearch").val().trim(),
             color: $("#colorSearch").val().trim(),
             sex: $("#sexSearch").val().trim(),
             age: $("#ageSearch").val().trim()
@@ -49,7 +54,7 @@ $(function () {
         event.preventDefault();
 
         var lostSearch = {
-            type: $("#breedLost").val().trim(),
+            looks_like: $("#breedLost").val().trim(),
             color: $("#colorLost").val().trim(),
             sex: $("#sexLost").val().trim(),
             age: $("#ageLost").val().trim()
@@ -68,7 +73,7 @@ $(function () {
 
         });
     });
-    
+
     //submit found pet
     $("#foundSubmit").on("click", function (event) {
 
@@ -80,7 +85,7 @@ $(function () {
         event.preventDefault();
 
         var foundSearch = {
-            type: $("#breedFound").val().trim(),
+            looks_like: $("#breedFound").val().trim(),
             color: $("#colorFound").val().trim(),
             sex: $("#sexFound").val().trim(),
             age: $("#ageFound").val().trim()

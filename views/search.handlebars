@@ -4,7 +4,7 @@
                 <img src="./assets/img/LogoMakr_0serJn.png" width="auto" height="40" alt="">
             </a>
             <div class="topnav-right">
-                <button class="btn btn-sm btn-outline-secondary" id="login-btn" type="button">Logout</button>
+                <button class="btn btn-sm btn-outline-secondary" id="logout" type="button">Logout</button>
             </div>
         </nav>
 </div>
@@ -82,13 +82,17 @@
     <div class="container" id="resultsDiv">
         <div class="row">
             <div class="col">
-                {{#each example}}
+                {{#each pet}}
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img id="imgLink"
+                            <iframe id="imgLink"
                                 src={{"Image Link"}}
-                                class="card-img" alt="search results pet picture">
+                                class="card-img" 
+                                alt="search results pet picture"
+                                scrolling="no">
+                                <p>iframes are not supported by your browser.</p>
+                            </iframe>
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -103,7 +107,7 @@
                 </div>
                 {{/each}}
             </div>
-            <div class="col">
+            {{!-- <div class="col">
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
@@ -121,7 +125,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <div>
@@ -162,6 +166,42 @@
         <img src="https://s0.2mdn.net/9032025/PURI_BEN_ben-petfinder2019_premium-line-2019_Save_Now_728x90_Banner_JPG.JPG">
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+
+        $("#searchSubmit").on("click", function(e){
+            e.preventDefault();
+
+            let type = $("#petType").val();
+            let color = $("#petColor").val();
+            let sex = $("#petSex").val();
+
+            $.ajax("/api/search", {
+                type: "GET",
+                data: {
+                    type: type,
+                    color: color,
+                    sex: sex
+                }
+            }).then(function(res){
+                console.log(res);
+            });
+        });
+
+        $("#logout").on("click", function(e){
+            e.preventDefault();
+
+            $.ajax("/logout", {
+                type: "GET"
+            }).then(function(){
+                location.reload();
+                console.log("You are no longer signed in")
+            });
+        });
+    });
+
+
+</script>
 </div>
 {{>footer}}
 {{!-- <footer>
