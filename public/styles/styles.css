@@ -56,7 +56,11 @@ hr {
   background-color: orange;
   border: 1px solid orange;
   text-align: center;
-  
+}
+
+#createAccountDropdown:hover, 
+#signInDropdown:hover {
+  border: 1px solid blue;
 }
 /* End of Jumbotron Styling */
 

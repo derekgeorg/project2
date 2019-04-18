@@ -1,4 +1,6 @@
 const db = require("../models");
+const Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 const authCheck = require("../config/middleware/authentication");
 
 
@@ -27,20 +29,56 @@ module.exports = function(app) {
         });
     });
     
-    app.get("/api/search", authCheck, function(req, res){
+    //WILL ASSUME THAT THE MODEL IS Stray
+    app.get("/api/search", authCheck, function (req, res) {
         db.Stray.findAll({
             where: {
-                //allowing only one option will be limiting maybe implement a filter by category
-                type: req.body.type,
-                color: req.body.color,
-                sex: req.body.sex
+                // allowing only one option will be limiting maybe implement a filter by category
+                [Op.and]: [
+                    {type: req.body.type},
+                    {
+                        color: {
+                            [Op.like]: `%${req.body.color}%`
+                        }
+                    }
+                ],
+                [Op.or]: [
+                    {
+                        looks_like: {
+                            [Op.like]: `%${req.body.looks_like}%`
+                        }
+                    },
+                    {
+                        sex: req.body.sex
+                    },
+                    {
+                        age: req.body.age
+                    }
+                ]
+                // SELECT * FROM post WHERE type = Cat AND color = Black 
+                // AND looks_like OR sex OR age;
             }
-        }).then(function(dbStrays) {
-            res.json(dbStrays);
-            // res.render("search", {pet: dbStrays});
+        }).then(function (dbStrays) {
+            res.render("search", {searchResults: dbStrays});  
         });
     });
-    
+
+    // Saved searches
+    app.post("/api/saved", function (req, res) {
+        db.Stray.create(req.body).then(function (dbStrays) {
+            res.json(dbStrays);
+        });
+    });
+
+    // modify a report
+    app.put("/api/found-pet", function (req, res) {
+        db.Stray.update(req.body, {
+            where: {
+                id: req.body.id
+            }
+        });
+    });
+
     app.post("/api/search", authCheck, function(req, res){
         db.Stray.findAll({
             where: {
@@ -52,6 +90,8 @@ module.exports = function(app) {
         }).then(function(dbStrays) {
             res.json(dbStrays);
             // res.render("search", {pet: dbStrays});
+        }).then(function (dbStrays) {
+            res.json(dbStrays);
         });
     });
 
@@ -67,8 +107,8 @@ module.exports = function(app) {
             type: req.body.type,
             looks_like: req.body.looks_like,
             age: req.body.age,
-            intake_date: req.body.intake_date,
-        }).then(function(dbStrays) {
+            intake_date: new Date()
+        }).then(function (dbStrays) {
             res.json(dbStrays);
         });
     });
@@ -85,8 +125,8 @@ module.exports = function(app) {
             type: req.body.type,
             looks_like: req.body.looks_like,
             age: req.body.age,
-            intake_date: req.body.intake_date,
-        }).then(function(dbStrays) {
+            intake_date: new Date()
+        }).then(function (dbStrays) {
             res.json(dbStrays);
         });
     });
