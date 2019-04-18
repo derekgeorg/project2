@@ -1,5 +1,10 @@
 $(function () {
 
+    // When the user clicks anywhere outside of the modal, close it
+    $(window).on("click", function(){
+        $("#SubmitModal").hide();
+    });
+
 
     //search database
     $("#searchSubmit").on("click", function (event) {
@@ -68,7 +73,7 @@ $(function () {
 
         });
     });
-    
+
     //submit found pet
     $("#foundSubmit").on("click", function (event) {
 
