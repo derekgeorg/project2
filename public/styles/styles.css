@@ -111,19 +111,6 @@ p {
   margin-top: 10px;
 }
 
-/* Modal Styling */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  animation-duration: 0.5s;
-}
-/* Modal Content/Box */
 .modal-content {
   background-color: rgb(221, 221, 216);
   margin: 10% auto; /* 15% from the top and centered */
@@ -141,7 +128,6 @@ p {
 .modalForm {
   margin: 40px 20px;
 }
-
 /* The Close Button */
 .close {
   color: #aaa;

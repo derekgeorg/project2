@@ -1,8 +1,37 @@
-$(function () {
+$(document).ready((function () {
 
-    // When the user clicks anywhere outside of the modal, close it
-    $(window).on("click", function () {
-        $("#SubmitModal").hide();
+    $("#createAccountSubmit").on("click", function (e) {
+        e.preventDefault();
+
+        let email = $("#createEmail").val();
+        let password = $("#createPassword").val();
+
+        $.ajax("/signup", {
+            type: "POST",
+            data: {
+                email: email,
+                password: password
+            }
+        }).then(function (res) {
+            document.location.replace(res.url);
+        });
+    });
+
+    $("#signInSubmit").on("click", function (e) {
+        e.preventDefault();
+
+        let email = $("#signInEmail").val();
+        let password = $("#signInPassword").val();
+        $.ajax("/login", {
+            type: "POST",
+            data: {
+                email: email,
+                password: password
+            }
+        }).then(function (res) {
+            console.log(res);
+            document.location.replace(res.url);
+        });
     });
 
     //search database
@@ -111,4 +140,4 @@ $(function () {
             });
         });
     });
-});
+}));
