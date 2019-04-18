@@ -97,10 +97,7 @@ $(document).ready((function () {
             $("#ageLost").val("");
             $("#imgLost").val("");
 
-            $("#SubmitModal").show();
-            $(".close").on("click", function () {
-                $("#SubmitModal").hide();
-            });
+            $("#submitModal").modal();
 
         });
     });
@@ -111,6 +108,7 @@ $(document).ready((function () {
         console.log($("#colorFound").val().trim());
         console.log($("#sexFound").val().trim());
         console.log($("#ageFound").val().trim());
+        console.log($("#imgFound").val().trim());
 
 
         event.preventDefault();
@@ -120,7 +118,7 @@ $(document).ready((function () {
             color: $("#colorFound").val().trim(),
             sex: $("#sexFound").val().trim(),
             age: $("#ageFound").val().trim(),
-            image: $("#imgLost").val().trim()
+            image: $("#imgFound").val().trim()
         };
 
         $.ajax("/api/found-pet", {
@@ -132,12 +130,9 @@ $(document).ready((function () {
             $("#colorFound").val("");
             $("#sexFound").val("");
             $("#ageFound").val("");
-            $("#imgLost").val("");
+            $("#imgFound").val("");
 
-            $("#SubmitModal").show();
-            $(".close").on("click", function () {
-                $("#SubmitModal").hide();
-            });
+            $("#submitModal").modal();
         });
     });
 }));
