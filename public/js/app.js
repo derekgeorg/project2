@@ -1,10 +1,9 @@
 $(function () {
 
     // When the user clicks anywhere outside of the modal, close it
-    $(window).on("click", function(){
+    $(window).on("click", function () {
         $("#SubmitModal").hide();
     });
-
 
     //search database
     $("#searchSubmit").on("click", function (event) {
@@ -46,11 +45,6 @@ $(function () {
         console.log($("#sexLost").val().trim());
         console.log($("#ageLost").val().trim());
 
-        $("#SubmitModal").show();
-        $(".close").on("click", function () {
-            $("#SubmitModal").hide();
-        });
-
         event.preventDefault();
 
         var lostSearch = {
@@ -66,6 +60,11 @@ $(function () {
         }).then(function (response) {
             console.log("Submitting new lost pet");
 
+            $("#breedLost").val().trim("");
+            $("#colorLost").val().trim("");
+            $("#sexLost").val().trim("");
+            $("#ageLost").val().trim("");
+
             $("#SubmitModal").show();
             $(".close").on("click", function () {
                 $("#SubmitModal").hide();
@@ -76,11 +75,11 @@ $(function () {
 
     //submit found pet
     $("#foundSubmit").on("click", function (event) {
+        console.log($("#breedFound").val().trim());
+        console.log($("#colorFound").val().trim());
+        console.log($("#sexFound").val().trim());
+        console.log($("#ageFound").val().trim());
 
-        $("#SubmitModal").show();
-        $(".close").on("click", function () {
-            $("#SubmitModal").hide();
-        });
 
         event.preventDefault();
 
@@ -96,6 +95,15 @@ $(function () {
             data: foundSearch
         }).then(function (response) {
             console.log("Submitting new found pet");
+            $("#breedFound").val().trim("");
+            $("#colorFound").val().trim("");
+            $("#sexFound").val().trim("");
+            $("#ageFound").val().trim("");
+
+            $("#SubmitModal").show();
+            $(".close").on("click", function () {
+                $("#SubmitModal").hide();
+            });
         });
     });
 });
