@@ -1,14 +1,17 @@
 $(function () {
+
+
     //search database
     $("#searchSubmit").on("click", function (event) {
+
         var newSearch = {
-            breed: $("#breedSearch").val().trim(),
+            type: $("#breedSearch").val().trim(),
             color: $("#colorSearch").val().trim(),
             sex: $("#sexSearch").val().trim(),
             age: $("#ageSearch").val().trim()
         };
 
-        $.ajax("/api/strays", {
+        $.ajax("/api/search", {
             type: "GET",
             data: newSearch
         }).then(function (data) {
@@ -31,7 +34,63 @@ $(function () {
     });
 
     //submit lost pet
-    
+    $("#lostSubmit").on("click", function (event) {
 
+        console.log($("#breedLost").val().trim());
+        console.log($("#colorLost").val().trim());
+        console.log($("#sexLost").val().trim());
+        console.log($("#ageLost").val().trim());
+
+        $("#SubmitModal").show();
+        $(".close").on("click", function () {
+            $("#SubmitModal").hide();
+        });
+
+        event.preventDefault();
+
+        var lostSearch = {
+            type: $("#breedLost").val().trim(),
+            color: $("#colorLost").val().trim(),
+            sex: $("#sexLost").val().trim(),
+            age: $("#ageLost").val().trim()
+        };
+
+        $.ajax("/api/lost-pet", {
+            type: "POST",
+            data: lostSearch
+        }).then(function (response) {
+            console.log("Submitting new lost pet");
+
+            $("#SubmitModal").show();
+            $(".close").on("click", function () {
+                $("#SubmitModal").hide();
+            });
+
+        });
+    });
+    
     //submit found pet
+    $("#foundSubmit").on("click", function (event) {
+
+        $("#SubmitModal").show();
+        $(".close").on("click", function () {
+            $("#SubmitModal").hide();
+        });
+
+        event.preventDefault();
+
+        var foundSearch = {
+            type: $("#breedFound").val().trim(),
+            color: $("#colorFound").val().trim(),
+            sex: $("#sexFound").val().trim(),
+            age: $("#ageFound").val().trim()
+        };
+
+        $.ajax("/api/found-pet", {
+            type: "POST",
+            data: foundSearch
+        }).then(function (response) {
+            console.log("Submitting new found pet");
+        });
+    });
 });

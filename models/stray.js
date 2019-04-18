@@ -1,43 +1,28 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
     const Stray = sequelize.define("Stray", {
-        "Found Location": {
-            type: DataTypes.STRING,
-            allowNull: false
+        id: {
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true,
+            type: DataTypes.INTEGER
         },
-        "At AAC": {
-            type: DataTypes.BOOLEAN,
-            allowNull: false
-        },
-        "Intake Date": {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        "Type": {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        "Looks Like": {type: DataTypes.STRING},
-        "Color": {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        "Sex": {type: DataTypes.STRING},
-        "Age": {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        "Reunited": {
-            type: DataTypes.STRING,
-            defaultValue: false
-        },
-        "Image Link": {type: DataTypes.STRING},
+        image: DataTypes.JSON,
+        at_aac:  DataTypes.BOOLEAN,  
+        color: DataTypes.STRING,
+        sex: DataTypes.STRING,
+        animal_id: DataTypes.STRING,
+        location: DataTypes.JSON,
+        type: DataTypes.STRING,
+        looks_like: DataTypes.STRING,
+        age: DataTypes. STRING,  
+        intake_date: DataTypes.DATE
     }, {
-        // don't add the timestamp attributes (updatedAt, createdAt)
+    // don't add the timestamp attributes (updatedAt, createdAt)
         timestamps: false,
     });
     Stray.associate = function (models) {
-        // associations can be defined here
+    // associations can be defined here
     };
     return Stray;
 };
