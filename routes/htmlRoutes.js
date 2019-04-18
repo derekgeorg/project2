@@ -30,7 +30,7 @@ module.exports = function (app) {
     app.get("/search", function (req, res) {
         // let currentPath = __dirname.slice(0, (__dirname.length - 6));
         // console.log(currentPath);
-        res.sendFile(path.join(__dirname, "/public/search.html"));
+        res.sendFile(path.join(__dirname, "../public/search.html"));
     });
 
     app.get("/lost", function (req, res) {
