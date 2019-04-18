@@ -18,18 +18,18 @@ let data = [
 module.exports = function(app) {
 //WILL ASSUME THAT THE MODEL IS Stray
     app.get("/api/search", function(req, res){
-        db.Stray.findAll({
-            where: {
+        // db.Stray.findAll({
+        //     where: {
 
-                //allowing only one option will be limiting maybe implement a filter by category
-                "Looks Like": "Snowshoe Mix",
-                Color: req.body.color,
-                // Sex: req.body.sex,
-                // Age: req.body.age
-            }
-        }).then(function(dbStrays) {
-            res.render("index", {example: data});
-        });
+        //         //allowing only one option will be limiting maybe implement a filter by category
+        //         "Looks Like": "Snowshoe Mix",
+        //         Color: req.body.color,
+        //         // Sex: req.body.sex,
+        //         // Age: req.body.age
+        //     }
+        // }).then(function(dbStrays) {
+        res.render("search", {example: data});
+        // });
     });
 
     app.post("/api/lost-pet", function(req, res){
