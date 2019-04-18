@@ -20,29 +20,34 @@
 
     <div class="container">
         <div class="row" id="jumbotronRow">
-            <div class="col-md-3"></div>
+            <div class="col-md-1"></div>
 
-            <div class="col-md-6">
+            <div class="col-md-10">
                 <div class="jumbotron">
                     <img id="jumbotronImage" src="assets/img/LogoMakr_0serJn.png">
                     <p class="lead">Austin's most reliable database of lost and found pets!</p>
                     <hr class="my-4">
-                    <p>When your pet is lost, putting up a poster just isn't enough. Sign in or create an account 
-                        to search our database of lost/found pets in Austin and become reunited with your furry
-                        friend faster than ever!
+                    <p class="jText">When your pet is lost, putting up a poster just isn't enough and can leave you feeling 
+                        powerless. StrayTX eliminates that by giving you access to our entire database of found 
+                        pet postings as well as allowing you to submit your pet as lost. And if you find a pet and 
+                        want to help reunite them with their owner, simply submit a found pet report and you'll be 
+                        on your way. Just create an account or sign in to begin!
                     </p>
 
-                    <button class="btn btn-secondary" type="button" id="createAccountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Create an Account
-                    </button>
+                    <div class="text-center">
+                        <button class="btn btn-secondary" type="button" id="createAccountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Create an Account
+                        </button>
 
-                    <button class="btn btn-secondary" type="button" id="signInDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sign In
-                    </button>
+                        <button class="btn btn-secondary" type="button" id="signInDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sign In
+                        </button>
+                    </div>
+                    
                 </div>
             </div>
 
-            <div class="col-md-3"></div>
+            <div class="col-md-1"></div>
         </div>
 
         <!-- Create Account Modal -->
@@ -50,7 +55,7 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h3 class="modalHeadline">Create Account</h3>
-                <form>
+                <form class="modalForm">
                     <div class="form-group">
                         <label for="createEmail">Email address</label>
                         <input type="email" class="form-control" id="createEmail" placeholder="email@example.com">
@@ -61,7 +66,7 @@
                         <input type="password" class="form-control" id="createPassword" placeholder="Password">
                     </div>
                                                         
-                    <button type="submit" class="btn btn-primary" id="createAccountSubmit"><a href="project2-results.html">Create Account</a></button>
+                    <button type="submit" class="btn btn-primary" id="createAccountSubmit">Create Account</button>
                 </form>
             </div>
         </div>
@@ -71,7 +76,7 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h3 class="modalHeadline">Sign In</h3>
-                <form>
+                <form class="modalForm">
                     <div class="form-group">
                         <label for="signInEmail">Email address</label>
                         <input type="email" class="form-control" id="signInEmail" placeholder="email@example.com">
@@ -82,7 +87,7 @@
                         <input type="password" class="form-control" id="signInPassword" placeholder="Password">
                     </div>
                                             
-                    <button type="submit" class="btn btn-primary" id="signInSubmit"><a href="project2-results.html">Sign in</a></button>
+                    <button type="submit" class="btn btn-primary" id="signInSubmit">Sign in</button>
                 </form>
             </div>
         </div>
