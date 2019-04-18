@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
   <title>Home Page</title>
 </head>
@@ -20,37 +21,47 @@
 
     <div class="container">
         <div class="row" id="jumbotronRow">
-            <div class="col-md-3"></div>
+            <div class="col-md-1"></div>
 
-            <div class="col-md-6">
+            <div class="col-md-10">
                 <div class="jumbotron">
                     <img id="jumbotronImage" src="assets/img/LogoMakr_0serJn.png">
                     <p class="lead">Austin's most reliable database of lost and found pets!</p>
                     <hr class="my-4">
-                    <p>When your pet is lost, putting up a poster just isn't enough. Sign in or create an account 
-                        to search our database of lost/found pets in Austin and become reunited with your furry
-                        friend faster than ever!
+                    <p class="jText text-center">When your pet is lost, putting up a poster just isn't enough and can leave you feeling 
+                        powerless. StrayTX eliminates that by giving you access to our entire database of found 
+                        pet postings as well as allowing you to submit your pet as lost. And if you find a pet and 
+                        want to help reunite them with their owner, simply submit a found pet post and you'll be 
+                        on your way. 
                     </p>
 
-                    <button class="btn btn-secondary" type="button" id="createAccountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Create an Account
-                    </button>
+                    <p class="jText text-center">
+                        Just create an account or sign in to begin!
+                    </p>
 
-                    <button class="btn btn-secondary" type="button" id="signInDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sign In
-                    </button>
+
+                    <div class="text-center" id="jumbotronButtons">
+                        <button class="btn btn-secondary" type="button" id="createAccountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Create an Account
+                        </button>
+
+                        <button class="btn btn-secondary" type="button" id="signInDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sign In
+                        </button>
+                    </div>
+                    
                 </div>
             </div>
 
-            <div class="col-md-3"></div>
+            <div class="col-md-1"></div>
         </div>
 
         <!-- Create Account Modal -->
-        <div id="createAccountModal" class="modal">
+        <div id="createAccountModal" class="modal animated zoomIn">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h3 class="modalHeadline">Create Account</h3>
-                <form>
+                <form class="modalForm">
                     <div class="form-group">
                         <label for="createEmail">Email address</label>
                         <input type="email" class="form-control" id="createEmail" placeholder="email@example.com">
@@ -60,18 +71,19 @@
                         <label for="createPassword">Password</label>
                         <input type="password" class="form-control" id="createPassword" placeholder="Password">
                     </div>
-                                                        
-                    <button type="submit" class="btn btn-primary" id="createAccountSubmit"><a href="project2-results.html">Create Account</a></button>
+                    <div class="text-center">                                    
+                        <button type="submit" class="btn btn-primary" id="createAccountSubmit">Create Account</button>
+                    </div>
                 </form>
             </div>
         </div>
 
         <!-- Sign In Modal -->
-        <div id="signInModal" class="modal">
+        <div id="signInModal" class="modal animated zoomIn">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h3 class="modalHeadline">Sign In</h3>
-                <form>
+                <form class="modalForm">
                     <div class="form-group">
                         <label for="signInEmail">Email address</label>
                         <input type="email" class="form-control" id="signInEmail" placeholder="email@example.com">
@@ -81,8 +93,9 @@
                         <label for="signInPassword">Password</label>
                         <input type="password" class="form-control" id="signInPassword" placeholder="Password">
                     </div>
-                                            
-                    <button type="submit" class="btn btn-primary" id="signInSubmit"><a href="project2-results.html">Sign in</a></button>
+                    <div class="text-center">                       
+                        <button type="submit" class="btn btn-primary" id="signInSubmit">Sign in</button>
+                    </div> 
                 </form>
             </div>
         </div>

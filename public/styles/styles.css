@@ -3,76 +3,62 @@ h5 {
   font-size: 14px;
 }
 
-/* Header Styling */
-
-#titleRow {
-  padding-bottom: 10px;
-  border-bottom: 2px solid blue;
+html {
+  height: 100%;
 }
 
-/* Sign In / Create Account Button Styling */
+body {
+  background-image: url(../assets/img/dogbackground.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: rgb(221, 221, 216);
+  height: 100%;
+}
 
-#createAccountDropdown, #signInDropdown {
-  background-color: orange;
-  margin: 0 auto;
+/* Header Styling */
+
+.topnav {
+  border-bottom: 10px solid blue;
 }
 
 /* Jumbotron Styling */
 .jumbotron {
   margin: auto;
-}
-
-#jumbotronRow {
-  margin-top: 80px;
+  background-color: rgba(255, 255, 255, 0);
+  padding-top: 40px;
 }
 
 #jumbotronImage {
   height: 80px;
   width: auto;
+  display: block;
+  margin: 0 auto 10px auto;
 }
 
-/* Modal Styling */
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-.modalHeadline {
+.lead {
   text-align: center;
 }
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+hr {
+  background-color: blue;
+  height: 2px;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.jText {
+  font-size: 16px;
 }
+
+#jumbotronButtons {
+  padding-top: 10px;
+}
+
+#createAccountDropdown, #signInDropdown {
+  background-color: orange;
+  border: 1px solid orange;
+  text-align: center;
+  
+}
+/* End of Jumbotron Styling */
 
 p {
   font-family: 'Montserrat', sans-serif;
@@ -131,17 +117,27 @@ p {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  animation-duration: 0.5s;
 }
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  background-color: rgb(221, 221, 216);
+  margin: 10% auto; /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  border: 1px solid blue;
+  width: 40%; /* Could be more or less, depending on screen size */
 }
+
+.modalHeadline {
+  text-align: center;
+  border-bottom: 2px solid blue;
+  padding-bottom: 40px;
+}
+
+.modalForm {
+  margin: 40px 20px;
+}
+
 /* The Close Button */
 .close {
   color: #aaa;
@@ -151,7 +147,7 @@ p {
 }
 .close:hover,
 .close:focus {
-  color: black;
+  color: orange;
   text-decoration: none;
   cursor: pointer;
 }
