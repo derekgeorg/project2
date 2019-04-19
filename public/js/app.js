@@ -27,7 +27,7 @@ function displaySearchResults(res) {
 $(document).ready((function () {
 
 
-    $(".logout").on("click", function(e){
+    $(".logout").on("click", function (e) {
 
         e.preventDefault();
 
@@ -86,6 +86,8 @@ $(document).ready((function () {
         console.log($("#sexLost").val().trim());
         console.log($("#ageLost").val().trim());
         console.log($("#imgLost").val().trim());
+        console.log($("#zipLost").val().trim());
+
 
         event.preventDefault();
 
@@ -94,7 +96,12 @@ $(document).ready((function () {
             color: $("#colorLost").val().trim(),
             sex: $("#sexLost").val().trim(),
             age: $("#ageLost").val().trim(),
-            image: $("#imgLost").val().trim()
+            image: {
+                url: $("#imgLost").val().trim()
+            },
+            location: {
+                zip_code: $("#zipLost").val().trim()
+            }
         };
 
         $.ajax("/api/lost-pet", {
@@ -120,6 +127,7 @@ $(document).ready((function () {
         console.log($("#sexFound").val().trim());
         console.log($("#ageFound").val().trim());
         console.log($("#imgFound").val().trim());
+        console.log($("#zipFound").val().trim());
 
 
         event.preventDefault();
@@ -129,7 +137,12 @@ $(document).ready((function () {
             color: $("#colorFound").val().trim(),
             sex: $("#sexFound").val().trim(),
             age: $("#ageFound").val().trim(),
-            image: $("#imgFound").val().trim()
+            image: {
+                url: $("#imgFound").val().trim()
+            },
+            location: {
+                zip_code: $("#zipFound").val().trim()
+            }
         };
 
         $.ajax("/api/found-pet", {
