@@ -7,23 +7,21 @@ module.exports = function (app) {
     
     app.get("/", function(req, res){
         if(req.user){
-            res.redirect("/preview/search");
+            res.redirect("/search");
         }   
-        
-        res.sendFile(path.join(__dirname, "../public/index.html"));
+        else{
+            res.sendFile(path.join(__dirname, "../public/index.html"));
+        }
     });
 
     app.post("/login", passport.authenticate("local"), function (req, res) {
         // res.sendFile(path.join(__dirname, "../public/search.html"));
         res.status(200).json({url:"/preview/search"});
-
     });
 
     app.get("/logout", function(req, res) {
         req.logout();
         res.status(200).json({url:"/search"});
-
-        // res.redirect("/");
     });
 
     app.post("/signup", function (req, res) {
