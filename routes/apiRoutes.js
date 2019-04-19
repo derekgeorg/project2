@@ -79,6 +79,7 @@ module.exports = function(app) {
 
     // Create a new lost pet
     app.post("/api/lost-pet", authCheck, function(req, res) {
+        console.log(req.body);
         db.Stray.create({
             // Post Image
             // image: req.body.image,

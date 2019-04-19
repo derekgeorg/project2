@@ -1,7 +1,8 @@
+
 function displaySearchResults(res) {
     $("#tbody").empty();
 
-    for (let i =0; i<res.length; i++) {
+    for (let i = 0; i < res.length; i++) {
         let newEntry = $("<tr>");
         let sex = $("<th>");
         let looks_like = $("<td>");
@@ -23,21 +24,14 @@ function displaySearchResults(res) {
     }
 }
 
-//<tr>
-//    <th scope="row">Intact Female</th>
-//    <td>Snowshoe Mix</td>
-//    <td>Seal Point</td>
-//    <td>http://petharbor.com/get_image.asp?RES=Detail&ID=A792513&LOCATION=ASTN</td>
-//</tr>
-
 $(document).ready((function () {
 
-    $("#logout").on("click", function(e){
+    $("#logout").on("click", function (e) {
         e.preventDefault();
 
         $.ajax("/logout", {
             type: "GET"
-        }).then(function(res){
+        }).then(function (res) {
             document.location.replace(res.url);
             console.log("You are no longer signed in");
         });
@@ -77,39 +71,9 @@ $(document).ready((function () {
         });
     });
 
-    $("#searchPageButton").on("click", function(e) {
-        document.location.replace("/api/strays");
-    }); 
-
-    //search database
-    $("#searchSubmit").on("click", function (event) {
-        event.preventDefault();
-
-        let newSearch = {
-            type: $("#petType").val(),
-            color: $("#petColor").val()
-        };
-
-        $.ajax("/api/search", {
-            type: "POST",
-            data: newSearch
-        }).then(function (res) {
-            console.log(res);
-            displaySearchResults(res);
-            // for (var i = 0; i < data.length; i++) {
-            //     var searchDiv = $("<div class='searchDiv'></div>");
-            // var p1 = $("<p>").html("<span id='descriptionHeader'>Found Location: </span>" + data[i]["Found Location"]);
-            //     var p2 = $("<p>").html("<span id='descriptionHeader'>At AAC: </span>" + data[i]["At AAC"]);
-            //     var p3 = $("<p>").html("<span id='descriptionHeader'>Intake Date: </span>" + data[i]["Intake Date"]);
-            //     var p4 = $("<p>").html("<span id='descriptionHeader'>Type: </span>" + data[i]["Type"]);
-            //     var p5 = $("<p>").html("<span id='descriptionHeader'>Looks Like: </span>" + data[i]["Looks Like"]);
-            //     var p6 = $("<p>").html("<span id='descriptionHeader'>Color: </span>" + data[i]["Color"]);
-            //     var p7 = $("<p>").html("<span id='descriptionHeader'>Sex: </span>" + data[i]["Sex"]);
-            //     var p8 = $("<p>").html("<span id='descriptionHeader'>Age: </span>" + data[i]["Age"]);
-            //     var image = $("<img>").attr("src", data[i]["Image Link"]);
-            //     searchDiv.append(image, p1, p2, p6, p3, p4, p5, p6, p7, p8);
-            // }
-        });
+    $("#searchPageButton").on("click", function (e) {
+        e.preventDefault();
+        document.location.replace("/search");
     });
 
     //submit lost pet
@@ -119,7 +83,7 @@ $(document).ready((function () {
         console.log($("#colorLost").val().trim());
         console.log($("#sexLost").val().trim());
         console.log($("#ageLost").val().trim());
-        console.log(("#imgLost").val().trim());
+        console.log($("#imgLost").val().trim());
 
         event.preventDefault();
 
@@ -144,7 +108,6 @@ $(document).ready((function () {
             $("#imgLost").val("");
 
             $("#submitModal").modal();
-
         });
     });
 
