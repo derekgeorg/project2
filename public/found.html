@@ -15,11 +15,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
-    <link rel="shortcut icon" type="image/png" href="assets/img/straytx_favicon.png"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <script src="/public/js/app.js"></script>
+    <link rel="shortcut icon" type="image/png" href="assets/img/straytx_favicon.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="/js/app.js"></script>
 </head>
 
 <body>
@@ -27,16 +28,16 @@
     <div class="heading-div">
         <div class="topnav">
             <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/search">
                     <img src="assets/img/LogoMakr_0serJn.png" width="auto" height="40" alt="">
                 </a>
                 <div class="topnav-right">
-                    <button class="btn btn-sm btn-outline-secondary" id="login-btn" type="button">Log Out</button>
+                    <button class="btn btn-sm btn-outline-secondary logout" type="button">Log Out</button>
                 </div>
             </nav>
         </div>
     </div>
-      <!-- main Tabs Div includes List tab and Map tab-->      
+    <!-- main Tabs Div includes List tab and Map tab-->
     <div class="card text-center">
         <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
@@ -47,7 +48,7 @@
                     <a class="nav-link" href="/lost">Lost pet</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link active" href="/found">Found pet</a>
+                    <a class="nav-link active" href="/found">Found pet</a>
                 </li>
             </ul>
         </div>
@@ -61,40 +62,60 @@
                 <h3 class="form-title">Submit a Found Pet</h3>
                 <form class="post-form">
                     <div class="form-group">
+                        <label for="lostType">Pet Type</label>
+                        <select class="form-control" id="lostType">
+                            <option>Cat</option>
+                            <option>Dog</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label for="breedFound">Breed</label>
                         <input type="text" class="form-control" id="breedFound" placeholder="Breed">
                     </div>
-              
+
                     <div class="form-group">
                         <label for="colorFound">Main Color</label>
                         <select class="form-control" id="colorFound">
-                          <option>Black</option>
-                          <option>Brown</option>
-                          <option>Grey</option>
-                          <option>White</option>
-                          <option>Golden</option>
+                            <option value="Apricot">Apricot</option>
+                            <option value="Black">Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Brown">Brown</option>
+                            <option value="Calico">Calico</option>
+                            <option value="Chocolate">Chocolate</option>
+                            <option value="Gray">Gray</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Red">Red</option>
+                            <option value="Tan">Tan</option>
+                            <option value="Tricolor">Tricolor</option>
+                            <option value="White">White</option>
                         </select>
                     </div>
-              
+
                     <div class="form-group">
                         <label for="sexFound">Sex</label>
                         <input type="text" class="form-control" id="sexFound" placeholder="Sex">
                     </div>
-              
+
                     <div class="form-group">
                         <label for="ageFound">Age</label>
                         <input type="number" class="form-control" id="ageFound" placeholder="Age">
                     </div>
-              
+
+                    <div class="form-group">
+                        <label for="zipFound">zipcode</label>
+                        <input type="number" class="form-control" id="zipFound" placeholder="Zipcode">
+                    </div>
+
                     <div class="form-group">
                         <label for="imgFound">Image URL</label>
                         <input type="text" class="form-control" id="imgFound" placeholder="Image URL">
                     </div>
-                    
+
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary" id="foundSubmit">Submit</button>
                     </div>
-                </form> 
+                </form>
             </div>
 
             <div class="col-md-2"></div>
@@ -110,10 +131,10 @@
                 <div class="form-group">
                     <label for="signInEmail">Your pet has been submitted!</label>
                 </div>
-            
-                <div class="text-center">                       
-                    <button class="btn btn-primary" id="searchPageButton">Home</button>                
-                </div> 
+
+                <div class="text-center">
+                    <button class="btn btn-primary" id="searchPageButton">Home</button>
+                </div>
             </form>
         </div>
     </div>
@@ -127,7 +148,7 @@
                     <li class="socialIcon"><i class="fab fa-twitter-square fa-2x"></i></li>
                 </ul>
             </div>
-        </div>    
+        </div>
         <div class="subFooter2">
             <div class="subFooter-inner-body">
                 <p class="subFooter-copyright">© 2019
@@ -137,7 +158,7 @@
                     All trademarks are owned by G6 Incorporated.
                 </p>
             </div>
-        </div> 
+        </div>
     </footer>
 
     <script src="./js/app.js"></script>
