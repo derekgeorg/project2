@@ -26,6 +26,10 @@ function displaySearchResults(res) {
 
 $(document).ready((function () {
 
+    // if (!$("#breedLost").val() ) {
+    //     document.getElementById("lostSubmit").disabled = true;
+    // }
+
 
     $(".logout").on("click", function (e) {
 
@@ -97,6 +101,9 @@ $(document).ready((function () {
 
     //submit lost pet
     $("#lostSubmit").on("click", function (event) {
+        event.preventDefault();
+
+        $("#error-message").text("");
 
         console.log($("#lostType").val().trim());
         console.log($("#breedLost").val().trim());
@@ -106,9 +113,12 @@ $(document).ready((function () {
         console.log($("#zipLost").val().trim());
         console.log($("#imgLost").val().trim());
         
+        if (!$("#lostType").val().trim() || !$("#breedLost").val().trim() || !$("#colorLost").val().trim() || !$("#zipLost").val().trim() || !$("#imgLost").val().trim()) {
+            $("#error-message").text("Please fill in all fields");
+            return;
+        }
 
 
-        event.preventDefault();
 
         var lostSearch = {
             pet_type: $("#lostType").val().trim(),
@@ -136,6 +146,7 @@ $(document).ready((function () {
             $("#sexLost").val("");
             $("#ageLost").val("");
             $("#imgLost").val("");
+            $("#zipLost").val("");
 
             $("#submitModal").modal();
         });
@@ -143,6 +154,11 @@ $(document).ready((function () {
 
     //submit found pet
     $("#foundSubmit").on("click", function (event) {
+
+        event.preventDefault();
+
+        $("#error-message").text("");
+
         console.log($("#foundType").val().trim());
         console.log($("#breedFound").val().trim());
         console.log($("#colorFound").val().trim());
@@ -150,10 +166,12 @@ $(document).ready((function () {
         console.log($("#ageFound").val().trim());
         console.log($("#zipFound").val().trim());
         console.log($("#imgFound").val().trim());
+
+        if (!$("#foundType").val().trim() || !$("#breedFound").val().trim() || !$("#colorFound").val().trim() || !$("#zipFound").val().trim() || !$("#imgFound").val().trim()) {
+            $("#error-message").text("Please fill in all fields");
+            return;
+        }
         
-
-
-        event.preventDefault();
 
         var foundSearch = {
             pet_type: $("#foundType").val().trim(),
@@ -180,6 +198,7 @@ $(document).ready((function () {
             $("#sexFound").val("");
             $("#ageFound").val("");
             $("#imgFound").val("");
+            $("#zipFound").val("");
 
             $("#submitModal").modal();
         });
