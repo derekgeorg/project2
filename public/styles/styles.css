@@ -2,6 +2,12 @@ html {
   height: 100%;
 }
 
+body {
+  height: 100%;
+}
+
+/* Landing Page Body */
+
 #index {
   background-image: url(../assets/img/dogbackground.jpg);
   background-repeat: no-repeat;
@@ -11,6 +17,7 @@ html {
 }
 
 /* Header Styling */
+
 .heading-div {
   border-bottom: 4px solid #ffbe67;
 }
@@ -23,14 +30,14 @@ html {
   font-family: 'Montserrat', sans-serif;
 }
 
-#login-btn {
+#login-btn, #logout, .logout {
   border: 1px solid blue;
   color: blue;
   font-family: 'Montserrat', sans-serif;
   padding: 5px 25px;
 }
 
-#login-btn:hover {
+#login-btn:hover, #logout:hover, .logout:hover {
   background-color: blue;
   color: white;
 }
@@ -40,7 +47,7 @@ html {
 .jumbotron {
   margin: auto;
   background-color: rgba(255, 255, 255, 0);
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 #jumbotronImage {
@@ -80,23 +87,7 @@ hr {
   border: 1px solid #ffbe67;
 }
 
-
-/* .card.mb-3{
-  border: none;
-} */
-
-.card-text {
-  margin-bottom: 25px;
-}
-
-#logo-center {
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-#searchDiv {
-  margin-top: 10px;
-}
+/* Modal Styling */
 
 .modal-content {
   background-color: #f8f9fa;
@@ -105,6 +96,7 @@ hr {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-family: 'Montserrat', sans-serif;
   width: 40%; /* Could be more or less, depending on screen size */
+  animation-duration: 0.4s;
 }
 
 .modalHeadline {
@@ -135,6 +127,7 @@ hr {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  width: 5%;
 }
 
 .close:hover,
@@ -318,6 +311,45 @@ footer {
   padding: 15px;
 }
 
+/* Media Queries */
+
+@media only screen and (max-width: 360px) {
+  .nav-item {
+    font-size: 13px;
+  }
+}
+
+
+@media only screen and (max-width: 360px) {
+  
+  #jumbotronImage {
+    margin-left: -12px;
+  }
+  
+  .nav-item {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .modal-content {
+    width: 100%;
+  }
+
+  #createAccountDropdown {
+    margin-bottom: 10px;
+  }
+
+  #createAccountDropdown, #signInDropdown {
+    width: 60%;
+  }
+
+  #createAccountSubmit, #signInSubmit {
+    width: 100%;
+  }
+}
+  
 /* 404 page */
 
 .bg {
@@ -336,4 +368,4 @@ footer {
   color: white;
   text-shadow: black 0.3em 0.3em 0.3em;
   background:transparent;
-}
+  }
