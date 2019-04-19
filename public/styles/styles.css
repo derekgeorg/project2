@@ -11,12 +11,32 @@ html {
 }
 
 /* Header Styling */
+.heading-div {
+  border-bottom: 4px solid #ffbe67;
+}
 
 .topnav {
   border-bottom: 10px solid blue;
 }
 
+.card-header {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#login-btn {
+  border: 1px solid blue;
+  color: blue;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px 25px;
+}
+
+#login-btn:hover {
+  background-color: blue;
+  color: white;
+}
+
 /* Jumbotron Styling */
+
 .jumbotron {
   margin: auto;
   background-color: rgba(255, 255, 255, 0);
@@ -48,19 +68,16 @@ hr {
 }
 
 #createAccountDropdown, #signInDropdown {
-  background-color: orange;
-  border: 1px solid orange;
+  background-color: blue;
+  border: 1px solid blue;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  width: 25%;
 }
 
 #createAccountDropdown:hover, 
 #signInDropdown:hover {
-  border: 1px solid blue;
-}
-/* End of Jumbotron Styling */
-
-.dropdown {
-  display: inline-block;
+  border: 1px solid #ffbe67;
 }
 
 /* Modal Styling */
@@ -77,21 +94,34 @@ hr {
 }
 /* Modal Content/Box */
 .modal-content {
-  background-color: rgb(221, 221, 216);
+  background-color: #f8f9fa;
   margin: 10% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid blue;
+  padding: 20px 30px 0px 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: 'Montserrat', sans-serif;
   width: 40%; /* Could be more or less, depending on screen size */
 }
 
 .modalHeadline {
   text-align: center;
+  font-weight: bold;
+  color: orange;
   border-bottom: 2px solid blue;
   padding-bottom: 40px;
 }
 
 .modalForm {
   margin: 40px 20px;
+}
+
+#createAccountSubmit, #signInSubmit {
+  margin-top: 20px;
+  width: 40%;
+  background-color: blue;
+}
+
+#createAccountSubmit:hover, #signInSubmit:hover {
+  border: 1px solid #ffbe67;
 }
 
 /* The Close Button */
@@ -108,6 +138,47 @@ hr {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Lost/Found Pet Forms */
+
+.form-div {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.post-form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 30px;
+}
+
+.form-title {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid blue;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  color: orange;
+}
+
+#lostSubmit, #foundSubmit {
+  width: 30%;
+  margin: 15px 0px 10px 0px;
+  background-color: blue;
+}
+
+#lostSubmit:hover, #foundSubmit:hover {
+  border: 1px solid #ffbe67;
+}
+
+/* End Lost/Found Pet Form Styling */
 
 #searchDiv {
   margin-top: 20px;
@@ -215,9 +286,8 @@ footer {
 }
 
 .subFooter {
-  border-bottom: 1px;
-  border-bottom-color: white;
-  border-bottom-style: solid;
+  border-bottom: 1px solid white;
+  border-top: 4px solid #ffbe67;
 }
 
 .subFooter2 {
