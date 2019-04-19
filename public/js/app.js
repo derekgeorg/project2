@@ -78,6 +78,23 @@ $(document).ready((function () {
         document.location.replace("/search");
     });
 
+    $("#searchSubmit").on("click", function (event) {
+        event.preventDefault();
+
+        let newSearch = {
+            type: $("#petType").val(),
+            color: $("#petColor").val()
+        };
+
+        $.ajax("/api/search", {
+            type: "POST",
+            data: newSearch
+        }).then(function (res) {
+            console.log(res);
+            displaySearchResults(res);
+        });
+    });
+
     //submit lost pet
     $("#lostSubmit").on("click", function (event) {
 
