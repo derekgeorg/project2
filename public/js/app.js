@@ -1,3 +1,35 @@
+function displaySearchResults(res) {
+    $("#tbody").empty();
+
+    for (let i =0; i<res.length; i++) {
+        let newEntry = $("<tr>");
+        let sex = $("<th>");
+        let looks_like = $("<td>");
+        let color = $("<td>");
+        let image = $("<td>");
+
+        sex.attr("scope", "row");
+        sex.text(res[i].sex);
+        looks_like.text(res[i].looks_like);
+        color.text(res[i].color);
+        image.text(res[i].image.url);
+
+        newEntry.append(sex);
+        newEntry.append(looks_like);
+        newEntry.append(color);
+        newEntry.append(image);
+
+        $("#tbody").append(newEntry);
+    }
+}
+
+//<tr>
+//    <th scope="row">Intact Female</th>
+//    <td>Snowshoe Mix</td>
+//    <td>Seal Point</td>
+//    <td>http://petharbor.com/get_image.asp?RES=Detail&ID=A792513&LOCATION=ASTN</td>
+//</tr>
+
 $(document).ready((function () {
 
     $("#logout").on("click", function(e){
@@ -51,20 +83,19 @@ $(document).ready((function () {
 
     //search database
     $("#searchSubmit").on("click", function (event) {
+        event.preventDefault();
 
-        var newSearch = {
-            looks_like: $("#breedSearch").val().trim(),
-            color: $("#colorSearch").val().trim(),
-            sex: $("#sexSearch").val().trim(),
-            age: $("#ageSearch").val().trim()
+        let newSearch = {
+            type: $("#petType").val(),
+            color: $("#petColor").val()
         };
 
         $.ajax("/api/search", {
-            type: "GET",
+            type: "POST",
             data: newSearch
-        }).then(function (data) {
-            console.log(data);
-
+        }).then(function (res) {
+            console.log(res);
+            displaySearchResults(res);
             // for (var i = 0; i < data.length; i++) {
             //     var searchDiv = $("<div class='searchDiv'></div>");
             // var p1 = $("<p>").html("<span id='descriptionHeader'>Found Location: </span>" + data[i]["Found Location"]);

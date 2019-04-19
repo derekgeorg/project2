@@ -15,7 +15,6 @@ module.exports = function(app) {
         console.log(req.body);
         db.Stray.findAll({
             where: {
-                // allowing only one option will be limiting maybe implement a filter by category
                 [Op.and]: [
                     {type: req.body.type},
                     {
@@ -41,8 +40,8 @@ module.exports = function(app) {
                 // AND looks_like OR sex OR age;
             }
         }).then(function (dbStrays) {
-            // res.json(dbStrays);
-            res.render("search", {searchResults: dbStrays});  
+            res.json(dbStrays);
+            // res.render("search", {searchResults: dbStrays});  
         });
     });
 
