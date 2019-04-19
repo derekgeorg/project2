@@ -7,12 +7,10 @@ module.exports = function(app) {
     // Get all strays
     app.get("/api/strays", authCheck, function(req, res) {
         db.Stray.findAll({}).then(function(dbStrays) {
-            // res.json(dbStrays);
-            res.render("search", {pet: dbStrays});
+            res.json(dbStrays);
         });
     });
     
-    //WILL ASSUME THAT THE MODEL IS Stray
     app.post("/api/search", authCheck, function (req, res) {
         console.log(req.body);
         db.Stray.findAll({

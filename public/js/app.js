@@ -1,5 +1,16 @@
 $(document).ready((function () {
 
+    $("#logout").on("click", function(e){
+        e.preventDefault();
+
+        $.ajax("/logout", {
+            type: "GET"
+        }).then(function(res){
+            document.location.replace(res.url);
+            console.log("You are no longer signed in");
+        });
+    });
+
     $("#createAccountSubmit").on("click", function (e) {
         e.preventDefault();
 
