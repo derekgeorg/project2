@@ -122,9 +122,6 @@ $(document).ready((function () {
             image: {
                 url: $("#imgLost").val().trim()
             }
-            // location: {
-            //     zip_code: $("#zipLost").val().trim()
-            // }
         };
 
         $.ajax("/api/lost-pet", {
@@ -146,27 +143,30 @@ $(document).ready((function () {
 
     //submit found pet
     $("#foundSubmit").on("click", function (event) {
+        console.log($("#foundType").val().trim());
         console.log($("#breedFound").val().trim());
         console.log($("#colorFound").val().trim());
         console.log($("#sexFound").val().trim());
         console.log($("#ageFound").val().trim());
+        console.log($("#zipFound").val().trim());
         console.log($("#imgFound").val().trim());
-        // console.log($("#zipFound").val().trim());
+        
 
 
         event.preventDefault();
 
         var foundSearch = {
+            pet_type: $("#foundType").val().trim(),
             looks_like: $("#breedFound").val().trim(),
             color: $("#colorFound").val().trim(),
             sex: $("#sexFound").val().trim(),
             age: $("#ageFound").val().trim(),
+            location: {
+                zip: $("#zipFound").val().trim()
+            },
             image: {
                 url: $("#imgFound").val().trim()
             }
-            // location: {
-            //     zip_code: $("#zipFound").val().trim()
-            // }
         };
 
         $.ajax("/api/found-pet", {
