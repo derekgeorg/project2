@@ -98,21 +98,27 @@ $(document).ready((function () {
     //submit lost pet
     $("#lostSubmit").on("click", function (event) {
 
+        console.log($("#lostType").val().trim());
         console.log($("#breedLost").val().trim());
         console.log($("#colorLost").val().trim());
         console.log($("#sexLost").val().trim());
         console.log($("#ageLost").val().trim());
+        console.log($("#zipLost").val().trim());
         console.log($("#imgLost").val().trim());
-        // console.log($("#zipLost").val().trim());
+        
 
 
         event.preventDefault();
 
         var lostSearch = {
+            pet_type: $("#lostType").val().trim(),
             looks_like: $("#breedLost").val().trim(),
             color: $("#colorLost").val().trim(),
             sex: $("#sexLost").val().trim(),
             age: $("#ageLost").val().trim(),
+            location: {
+                zip: $("#zipLost").val().trim()
+            },
             image: {
                 url: $("#imgLost").val().trim()
             }
