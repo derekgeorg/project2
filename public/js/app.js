@@ -32,7 +32,7 @@ function displaySearchResults(res) {
 
 $(document).ready((function () {
 
-    $("#logout").on("click", function(e){
+    $(".logout").on("click", function(e){
         e.preventDefault();
 
         $.ajax("/logout", {
