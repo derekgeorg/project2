@@ -28,7 +28,7 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         }
     }, {
-        timestamp: false
+        timestamps: false
     });
 
     User.associate = function (models) {
