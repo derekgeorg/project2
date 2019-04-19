@@ -51,12 +51,12 @@
                 </li>
             </ul>
         </div>
-        <div class="addspace">
+        <!-- <div class="addspace">
             <img src="https://s0.2mdn.net/9032025/PURI_BEN_ben-petfinder2019_premium-line-2019_Save_Now_728x90_Banner_JPG.JPG">
-        </div>
+        </div> -->
     </div>
         
-    <div class="container" id="searchDiv"> 
+    <div class="container" id="searchBar"> 
         <form class="form-inline">
             <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
             <select class="custom-select my-1 mr-sm-2" id="petType">
@@ -70,7 +70,11 @@
                 <option value="Black">Black</option>
                 <option value="Gold">Gold</option>
             </select>
-        
+            <select class="custom-select my-1 mr-sm-2" id="petSex">
+                <option selected>Pet Sex</option>
+                <option value="Male">Male</option>
+                <option value="Female">Black</option>
+            </select>
         
             <div class="custom-control custom-checkbox my-1 mr-sm-2">
                 <input type="checkbox" class="custom-control-input" id="customControlInline">
@@ -82,7 +86,7 @@
     </div>
 
     <div>
-        <table class="table table-striped">
+        <table class="table table-striped" id="searchTable">
             <thead>
                 <tr>
                     <th scope="col">Sex</th>
