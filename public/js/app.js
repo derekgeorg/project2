@@ -86,7 +86,7 @@ $(document).ready((function () {
         console.log($("#sexLost").val().trim());
         console.log($("#ageLost").val().trim());
         console.log($("#imgLost").val().trim());
-        console.log($("#zipLost").val().trim());
+        // console.log($("#zipLost").val().trim());
 
 
         event.preventDefault();
@@ -98,16 +98,17 @@ $(document).ready((function () {
             age: $("#ageLost").val().trim(),
             image: {
                 url: $("#imgLost").val().trim()
-            },
-            location: {
-                zip_code: $("#zipLost").val().trim()
             }
+            // location: {
+            //     zip_code: $("#zipLost").val().trim()
+            // }
         };
 
         $.ajax("/api/lost-pet", {
             type: "POST",
             data: lostSearch
         }).then(function (response) {
+            console.log(lostSearch);
             console.log("Submitting new lost pet");
 
             $("#breedLost").val("");
@@ -127,7 +128,7 @@ $(document).ready((function () {
         console.log($("#sexFound").val().trim());
         console.log($("#ageFound").val().trim());
         console.log($("#imgFound").val().trim());
-        console.log($("#zipFound").val().trim());
+        // console.log($("#zipFound").val().trim());
 
 
         event.preventDefault();
@@ -139,16 +140,17 @@ $(document).ready((function () {
             age: $("#ageFound").val().trim(),
             image: {
                 url: $("#imgFound").val().trim()
-            },
-            location: {
-                zip_code: $("#zipFound").val().trim()
             }
+            // location: {
+            //     zip_code: $("#zipFound").val().trim()
+            // }
         };
 
         $.ajax("/api/found-pet", {
             type: "POST",
             data: foundSearch
         }).then(function (response) {
+            console.log(foundSearch);
             console.log("Submitting new found pet");
             $("#breedFound").val("");
             $("#colorFound").val("");
