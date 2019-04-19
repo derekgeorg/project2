@@ -330,7 +330,7 @@ footer {
   z-index: -1;
 }
 
-.jumbotron {
+#jumboError {
   margin-bottom: 0px;
   height: 350px;
   color: white;
