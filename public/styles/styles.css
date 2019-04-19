@@ -144,6 +144,17 @@ hr {
   cursor: pointer;
 }
 
+
+/*Search page */
+
+#searchBar {
+  margin-top: 20px;
+}
+
+#searchTable {
+  margin-top: 20px;
+}
+
 /* Lost/Found Pet Forms */
 
 .form-div {
@@ -257,6 +268,13 @@ p {
 footer {
   background-color: #1330e1;
   height: auto;
+  /* left: 0;
+  bottom: 0;
+  width: 100%;
+  clear: both;
+  font-size: 12px;
+  text-align: center;
+  position: fixed; */
 }
 
 #hrArray {
