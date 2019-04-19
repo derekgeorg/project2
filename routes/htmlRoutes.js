@@ -14,7 +14,6 @@ module.exports = function (app) {
     });
 
     app.post("/login", passport.authenticate("local"), function (req, res) {
-        // res.status(200).json({url:"/search"});
         // res.sendFile(path.join(__dirname, "../public/search.html"));
         res.status(200).json({url:"/preview/search"});
 
