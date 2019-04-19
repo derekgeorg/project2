@@ -80,19 +80,24 @@ hr {
   border: 1px solid #ffbe67;
 }
 
-/* Modal Styling */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  animation-duration: 0.5s;
+
+/* .card.mb-3{
+  border: none;
+} */
+
+.card-text {
+  margin-bottom: 25px;
 }
-/* Modal Content/Box */
+
+#logo-center {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#searchDiv {
+  margin-top: 10px;
+}
+
 .modal-content {
   background-color: #f8f9fa;
   margin: 10% auto; /* 15% from the top and centered */

@@ -1,47 +1,50 @@
 <div class="topnav">
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">
-                <img src="./assets/img/LogoMakr_0serJn.png" width="auto" height="40" alt="">
-            </a>
-            <div class="topnav-right">
-                <button class="btn btn-sm btn-outline-secondary" id="logout" type="button">Logout</button>
-            </div>
-        </nav>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="./assets/img/LogoMakr_0serJn.png" width="auto" height="40" alt="">
+        </a>
+        <div class="topnav-right">
+            <button class="btn btn-sm btn-outline-secondary" id="logout" type="button">Logout</button>
+        </div>
+    </nav>
 </div>
 <!-- Main Container with tab links -->
 <div class="card text-center">
+    
     <div class="card-header">
         <ul class="nav nav-tabs card-header-tabs">
             <li class="nav-item">
                 <a class="nav-link active" href="/search">Search pets</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="lost.html">Lost pets</a>
+                <a class="nav-link" href="/lost">Lost pets</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="found.html">Found pet</a>
+                <a class="nav-link" href="/found">Found pet</a>
             </li>
         </ul>
     </div>
+
     <!-- Insert search Div -->
     {{!-- <div class="card-body">
                 <img id="logo-center" src="./assets/img/LogoMakr_0serJn.png" width="auto" height="100" alt="">
             <h5 class="card-text">Helping lost pets find their way home.</h5>
             <a href="#" class="btn btn-primary">New Search</a>
             <br> <br>--}}
+
     <div class="container" id="searchDiv"> 
         <form class="form-inline">
             <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
-            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref1">
+            <select class="custom-select my-1 mr-sm-2" id="petType">
                 <option selected>Pet type</option>
-                <option value="1">Dog</option>
-                <option value="2">Cat</option>
+                <option value="Dog">Dog</option>
+                <option value="Cat">Cat</option>
             </select>
-            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref2">
+            <select class="custom-select my-1 mr-sm-2" id="petColor">
                 <option selected>Color</option>
-                <option value="1">White</option>
-                <option value="2">Black</option>
-                <option value="2">Gold</option>
+                <option value="White">White</option>
+                <option value="Black">Black</option>
+                <option value="Gold">Gold</option>
             </select>
         
         
@@ -50,8 +53,10 @@
                 <label class="custom-control-label" for="customControlInline">Remember my search</label>
             </div>
         
-            <button type="submit" class="btn btn-primary my-1" id="sub-btn">Submit</button>
-</form>
+            <button type="submit" class="btn btn-primary my-1" id="searchSubmit">Submit</button>
+        </form>
+    </div>
+
         {{!-- <form>
             <div class="row"> --}}
                 {{!-- <div class="col-md-4">
@@ -77,9 +82,10 @@
             <button type="submit" class="btn btn-primary">Search</button>
             </div>
         </form> --}}
-    </div>
+
     <!-- Search results display cards -->
-    <div class="container" id="resultsDiv">
+    
+    {{!-- <div class="container" id="resultsDiv">
         <div class="row">
             <div class="col-md-6">
                 {{#each pet}}
@@ -103,7 +109,6 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
                 {{/each}}
             </div>
@@ -127,101 +132,44 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">Sex</th>
-                <th scope="col">Looks Like</th>
-                <th scope="col">Color</th>
-                <th scope="col">Link</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">Intact Female</th>
-                <td>Snowshoe Mix</td>
-                <td>Seal Point</td>
-                <td>http://petharbor.com/get_image.asp?RES=Detail&ID=A792513&LOCATION=ASTN</td>
-            </tr>
-            <tr>
-                <th scope="row">Male</th>
-                <td>Yorkshire Terrier/Miniature Schnauzer</td>
-                <td>Red/Black</td>
-                <td>http://petharbor.com/get_image.asp?RES=Detail&ID=A792513&LOCATION=ASTN</td>
-            </tr>
-            <tr>
-                <th scope="row">Female</th>
-                <td>Pitbull/Mix</td>
-                <td>Black/White</td>
-                <td>http://petharbor.com/get_image.asp?RES=Detail&ID=A792513&LOCATION=ASTN
-</td>
-            </tr>
-        </tbody>
-    </table>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Sex</th>
+                    <th scope="col">Looks Like</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Link</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <th scope="row">Intact Female</th>
+                    <td>Snowshoe Mix</td>
+                    <td>Seal Point</td>
+                    <td>http://petharbor.com/get_image.asp?RES=Detail&ID=A792513&LOCATION=ASTN</td>
+                </tr>
+                <tr>
+                    <th scope="row">Male</th>
+                    <td>Yorkshire Terrier/Miniature Schnauzer</td>
+                    <td>Red/Black</td>
+                    <td>http://petharbor.com/get_image.asp?RES=Detail&ID=A792513&LOCATION=ASTN</td>
+                </tr>
+                <tr>
+                    <th scope="row">Female</th>
+                    <td>Pitbull/Mix</td>
+                    <td>Black/White</td>
+                    <td>http://petharbor.com/get_image.asp?RES=Detail&ID=A792513&LOCATION=ASTN</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <div class="addspace">
         <img src="https://s0.2mdn.net/9032025/PURI_BEN_ben-petfinder2019_premium-line-2019_Save_Now_728x90_Banner_JPG.JPG">
     </div>
+
 </div>
-<script>
-    $(document).ready(function(){
 
-        $("#searchSubmit").on("click", function(e){
-            e.preventDefault();
-
-            let type = $("#petType").val();
-            let color = $("#petColor").val();
-            let sex = $("#petSex").val();
-
-            $.ajax("/api/search", {
-                type: "GET",
-                data: {
-                    type: type,
-                    color: color,
-                    sex: sex
-                }
-            }).then(function(res){
-                console.log(res);
-            });
-        });
-
-        $("#logout").on("click", function(e){
-            e.preventDefault();
-
-            $.ajax("/logout", {
-                type: "GET"
-            }).then(function(){
-                location.reload();
-                console.log("You are no longer signed in")
-            });
-        });
-    });
-
-
-</script>
-</div>
 {{>footer}}
-{{!-- <footer>
-    <div class="subFooter">
-        <div class="subFooter-inner-social">
-            <ul class="hr-sc-bar" id="hrArray">
-                <li class="socialIcon"><i class="fab fa-instagram fa-2x"></i></li>
-                <li class="socialIcon"><i class="fab fa-facebook-square fa-2x"></i></li>
-                <li class="socialIcon"><i class="fab fa-twitter-square fa-2x"></i></li>
-            </ul>
-        </div>
-    </div>    
-    <div class="subFooter2">
-        <div class="subFooter-inner-body">
-            <p class="subFooter-copyright">© 2019
-                StrayTX
-            </p>
-            <p class='subFooter-trademark'>
-                All trademarks are owned by G6 Incorporated.
-            </p>
-        </div>
-    </div> 
-</footer> --}}

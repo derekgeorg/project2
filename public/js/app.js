@@ -1,26 +1,101 @@
-$(function () {
+function displaySearchResults(res) {
+    $("#tbody").empty();
 
-    // When the user clicks anywhere outside of the modal, close it
-    $(window).on("click", function () {
-        $("#SubmitModal").hide();
+    for (let i =0; i<res.length; i++) {
+        let newEntry = $("<tr>");
+        let sex = $("<th>");
+        let looks_like = $("<td>");
+        let color = $("<td>");
+        let image = $("<td>");
+
+        sex.attr("scope", "row");
+        sex.text(res[i].sex);
+        looks_like.text(res[i].looks_like);
+        color.text(res[i].color);
+        image.text(res[i].image.url);
+
+        newEntry.append(sex);
+        newEntry.append(looks_like);
+        newEntry.append(color);
+        newEntry.append(image);
+
+        $("#tbody").append(newEntry);
+    }
+}
+
+//<tr>
+//    <th scope="row">Intact Female</th>
+//    <td>Snowshoe Mix</td>
+//    <td>Seal Point</td>
+//    <td>http://petharbor.com/get_image.asp?RES=Detail&ID=A792513&LOCATION=ASTN</td>
+//</tr>
+
+$(document).ready((function () {
+
+    $("#logout").on("click", function(e){
+        e.preventDefault();
+
+        $.ajax("/logout", {
+            type: "GET"
+        }).then(function(res){
+            document.location.replace(res.url);
+            console.log("You are no longer signed in");
+        });
     });
+
+    $("#createAccountSubmit").on("click", function (e) {
+        e.preventDefault();
+
+        let email = $("#createEmail").val();
+        let password = $("#createPassword").val();
+
+        $.ajax("/signup", {
+            type: "POST",
+            data: {
+                email: email,
+                password: password
+            }
+        }).then(function (res) {
+            document.location.replace(res.url);
+        });
+    });
+
+    $("#signInSubmit").on("click", function (e) {
+        e.preventDefault();
+
+        let email = $("#signInEmail").val();
+        let password = $("#signInPassword").val();
+        $.ajax("/login", {
+            type: "POST",
+            data: {
+                email: email,
+                password: password
+            }
+        }).then(function (res) {
+            console.log(res);
+            document.location.replace(res.url);
+        });
+    });
+
+    $("#searchPageButton").on("click", function(e) {
+        document.location.replace("/api/strays");
+    }); 
 
     //search database
     $("#searchSubmit").on("click", function (event) {
+        event.preventDefault();
 
-        var newSearch = {
-            looks_like: $("#breedSearch").val().trim(),
-            color: $("#colorSearch").val().trim(),
-            sex: $("#sexSearch").val().trim(),
-            age: $("#ageSearch").val().trim()
+        let newSearch = {
+            type: $("#petType").val(),
+            color: $("#petColor").val()
         };
 
         $.ajax("/api/search", {
-            type: "GET",
+            type: "POST",
             data: newSearch
-        }).then(function (data) {
-            console.log(data);
-
+        }).then(function (res) {
+            console.log(res);
+            displaySearchResults(res);
             // for (var i = 0; i < data.length; i++) {
             //     var searchDiv = $("<div class='searchDiv'></div>");
             // var p1 = $("<p>").html("<span id='descriptionHeader'>Found Location: </span>" + data[i]["Found Location"]);
@@ -68,10 +143,7 @@ $(function () {
             $("#ageLost").val("");
             $("#imgLost").val("");
 
-            $("#SubmitModal").show();
-            $(".close").on("click", function () {
-                $("#SubmitModal").hide();
-            });
+            $("#submitModal").modal();
 
         });
     });
@@ -82,6 +154,7 @@ $(function () {
         console.log($("#colorFound").val().trim());
         console.log($("#sexFound").val().trim());
         console.log($("#ageFound").val().trim());
+        console.log($("#imgFound").val().trim());
 
 
         event.preventDefault();
@@ -91,7 +164,7 @@ $(function () {
             color: $("#colorFound").val().trim(),
             sex: $("#sexFound").val().trim(),
             age: $("#ageFound").val().trim(),
-            image: $("#imgLost").val().trim()
+            image: $("#imgFound").val().trim()
         };
 
         $.ajax("/api/found-pet", {
@@ -103,12 +176,9 @@ $(function () {
             $("#colorFound").val("");
             $("#sexFound").val("");
             $("#ageFound").val("");
-            $("#imgLost").val("");
+            $("#imgFound").val("");
 
-            $("#SubmitModal").show();
-            $(".close").on("click", function () {
-                $("#SubmitModal").hide();
-            });
+            $("#submitModal").modal();
         });
     });
-});
+}));

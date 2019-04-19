@@ -3,37 +3,18 @@ const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 const authCheck = require("../config/middleware/authentication");
 
-
-let data = [
-    {
-        "id": 40,
-        "Found Location": "9302 S 1ST ST\nAUSTIN 78748\n(30.169864, -97.801524)",
-        "At AAC": false,
-        "Intake Date": "4/10/2019",
-        "Type": "Cat",
-        "Looks Like": "Snowshoe Mix",
-        "Color": "Seal Point",
-        "Sex": "Intact Female",
-        "Age": "4 weeks",
-        "Reunited": "0",
-        "Image Link": "http://petharbor.com/get_image.asp?RES=Detail&ID=A744019&LOCATION=ASTN"
-    }
-];
-
 module.exports = function(app) {
     // Get all strays
     app.get("/api/strays", authCheck, function(req, res) {
         db.Stray.findAll({}).then(function(dbStrays) {
-            // res.json(dbStrays);
-            res.render("search", {pet: dbStrays});
+            res.json(dbStrays);
         });
     });
     
-    //WILL ASSUME THAT THE MODEL IS Stray
-    app.get("/api/search", authCheck, function (req, res) {
+    app.post("/api/search", authCheck, function (req, res) {
+        console.log(req.body);
         db.Stray.findAll({
             where: {
-                // allowing only one option will be limiting maybe implement a filter by category
                 [Op.and]: [
                     {type: req.body.type},
                     {
@@ -41,25 +22,26 @@ module.exports = function(app) {
                             [Op.like]: `%${req.body.color}%`
                         }
                     }
-                ],
-                [Op.or]: [
-                    {
-                        looks_like: {
-                            [Op.like]: `%${req.body.looks_like}%`
-                        }
-                    },
-                    {
-                        sex: req.body.sex
-                    },
-                    {
-                        age: req.body.age
-                    }
                 ]
+                // [Op.or]: [
+                //     {
+                //         looks_like: {
+                //             [Op.like]: `%${req.body.looks_like}%`
+                //         }
+                //     }
+                // {
+                //     sex: req.body.sex
+                // },
+                // {
+                //     age: req.body.age
+                // }
+                // ]
                 // SELECT * FROM post WHERE type = Cat AND color = Black 
                 // AND looks_like OR sex OR age;
             }
         }).then(function (dbStrays) {
-            res.render("search", {searchResults: dbStrays});  
+            res.json(dbStrays);
+            // res.render("search", {searchResults: dbStrays});  
         });
     });
 
@@ -79,21 +61,21 @@ module.exports = function(app) {
         });
     });
 
-    app.post("/api/search", authCheck, function(req, res){
-        db.Stray.findAll({
-            where: {
-                //allowing only one option will be limiting maybe implement a filter by category
-                type: req.body.type,
-                color: req.body.color,
-                sex: req.body.sex
-            }
-        }).then(function(dbStrays) {
-            res.json(dbStrays);
-            // res.render("search", {pet: dbStrays});
-        }).then(function (dbStrays) {
-            res.json(dbStrays);
-        });
-    });
+    // app.post("/api/search", authCheck, function(req, res){
+    //     db.Stray.findAll({
+    //         where: {
+    //             //allowing only one option will be limiting maybe implement a filter by category
+    //             type: req.body.type,
+    //             color: req.body.color,
+    //             sex: req.body.sex
+    //         }
+    //     }).then(function(dbStrays) {
+    //         res.json(dbStrays);
+    //         // res.render("search", {pet: dbStrays});
+    //     }).then(function (dbStrays) {
+    //         res.json(dbStrays);
+    //     });
+    // });
 
     // Create a new lost pet
     app.post("/api/lost-pet", authCheck, function(req, res) {

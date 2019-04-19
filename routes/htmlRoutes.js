@@ -1,27 +1,29 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const path = require("path");
+const authCheck = require("../config/middleware/authentication");
 
 module.exports = function (app) {
     
     app.get("/", function(req, res){
+        if(req.user){
+            res.redirect("/preview/search");
+        }   
+        
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 
-    app.get("/dummy", function(req, res) {
-        db.Stray.findAll({}).then(function(dbStrays) {
-            // res.json(dbStrays);
-            res.render("search", {pet: dbStrays});
-        });
-    });
-
     app.post("/login", passport.authenticate("local"), function (req, res) {
-        res.status(200).json({url:"/api/strays"});
+        // res.sendFile(path.join(__dirname, "../public/search.html"));
+        res.status(200).json({url:"/preview/search"});
+
     });
 
     app.get("/logout", function(req, res) {
         req.logout();
-        res.redirect("/");
+        res.status(200).json({url:"/search"});
+
+        // res.redirect("/");
     });
 
     app.post("/signup", function (req, res) {
@@ -30,39 +32,35 @@ module.exports = function (app) {
             email: req.body.email,
             password: req.body.password
         }).then(function () {
-            res.status(200).json({url:"/api/strays"});
+            res.status(200).json({url:"/preview/search"});
         });
     });
 
-    app.get("/search", function (req, res) {
+    app.get("/preview/search", authCheck, function (req, res) {
+        console.log(req.body);
+        db.Stray.findAll({
+            where: {
+                color: "Black"
+            }
+        }).then(function (dbStrays) {
+            // res.json(dbStrays);
+            res.render("search", {searchResults: dbStrays});  
+        });
+    });
+
+    app.get("/search", authCheck, function (req, res) {
+        // let currentPath = __dirname.slice(0, (__dirname.length - 6));
+        // console.log(currentPath);
         res.sendFile(path.join(__dirname, "../public/search.html"));
     });
 
-    app.get("/lost", function (req, res) {
+    app.get("/lost", authCheck, function (req, res) {
         res.sendFile(path.join(__dirname, "../public/lost.html"));
     });
 
-    app.get("/found", function (req, res) {
+    app.get("/found", authCheck, function (req, res) {
         res.sendFile(path.join(__dirname, "../public/found.html"));
     });
-
-
-    // Unnecessary unless we want them to be their own page for login and signup
-    // app.get("/login", function (req, res) {
-    //     res.render("login", req);
-    // });
-
-    // app.get("/signup", function (req, res) {
-    //     res.render("signup", req);
-    // });
-
-    //this authCheck function either redirects to home if not auth (determined by whether a session id exists for the user)
-    //or lets the authorized user continue(next()) to the handlebar generated user page
-    // app.get("/user", authCheck, function (req, res) {
-    //     console.log(req.user);
-
-    //     res.redirect("/api/strays", req);
-    // });
 
     // Render 404 page for any unmatched routes
     app.get("*", function (req, res) {
