@@ -2,6 +2,12 @@ html {
   height: 100%;
 }
 
+body {
+  height: 100%;
+}
+
+/* Landing Page Body */
+
 #index {
   background-image: url(../assets/img/dogbackground.jpg);
   background-repeat: no-repeat;
@@ -11,6 +17,7 @@ html {
 }
 
 /* Header Styling */
+
 .heading-div {
   border-bottom: 4px solid #ffbe67;
 }
@@ -23,14 +30,14 @@ html {
   font-family: 'Montserrat', sans-serif;
 }
 
-#login-btn {
+#login-btn, #logout, .logout {
   border: 1px solid blue;
   color: blue;
   font-family: 'Montserrat', sans-serif;
   padding: 5px 25px;
 }
 
-#login-btn:hover {
+#login-btn:hover, #logout:hover, .logout:hover {
   background-color: blue;
   color: white;
 }
@@ -40,7 +47,7 @@ html {
 .jumbotron {
   margin: auto;
   background-color: rgba(255, 255, 255, 0);
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 #jumbotronImage {
@@ -80,23 +87,7 @@ hr {
   border: 1px solid #ffbe67;
 }
 
-
-/* .card.mb-3{
-  border: none;
-} */
-
-.card-text {
-  margin-bottom: 25px;
-}
-
-#logo-center {
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-#searchDiv {
-  margin-top: 10px;
-}
+/* Modal Styling */
 
 .modal-content {
   background-color: #f8f9fa;
@@ -105,6 +96,7 @@ hr {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-family: 'Montserrat', sans-serif;
   width: 40%; /* Could be more or less, depending on screen size */
+  animation-duration: 0.4s;
 }
 
 .modalHeadline {
@@ -135,6 +127,7 @@ hr {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  width: 5%;
 }
 
 .close:hover,
@@ -317,3 +310,85 @@ footer {
   margin-top: 5px;
   padding: 15px;
 }
+
+/* Media Queries */
+
+@media only screen and (max-width: 360px) {
+  
+  #jumbotronImage {
+    margin-left: -12px;
+  }
+  
+  .nav-item {
+    font-size: 13px;
+  }
+
+  
+}
+
+@media only screen and (max-width: 415px) {
+  .jText {
+    display: none;
+  }
+
+  .index-container {
+    height: 80%;
+  }
+
+  .jumbotron {
+    margin: auto;
+  }
+  
+  #lostSubmit, #foundSubmit {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  #index {
+    background-size: 100%;
+  }
+
+  .modal-content {
+    width: 100%;
+  }
+
+  #createAccountDropdown {
+    margin-bottom: 10px;
+  }
+
+  #createAccountDropdown, #signInDropdown {
+    width: 60%;
+  }
+
+  #createAccountSubmit, #signInSubmit {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 900px) {
+  #createAccountDropdown, #signInDropdown {
+    width: 40%;
+  }
+}
+  
+/* 404 page */
+
+.bg {
+  background-image: url(https://images.unsplash.com/photo-1455380579765-810023662ea2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+  position: fixed;
+  width: 100%;
+  height: 450px; /*same height as jumbotron */
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
+#jumboError {
+  margin-bottom: 0px;
+  height: 350px;
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  background:transparent;
+  }
