@@ -61,7 +61,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792432",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"ROSEWOOD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78702\"}",
+                    "human_address": {"address":"ROSEWOOD","city":"AUSTIN","state":"","zip":"78702"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
