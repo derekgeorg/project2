@@ -314,24 +314,41 @@ footer {
 /* Media Queries */
 
 @media only screen and (max-width: 360px) {
-  .nav-item {
-    font-size: 13px;
-  }
-}
-
-
-@media only screen and (max-width: 360px) {
   
   #jumbotronImage {
     margin-left: -12px;
   }
   
   .nav-item {
-    font-size: 14px;
+    font-size: 13px;
+  }
+
+  
+}
+
+@media only screen and (max-width: 415px) {
+  .jText {
+    display: none;
+  }
+
+  .index-container {
+    height: 80%;
+  }
+
+  .jumbotron {
+    margin: auto;
+  }
+  
+  #lostSubmit, #foundSubmit {
+    width: 50%;
   }
 }
 
 @media only screen and (max-width: 500px) {
+
+  #index {
+    background-size: 100%;
+  }
 
   .modal-content {
     width: 100%;
@@ -347,6 +364,12 @@ footer {
 
   #createAccountSubmit, #signInSubmit {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 900px) {
+  #createAccountDropdown, #signInDropdown {
+    width: 40%;
   }
 }
   
