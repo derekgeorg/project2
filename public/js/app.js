@@ -86,8 +86,8 @@ $(document).ready((function () {
             color: $("#petColor").val()
         };
 
-        $.ajax("/api/search", {
-            type: "POST",
+        $.ajax("/search*", {
+            type: "GET",
             data: newSearch
         }).then(function (res) {
             console.log(res);
