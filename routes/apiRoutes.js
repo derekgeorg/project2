@@ -3,39 +3,33 @@ const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 const authCheck = require("../config/middleware/authentication");
 
-module.exports = function(app) {
+module.exports = function (app) {
     // Get all strays
-    app.get("/api/strays", authCheck, function(req, res) {
-        db.Stray.findAll({}).then(function(dbStrays) {
+    app.get("/api/strays", function (req, res) {
+        console.log(req.query);
+        db.Stray.findAll({}).then(function (dbStrays) {
             res.json(dbStrays);
         });
     });
-    
-    app.post("/api/search", authCheck, function (req, res) {
-        console.log(req.body);
+
+    // Search database
+    app.get("/search*", function (req, res) {
         db.Stray.findAll({
             where: {
-                [Op.and]: [
-                    {type: req.body.type},
-                    {
-                        color: {
-                            [Op.like]: `%${req.body.color}%`
-                        }
-                    }
-                ]
-                // [Op.or]: [
-                //     {
-                //         looks_like: {
-                //             [Op.like]: `%${req.body.looks_like}%`
-                //         }
-                //     }
-                // {
-                //     sex: req.body.sex
-                // },
-                // {
-                //     age: req.body.age
-                // }
-                // ]
+                type: req.query.type,
+                color: {
+                    [Op.like]: `%${req.query.color}%`
+                },
+                [Op.or]: {
+                    location:{
+                        human_address: {
+                            zip: req.query.zip
+                        } 
+                    },
+                    sex: req.query.sex,
+                    age: req.query.age
+                }
+
                 // SELECT * FROM post WHERE type = Cat AND color = Black 
                 // AND looks_like OR sex OR age;
             }
@@ -78,7 +72,7 @@ module.exports = function(app) {
     // });
 
     // Create a new lost pet
-    app.post("/api/lost-pet", authCheck, function(req, res) {
+    app.post("/api/lost-pet", authCheck, function (req, res) {
         console.log(req.body);
         db.Stray.create({
             // Post Image
@@ -97,7 +91,7 @@ module.exports = function(app) {
     });
 
     // Create a new found pet
-    app.post("/api/found-pet", authCheck, function(req, res) {
+    app.post("/api/found-pet", authCheck, function (req, res) {
         db.Stray.create({
             // Post Image
             // image: req.body.image,
