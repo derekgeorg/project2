@@ -13,7 +13,7 @@ module.exports = function (app) {
     });
 
     // Search database
-    app.get("/api/search*", function (req, res) {
+    app.get("/api/search*", authCheck, function (req, res) {
         db.Stray.findAll({
             where: {
                 type: req.query.pet_type,
@@ -36,7 +36,6 @@ module.exports = function (app) {
             }
         }).then(function (dbStrays) {
             res.json(dbStrays);
-            // res.render("search", {searchResults: dbStrays});  
         });
     });
 
@@ -56,22 +55,6 @@ module.exports = function (app) {
         });
     });
 
-    // app.post("/api/search", authCheck, function(req, res){
-    //     db.Stray.findAll({
-    //         where: {
-    //             //allowing only one option will be limiting maybe implement a filter by category
-    //             type: req.body.type,
-    //             color: req.body.color,
-    //             sex: req.body.sex
-    //         }
-    //     }).then(function(dbStrays) {
-    //         res.json(dbStrays);
-    //         // res.render("search", {pet: dbStrays});
-    //     }).then(function (dbStrays) {
-    //         res.json(dbStrays);
-    //     });
-    // });
-
     // Create a new lost pet
     app.post("/api/lost-pet", authCheck, function (req, res) {
         console.log(req.body);
@@ -81,7 +64,6 @@ module.exports = function (app) {
             },
             sex: req.body.sex,
             color: req.body.color,
-            // zip code
             location: {
                 human_address: {
                     zip: req.body.zip
