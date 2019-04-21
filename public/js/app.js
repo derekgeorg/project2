@@ -2,7 +2,7 @@ function displaySavedSearches(res){
     $("#savedSearchesContainer").empty();
     for (let i = 0; i<res.length; i++) {
         //for every result make a button
-        let badge = $("<button>").addClass("saveSearch");
+        let badge = $("<button>").addClass("saveSearch btn btn-primary");
         let name = $("<span>").addClass("badge badge-info").text(res[i].search_name);
         let type = $("<span>").attr("id", "type").text(res[i].pet_type).css("display", "none");
         let color = $("<span>").attr("id", "color").text(res[i].color).css("display", "none");
