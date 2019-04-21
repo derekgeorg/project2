@@ -15,8 +15,7 @@ module.exports = function (app) {
     });
 
     app.post("/login", passport.authenticate("local"), function (req, res) {
-        // res.sendFile(path.join(__dirname, "../public/search.html"));
-        res.status(200).json({url:"/preview/search"});
+        res.status(200).json({url:"/search"});
     });
 
     app.get("/logout", function(req, res) {
@@ -30,25 +29,22 @@ module.exports = function (app) {
             email: req.body.email,
             password: req.body.password
         }).then(function () {
-            res.status(200).json({url:"/preview/search"});
+            res.status(200).json({url:"/search"});
         });
     });
 
-    app.get("/preview/search", authCheck, function (req, res) {
-        console.log(req.body);
-        db.Stray.findAll({
+    app.get("/saved/searches", authCheck, function (req, res) {
+        db.Search.findAll({
             where: {
-                color: "Black"
+                UserId: req.user.id
             }
-        }).then(function (dbStrays) {
-            // res.json(dbStrays);
-            res.render("search", {searchResults: dbStrays});  
+        }).then(function(dbSearch){
+            res.json(dbSearch);
         });
+
     });
 
     app.get("/search", authCheck, function (req, res) {
-        // let currentPath = __dirname.slice(0, (__dirname.length - 6));
-        // console.log(currentPath);
         res.sendFile(path.join(__dirname, "../public/search.html"));
     });
 

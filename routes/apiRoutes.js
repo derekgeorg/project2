@@ -40,9 +40,11 @@ module.exports = function (app) {
     });
 
     // Saved searches
-    app.post("/api/saved", function (req, res) {
-        db.Stray.create(req.body).then(function (dbStrays) {
-            res.json(dbStrays);
+    app.post("/api/save/search", function (req, res) {
+        req.body.UserId = req.user.id;
+        
+        db.Search.create(req.body).then(function (dbSearch) {
+            res.json(dbSearch);
         });
     });
 
