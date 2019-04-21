@@ -4,21 +4,27 @@ function displaySearchResults(res) {
 
     for (let i = 0; i < res.length; i++) {
         let newEntry = $("<tr>");
-        let sex = $("<th>");
+        let location = $("<td>");
+        let sex = $("<td>");
         let looks_like = $("<td>");
         let color = $("<td>");
         let image = $("<td>");
+        let claim = $("<td>");
 
         sex.attr("scope", "row");
+        location.text(res[i].location.human_address.zip);
         sex.text(res[i].sex);
         looks_like.text(res[i].looks_like);
         color.text(res[i].color);
         image.text(res[i].image.url);
+        color.text(res[i].color);
 
+        newEntry.append(location);
         newEntry.append(sex);
         newEntry.append(looks_like);
         newEntry.append(color);
         newEntry.append(image);
+        newEntry.append(claim);
 
         $("#tbody").append(newEntry);
     }
@@ -44,6 +50,7 @@ $(document).ready((function () {
     });
 
     $("#createAccountSubmit").on("click", function (e) {
+        e.stopImmediatePropagation();
         e.preventDefault();
 
         let email = $("#createEmail").val();
@@ -86,11 +93,12 @@ $(document).ready((function () {
         event.preventDefault();
 
         let newSearch = {
-            type: $("#petType").val(),
-            color: $("#petColor").val()
+            pet_type: $("#petType").val(),
+            color: $("#petColor").val(),
+            sex: $("#petSex").val()
         };
 
-        $.ajax("/search*", {
+        $.ajax("/api/search*", {
             type: "GET",
             data: newSearch
         }).then(function (res) {
@@ -101,6 +109,7 @@ $(document).ready((function () {
 
     //submit lost pet
     $("#lostSubmit").on("click", function (event) {
+        event.stopImmediatePropagation();
         event.preventDefault();
 
         $("#error-message").text("");
@@ -118,20 +127,14 @@ $(document).ready((function () {
             return;
         }
 
-
-
         var lostSearch = {
             pet_type: $("#lostType").val().trim(),
             looks_like: $("#breedLost").val().trim(),
             color: $("#colorLost").val().trim(),
             sex: $("#sexLost").val().trim(),
             age: $("#ageLost").val().trim(),
-            location: {
-                zip: $("#zipLost").val().trim()
-            },
-            image: {
-                url: $("#imgLost").val().trim()
-            }
+            zip: $("#zipLost").val().trim(),
+            image_url: $("#imgLost").val().trim()
         };
 
         $.ajax("/api/lost-pet", {
@@ -154,8 +157,9 @@ $(document).ready((function () {
 
     //submit found pet
     $("#foundSubmit").on("click", function (event) {
-
+        event.stopImmediatePropagation();
         event.preventDefault();
+
 
         $("#error-message").text("");
 
@@ -179,12 +183,8 @@ $(document).ready((function () {
             color: $("#colorFound").val().trim(),
             sex: $("#sexFound").val().trim(),
             age: $("#ageFound").val().trim(),
-            location: {
-                zip: $("#zipFound").val().trim()
-            },
-            image: {
-                url: $("#imgFound").val().trim()
-            }
+            zip: $("#zipFound").val().trim(),
+            image_url: $("#imgFound").val().trim()
         };
 
         $.ajax("/api/found-pet", {

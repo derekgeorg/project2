@@ -5,7 +5,7 @@ const authCheck = require("../config/middleware/authentication");
 
 module.exports = function (app) {
     // Get all strays
-    app.get("/api/strays", function (req, res) {
+    app.get("/api/strays", authCheck, function (req, res) {
         console.log(req.query);
         db.Stray.findAll({}).then(function (dbStrays) {
             res.json(dbStrays);
@@ -13,25 +13,26 @@ module.exports = function (app) {
     });
 
     // Search database
-    app.get("/search*", function (req, res) {
+    app.get("/api/search*", function (req, res) {
         db.Stray.findAll({
             where: {
-                type: req.query.type,
+                type: req.query.pet_type,
                 color: {
                     [Op.like]: `%${req.query.color}%`
                 },
+                sex: {
+                    [Op.like]: `%${req.query.sex}%`
+                }
+                /*
                 [Op.or]: {
                     location:{
                         human_address: {
                             zip: req.query.zip
                         } 
                     },
-                    sex: req.query.sex,
                     age: req.query.age
                 }
-
-                // SELECT * FROM post WHERE type = Cat AND color = Black 
-                // AND looks_like OR sex OR age;
+                */
             }
         }).then(function (dbStrays) {
             res.json(dbStrays);
@@ -75,13 +76,18 @@ module.exports = function (app) {
     app.post("/api/lost-pet", authCheck, function (req, res) {
         console.log(req.body);
         db.Stray.create({
-            // Post Image
-            // image: req.body.image,
+            image: {
+                url: req.body.image_url
+            },
             sex: req.body.sex,
             color: req.body.color,
-            // zip code ?
-            // location: req.body.location.human_address.zip,
-            type: req.body.type,
+            // zip code
+            location: {
+                human_address: {
+                    zip: req.body.zip
+                }
+            },
+            type: req.body.pet_type,
             looks_like: req.body.looks_like,
             age: req.body.age,
             intake_date: new Date()
@@ -93,13 +99,17 @@ module.exports = function (app) {
     // Create a new found pet
     app.post("/api/found-pet", authCheck, function (req, res) {
         db.Stray.create({
-            // Post Image
-            // image: req.body.image,
+            image: {
+                url: req.body.image_url
+            },
             sex: req.body.sex,
             color: req.body.color,
-            // zip code ?
-            // location: req.body.location.human_address.zip,
-            type: req.body.type,
+            location: {
+                human_address: {
+                    zip: req.body.zip
+                }
+            },
+            type: req.body.pet_type,
             looks_like: req.body.looks_like,
             age: req.body.age,
             intake_date: new Date()
