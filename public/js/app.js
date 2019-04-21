@@ -18,7 +18,7 @@ function displaySearchResults(res) {
     $("#tbody").empty();
 
     for (let i = 0; i < res.length; i++) {
-        let newEntry = $("<tr>");
+        let newEntry = $("<tr>").attr("data-id", res[i].id);
         let location = $("<td>").text(res[i].location.human_address.zip);
         let sex = $("<td>").attr("scope", "row").text(res[i].sex);
         let looks_like = $("<td>").text(res[i].looks_like);
@@ -33,7 +33,7 @@ function displaySearchResults(res) {
     }
 }
 
-$(document).ready((function () {
+$(document).ready(function () {
 
     $(".logout").on("click", function (e) {
 
@@ -93,6 +93,8 @@ $(document).ready((function () {
         $("#afterSearch").hide();
         $("#beforeSearch").show();
     });
+
+
 
     $(document).on("click", ".saveSearch", function (e) {
         e.preventDefault();
@@ -168,6 +170,26 @@ $(document).ready((function () {
         }).then(function (res) {
             console.log(res);
             displaySearchResults(res);
+
+            $("tr").click(".claimButton",function(event) {
+                event.preventDefault();
+        
+                alert("Click");
+        
+                // get data-id of clicked row
+                var petId = $(this).attr("data-id");
+                
+                console.log(petId);
+
+                // send pet id data in put to update reunited value
+                $.ajax("/api/reunited", {
+                    type: "PUT",
+                    data: {id: petId}
+                }).then(function(res) {
+                    console.log(res);
+                });
+        
+            });
         });
         
     });
@@ -268,4 +290,6 @@ $(document).ready((function () {
             $("#submitModal").modal();
         });
     });
-}));
+
+
+});

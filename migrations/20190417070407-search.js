@@ -16,6 +16,14 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
+            UserId: {
+                type: Sequelize.INTEGER,
+                onDelete: "CASCADE",
+                references: {
+                    model: "Users",
+                    key: "id"
+                }
+            },
             search_name: {
                 type: Sequelize.STRING,
             },
