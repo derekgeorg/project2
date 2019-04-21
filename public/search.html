@@ -17,8 +17,9 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="./public/assets/img/straytx_favicon.png"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="./public/assets/img/straytx_favicon.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="/js/app.js"></script>
 </head>
 
@@ -37,7 +38,7 @@
             </nav>
         </div>
     </div>
-        <!-- main Tabs Div includes List tab and Map tab-->      
+    <!-- main Tabs Div includes List tab and Map tab-->
     <div class="card text-center">
         <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
@@ -48,7 +49,7 @@
                     <a class="nav-link" href="/lost">Lost pet</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="/found">Found pet</a>
+                    <a class="nav-link" href="/found">Found pet</a>
                 </li>
             </ul>
         </div>
@@ -56,70 +57,74 @@
             <img src="https://s0.2mdn.net/9032025/PURI_BEN_ben-petfinder2019_premium-line-2019_Save_Now_728x90_Banner_JPG.JPG">
         </div> -->
     </div>
-        
-    <div class="container" id="searchBar"> 
-        <div class="col-md-8 form-div">
-            <h3 class="form-title">Search Pets</h3>
-            <div id="savedSearchesContainer"></div>
-        <form class="form-inline" id="beforeSearch">
-            <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
-            <select class="custom-select my-1 mr-sm-2" id="petType">
-                <option selected>Pet type</option>
-                <option value="Dog">Dog</option>
-                <option value="Cat">Cat</option>
-            </select>
-            <select class="custom-select my-1 mr-sm-2" id="petColor">
-                <option selected>Color</option>
-                <option value="Apricot">Apricot</option>
-                <option value="Black">Black</option>
-                <option value="Blue">Blue</option>
-                <option value="Brown">Brown</option>
-                <option value="Calico">Calico</option>
-                <option value="Chocolate">Chocolate</option>
-                <option value="Gray">Gray</option>
-                <option value="Orange">Orange</option>
-                <option value="Red">Red</option>
-                <option value="Tan">Tan</option>
-                <option value="Tricolor">Tricolor</option>
-                <option value="White">White</option>
-            </select>
-            <select class="custom-select my-1 mr-sm-2" id="petSex">
-                <option selected>Sex</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-            </select>
-        
-            <!-- <div class="custom-control custom-checkbox my-1 mr-sm-2">
+
+    <div class="container" id="searchBar">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 form-div">
+                <h3 class="form-title">Search Pets</h3>
+                <div id="savedSearchesContainer"></div>
+                <form class="form-inline" id="beforeSearch">
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
+                    <select class="custom-select my-1 mr-sm-2" id="petType">
+                        <option selected>Pet type</option>
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                    </select>
+                    <select class="custom-select my-1 mr-sm-2" id="petColor">
+                        <option selected>Color</option>
+                        <option value="Apricot">Apricot</option>
+                        <option value="Black">Black</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Brown">Brown</option>
+                        <option value="Calico">Calico</option>
+                        <option value="Chocolate">Chocolate</option>
+                        <option value="Gray">Gray</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Red">Red</option>
+                        <option value="Tan">Tan</option>
+                        <option value="Tricolor">Tricolor</option>
+                        <option value="White">White</option>
+                    </select>
+                    <select class="custom-select my-1 mr-sm-2" id="petSex">
+                        <option selected>Sex</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+
+                    <!-- <div class="custom-control custom-checkbox my-1 mr-sm-2">
                 <input type="checkbox" class="custom-control-input" id="customControlInline">
                 <label class="custom-control-label" for="customControlInline">Remember my search</label>
             </div> -->
-            <button type="submit" class="btn btn-primary my-1" id="searchSubmit">Submit</button>
-            <button class="btn btn-info my-1" id="savedSearches">Saved Searches</button>
-        </form>
-        <form class="form-inline" id="afterSearch" style="display:none">
-            <input class="form-control" type="text" id="searchName" placeholder="Name your search">
-            <button class="btn btn-secondary my-1" id="saveSearch">Save Search</button>
-            <button class="btn btn-primary my-1" id="newSearch">New Search</button>
-        </form>
+                    <button type="submit" class="btn btn-primary my-1" id="searchSubmit">Submit</button>
+                    <button class="btn btn-info my-1" id="savedSearches">Saved Searches</button>
+                </form>
+                <form class="form-inline" id="afterSearch" style="display:none">
+                    <input class="form-control" type="text" id="searchName" placeholder="Name your search">
+                    <button class="btn btn-secondary my-1" id="saveSearch">Save Search</button>
+                    <button class="btn btn-primary my-1" id="newSearch">New Search</button>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <div>
-        <table class="table table-striped" id="searchTable">
-            <thead>
-                <tr>
-                    <th scope="col">Location</th>
-                    <th scope="col">Sex</th>
-                    <th scope="col">Breed</th>
-                    <th scope="col">Color</th>
-                    <th scope="col">Link</th>
-                    <th scope="col">Claim</th>
-                </tr>
-            </thead>
-            <tbody id="tbody">
+        <div>
+            <table class="table table-striped" id="searchTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Location</th>
+                        <th scope="col">Sex</th>
+                        <th scope="col">Breed</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Link</th>
+                        <th scope="col">Claim</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+            <div class="col-md-2"></div>
+        </div>
     </div>
 
     <footer>
@@ -131,7 +136,7 @@
                     <li class="socialIcon"><i class="fab fa-twitter-square fa-2x"></i></li>
                 </ul>
             </div>
-        </div>    
+        </div>
         <div class="subFooter2">
             <div class="subFooter-inner-body">
                 <p class="subFooter-copyright">© 2019
@@ -141,7 +146,7 @@
                     All trademarks are owned by G6 Incorporated.
                 </p>
             </div>
-        </div> 
+        </div>
     </footer>
 
 </body>
