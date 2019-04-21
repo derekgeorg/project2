@@ -1,41 +1,33 @@
+function displaySavedSearches(res){
+    for (let i = 0; i<res.length; i++) {
+        //for every result make a button
+        let item = $("<span>");
+        let button = $("<button>");
+        button.addClass("btn btn-info saveSearch");
+
+        $("#savedSearchesContainer").append(item);
+    }
+}
 
 function displaySearchResults(res) {
     $("#tbody").empty();
 
     for (let i = 0; i < res.length; i++) {
         let newEntry = $("<tr>");
-        let location = $("<td>");
-        let sex = $("<td>");
-        let looks_like = $("<td>");
-        let color = $("<td>");
-        let image = $("<td>");
-        let claim = $("<td>");
+        let location = $("<td>").text(res[i].location.human_address.zip);
+        let sex = $("<td>").attr("scope", "row").text(res[i].sex);
+        let looks_like = $("<td>").text(res[i].looks_like);
+        let color = $("<td>").text(res[i].color);
+        let image = $("<td>").text(res[i].image.url);
+        let claim = $("<td>").append("<button class = 'btn btn-success claimButton'>Claim</button>");
 
-        sex.attr("scope", "row");
-        location.text(res[i].location.human_address.zip);
-        sex.text(res[i].sex);
-        looks_like.text(res[i].looks_like);
-        color.text(res[i].color);
-        image.text(res[i].image.url);
-        color.text(res[i].color);
-
-        newEntry.append(location);
-        newEntry.append(sex);
-        newEntry.append(looks_like);
-        newEntry.append(color);
-        newEntry.append(image);
-        newEntry.append(claim);
+        newEntry.append(location, sex, looks_like, color, image, claim);
 
         $("#tbody").append(newEntry);
     }
 }
 
 $(document).ready((function () {
-
-    // if (!$("#breedLost").val() ) {
-    //     document.getElementById("lostSubmit").disabled = true;
-    // }
-
 
     $(".logout").on("click", function (e) {
 
@@ -89,8 +81,52 @@ $(document).ready((function () {
         document.location.replace("/search");
     });
 
+    $("#newSearch").on("click", function (e) {
+        e.preventDefault();
+        
+        $("#afterSearch").hide();
+        $("#beforeSearch").show();
+    });
+
+    $("#savedSearches").on("click", function (e) {
+        e.preventDefault();
+    
+        $.ajax("/saved/searches", {
+            type: "GET"
+        }).then(function (res) {
+            console.log(res);
+            displaySavedSearches(res);
+        });
+
+    });
+    
+    $("#saveSearch").on("click", function (e) {
+        e.preventDefault();
+
+        $("#afterSearch").hide();
+        $("#beforeSearch").show();
+
+        let search = {
+            search_name: $("#searchName").val().trim(),
+            pet_type: $("#petType").val(),
+            color: $("#petColor").val(),
+            sex: $("#petSex").val()
+        };
+
+        $.ajax("api/save/search", {
+            type: "POST",
+            data: search
+        }).then(function(res){
+            console.log(res);
+        });
+
+    });
+
     $("#searchSubmit").on("click", function (event) {
         event.preventDefault();
+
+        $("#afterSearch").show();
+        $("#beforeSearch").hide();
 
         let newSearch = {
             pet_type: $("#petType").val(),
@@ -105,6 +141,7 @@ $(document).ready((function () {
             console.log(res);
             displaySearchResults(res);
         });
+        
     });
 
     //submit lost pet

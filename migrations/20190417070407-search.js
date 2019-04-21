@@ -16,25 +16,18 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
-            lost_location: {
+            search_name: {
                 type: Sequelize.STRING,
-                allowNull: false
             },
-            intake_date: {
+            pet_type: {
                 type: Sequelize.STRING,
-                allowNull: false
             },
-            type: {
-                type: Sequelize.STRING,
-                allowNull: false
-            },
-            looks_like: { type: Sequelize.STRING },
             color: {
                 type: Sequelize.STRING,
-                allowNull: false
             },
-            sex: { type: Sequelize.STRING },
-            age: { type: Sequelize.STRING },
+            sex: { 
+                type: Sequelize.STRING,
+            }
         });
     },
 

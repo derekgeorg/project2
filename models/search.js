@@ -9,25 +9,18 @@ module.exports = (sequelize, DataTypes) => {
                 key: "id"
             }
         },
-        lost_location: {
+        search_name: {
             type: DataTypes.STRING,
-            allowNull: false
         },
-        intake_date: {
+        pet_type: {
             type: DataTypes.STRING,
-            allowNull: false
         },
-        type: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        looks_like: { type: DataTypes.STRING },
         color: {
             type: DataTypes.STRING,
-            allowNull: false
         },
-        sex: { type: DataTypes.STRING },
-        age: { type: DataTypes.STRING }
+        sex: { 
+            type: DataTypes.STRING,
+        },
     }, {
         // don't add the timestamp attributes (updatedAt, createdAt)
         timestamps: false,
