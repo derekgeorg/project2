@@ -3,45 +3,39 @@ const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 const authCheck = require("../config/middleware/authentication");
 
-module.exports = function(app) {
+module.exports = function (app) {
     // Get all strays
-    app.get("/api/strays", authCheck, function(req, res) {
-        db.Stray.findAll({}).then(function(dbStrays) {
+    app.get("/api/strays", authCheck, function (req, res) {
+        console.log(req.query);
+        db.Stray.findAll({}).then(function (dbStrays) {
             res.json(dbStrays);
         });
     });
-    
-    app.post("/api/search", authCheck, function (req, res) {
-        console.log(req.body);
+
+    // Search database
+    app.get("/api/search*", authCheck, function (req, res) {
         db.Stray.findAll({
             where: {
-                [Op.and]: [
-                    {type: req.body.type},
-                    {
-                        color: {
-                            [Op.like]: `%${req.body.color}%`
-                        }
-                    }
-                ]
-                // [Op.or]: [
-                //     {
-                //         looks_like: {
-                //             [Op.like]: `%${req.body.looks_like}%`
-                //         }
-                //     }
-                // {
-                //     sex: req.body.sex
-                // },
-                // {
-                //     age: req.body.age
-                // }
-                // ]
-                // SELECT * FROM post WHERE type = Cat AND color = Black 
-                // AND looks_like OR sex OR age;
+                type: req.query.pet_type,
+                color: {
+                    [Op.like]: `%${req.query.color}%`
+                },
+                sex: {
+                    [Op.like]: `%${req.query.sex}%`
+                }
+                /*
+                [Op.or]: {
+                    location:{
+                        human_address: {
+                            zip: req.query.zip
+                        } 
+                    },
+                    age: req.query.age
+                }
+                */
             }
         }).then(function (dbStrays) {
             res.json(dbStrays);
-            // res.render("search", {searchResults: dbStrays});  
         });
     });
 
@@ -61,33 +55,21 @@ module.exports = function(app) {
         });
     });
 
-    // app.post("/api/search", authCheck, function(req, res){
-    //     db.Stray.findAll({
-    //         where: {
-    //             //allowing only one option will be limiting maybe implement a filter by category
-    //             type: req.body.type,
-    //             color: req.body.color,
-    //             sex: req.body.sex
-    //         }
-    //     }).then(function(dbStrays) {
-    //         res.json(dbStrays);
-    //         // res.render("search", {pet: dbStrays});
-    //     }).then(function (dbStrays) {
-    //         res.json(dbStrays);
-    //     });
-    // });
-
     // Create a new lost pet
-    app.post("/api/lost-pet", authCheck, function(req, res) {
+    app.post("/api/lost-pet", authCheck, function (req, res) {
         console.log(req.body);
         db.Stray.create({
-            // Post Image
-            // image: req.body.image,
+            image: {
+                url: req.body.image_url
+            },
             sex: req.body.sex,
             color: req.body.color,
-            // zip code ?
-            // location: req.body.location.human_address.zip,
-            type: req.body.type,
+            location: {
+                human_address: {
+                    zip: req.body.zip
+                }
+            },
+            type: req.body.pet_type,
             looks_like: req.body.looks_like,
             age: req.body.age,
             intake_date: new Date()
@@ -97,15 +79,19 @@ module.exports = function(app) {
     });
 
     // Create a new found pet
-    app.post("/api/found-pet", authCheck, function(req, res) {
+    app.post("/api/found-pet", authCheck, function (req, res) {
         db.Stray.create({
-            // Post Image
-            // image: req.body.image,
+            image: {
+                url: req.body.image_url
+            },
             sex: req.body.sex,
             color: req.body.color,
-            // zip code ?
-            // location: req.body.location.human_address.zip,
-            type: req.body.type,
+            location: {
+                human_address: {
+                    zip: req.body.zip
+                }
+            },
+            type: req.body.pet_type,
             looks_like: req.body.looks_like,
             age: req.body.age,
             intake_date: new Date()
