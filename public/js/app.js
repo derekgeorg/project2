@@ -1,4 +1,5 @@
 function displaySavedSearches(res){
+    $("#savedSearchesContainer").empty();
     for (let i = 0; i<res.length; i++) {
         //for every result make a button
         let badge = $("<button>").addClass("saveSearch");
