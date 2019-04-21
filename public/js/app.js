@@ -23,7 +23,8 @@ function displaySearchResults(res) {
         let sex = $("<td>").attr("scope", "row").text(res[i].sex);
         let looks_like = $("<td>").text(res[i].looks_like);
         let color = $("<td>").text(res[i].color);
-        let image = $("<td>").text(res[i].image.url);
+        let imagelink = $("<a>").attr("href", res[i].image.url).attr("target", "_blank").text("Details");
+        let image = $("<td>").append(imagelink);
         let claim = $("<td>").append("<button class = 'btn btn-success claimButton'>Claim</button>");
 
         newEntry.append(location, sex, looks_like, color, image, claim);
