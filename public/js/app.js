@@ -1,11 +1,15 @@
 function displaySavedSearches(res){
     for (let i = 0; i<res.length; i++) {
         //for every result make a button
-        let item = $("<span>");
-        let button = $("<button>");
-        button.addClass("btn btn-info saveSearch");
+        let badge = $("<button>").addClass("saveSearch");
+        let name = $("<span>").addClass("badge badge-info").text(res[i].search_name);
+        let type = $("<span>").attr("id", "type").text(res[i].pet_type).css("display", "none");
+        let color = $("<span>").attr("id", "color").text(res[i].color).css("display", "none");
+        let sex = $("<span>").attr("id", "sex").text(res[i].sex).css("display", "none");
 
-        $("#savedSearchesContainer").append(item);
+        badge.append(name, type, color, sex);
+
+        $("#savedSearchesContainer").append(badge);
     }
 }
 
@@ -86,6 +90,26 @@ $(document).ready((function () {
         
         $("#afterSearch").hide();
         $("#beforeSearch").show();
+    });
+
+    $(".saveSearch").on("click", function(e){
+        e.preventDefault();
+
+        let search = {
+            pet_type: $(this).children("#type").val(),
+            color: $(this).children("#color").val(),
+            sex: $(this).children("#sex").val()
+        };
+
+        console.log(search);
+
+        $.ajax("/search", {
+            type: "GET",
+            data: search
+        }).then(function(res){
+            console.log(res);
+            displaySearchResults(res);
+        });
     });
 
     $("#savedSearches").on("click", function (e) {

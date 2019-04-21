@@ -138,7 +138,7 @@
             </div>
         </div>
     </div> --}}
-    <div>
+    {{!-- <div>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -171,6 +171,27 @@
         </table>
     </div>
 
-</div>
+</div> --}}
+{{#each saved}}
+<span class="saveSearch">
+
+    <span class="badge badge-info">{{search_name}}</span>
+    <span class="badge badge-info">{{type}}</span>
+    <span class="badge badge-info">{{color}}</span>
+    <span class="badge badge-info">{{sex}}</span>
+{{!-- 
+    let badge = $("<button>").addClass("saveSearch");
+        let name = $("<span>").addClass("badge badge-info").text(res[i].search_name);
+        let type = $("<span>").attr("id", "type").text(res[i].pet_type).css("display", "none");
+        let color = $("<span>").attr("id", "color").text(res[i].color).css("display", "none");
+        let sex = $("<span>").attr("id", "sex").text(res[i].sex).css("display", "none");
+
+        badge.append(name, type, color, sex);
+
+        $("#savedSearchesContainer").append(badge);
+    } --}}
+</span>
+{{/each}}
+
 
 {{>footer}}
