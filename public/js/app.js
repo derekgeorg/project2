@@ -92,24 +92,26 @@ $(document).ready((function () {
         $("#beforeSearch").show();
     });
 
-    $(".saveSearch").on("click", function(e){
+    $(document).on("click", ".saveSearch", function (e) {
         e.preventDefault();
 
         let search = {
-            pet_type: $(this).children("#type").val(),
-            color: $(this).children("#color").val(),
-            sex: $(this).children("#sex").val()
+            pet_type: $(this).children("#type").text(),
+            color: $(this).children("#color").text(),
+            sex: $(this).children("#sex").text()
         };
 
         console.log(search);
 
-        $.ajax("/search", {
+        $.ajax("/api/search", {
             type: "GET",
             data: search
         }).then(function(res){
             console.log(res);
             displaySearchResults(res);
         });
+
+    
     });
 
     $("#savedSearches").on("click", function (e) {
