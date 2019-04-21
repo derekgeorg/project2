@@ -15,8 +15,9 @@ module.exports = (sequelize, DataTypes) => {
         location: DataTypes.JSON,
         type: DataTypes.STRING,
         looks_like: DataTypes.STRING,
-        age: DataTypes. STRING,  
-        intake_date: DataTypes.DATE
+        age: DataTypes.STRING,  
+        intake_date: DataTypes.DATE,
+        reunited: DataTypes.BOOLEAN
     }, {
     // don't add the timestamp attributes (updatedAt, createdAt)
         timestamps: false,
