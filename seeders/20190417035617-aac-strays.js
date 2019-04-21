@@ -24,7 +24,7 @@ module.exports = {
                 "animal_id": "A788145",
                 "location": JSON.stringify({
                     "latitude": "30.227985",
-                    "human_address": "{\"address\":\"\",\"city\":\"FARO AUSTIN\",\"state\":\"\",\"zip\":\"78741\"}",
+                    "human_address": {"address":"","city":"FARO AUSTIN","state":"","zip":"78741"},
                     "needs_recoding": false,
                     "longitude": "-97.716971"
                 }),
@@ -43,7 +43,7 @@ module.exports = {
                 "animal_id": "A792395",
                 "location": JSON.stringify({
                     "latitude": "30.242394",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78725\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78725"},
                     "needs_recoding": false,
                     "longitude": "-97.615386"
                 }),
@@ -78,7 +78,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792433",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"ROSEWOOD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78702\"}",
+                    "human_address": {"address":"ROSEWOOD","city":"AUSTIN","state":"","zip":"78702"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -96,7 +96,7 @@ module.exports = {
                 "animal_id": "A792448",
                 "location": JSON.stringify({
                     "latitude": "30.169864",
-                    "human_address": "{\"address\":\"9302 S 1ST ST\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"9302 S 1ST ST","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.801524"
                 }),
@@ -115,7 +115,7 @@ module.exports = {
                 "animal_id": "A792449",
                 "location": JSON.stringify({
                     "latitude": "30.159555",
-                    "human_address": "{\"address\":\"4508 BRANDT RD\",\"city\":\"\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"4508 BRANDT RD","city":"","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.77136"
                 }),
@@ -134,7 +134,7 @@ module.exports = {
                 "animal_id": "A792453",
                 "location": JSON.stringify({
                     "latitude": "30.412512",
-                    "human_address": "{\"address\":\"1700 WEST PARMER\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78727\"}",
+                    "human_address": {"address":"1700 WEST PARMER","city":"AUSTIN","state":"","zip":"78727"},
                     "needs_recoding": false,
                     "longitude": "-97.688909"
                 }),
@@ -153,7 +153,7 @@ module.exports = {
                 "animal_id": "A792460",
                 "location": JSON.stringify({
                     "latitude": "30.223369",
-                    "human_address": "{\"address\":\"2612 EKTOM DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78745\"}",
+                    "human_address": {"address":"2612 EKTOM DRIVE","city":"AUSTIN","state":"","zip":"78745"},
                     "needs_recoding": false,
                     "longitude": "-97.803765"
                 }),
@@ -172,7 +172,7 @@ module.exports = {
                 "animal_id": "A792467",
                 "location": JSON.stringify({
                     "latitude": "30.356927",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78754\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78754"},
                     "needs_recoding": false,
                     "longitude": "-97.643722"
                 }),
@@ -191,7 +191,7 @@ module.exports = {
                 "animal_id": "A792468",
                 "location": JSON.stringify({
                     "latitude": "30.356927",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78754\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78754"},
                     "needs_recoding": false,
                     "longitude": "-97.643722"
                 }),
@@ -210,7 +210,7 @@ module.exports = {
                 "animal_id": "A792469",
                 "location": JSON.stringify({
                     "latitude": "30.356927",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78754\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78754"},
                     "needs_recoding": false,
                     "longitude": "-97.643722"
                 }),
@@ -229,7 +229,7 @@ module.exports = {
                 "animal_id": "A792470",
                 "location": JSON.stringify({
                     "latitude": "30.356927",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78754\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78754"},
                     "needs_recoding": false,
                     "longitude": "-97.643722"
                 }),
@@ -248,7 +248,7 @@ module.exports = {
                 "animal_id": "A792471",
                 "location": JSON.stringify({
                     "latitude": "30.356927",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78754\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78754"},
                     "needs_recoding": false,
                     "longitude": "-97.643722"
                 }),
@@ -267,7 +267,7 @@ module.exports = {
                 "animal_id": "A792472",
                 "location": JSON.stringify({
                     "latitude": "30.356927",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78754\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78754"},
                     "needs_recoding": false,
                     "longitude": "-97.643722"
                 }),
@@ -286,7 +286,7 @@ module.exports = {
                 "animal_id": "A792473",
                 "location": JSON.stringify({
                     "latitude": "30.384311",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78758\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78758"},
                     "needs_recoding": false,
                     "longitude": "-97.706726"
                 }),
@@ -305,7 +305,7 @@ module.exports = {
                 "animal_id": "A792474",
                 "location": JSON.stringify({
                     "latitude": "30.384311",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78758\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78758"},
                     "needs_recoding": false,
                     "longitude": "-97.706726"
                 }),
@@ -324,7 +324,7 @@ module.exports = {
                 "animal_id": "A792475",
                 "location": JSON.stringify({
                     "latitude": "30.384311",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78758\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78758"},
                     "needs_recoding": false,
                     "longitude": "-97.706726"
                 }),
@@ -343,7 +343,7 @@ module.exports = {
                 "animal_id": "A792476",
                 "location": JSON.stringify({
                     "latitude": "30.384311",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78758\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78758"},
                     "needs_recoding": false,
                     "longitude": "-97.706726"
                 }),
@@ -362,7 +362,7 @@ module.exports = {
                 "animal_id": "A792477",
                 "location": JSON.stringify({
                     "latitude": "30.384311",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78758\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78758"},
                     "needs_recoding": false,
                     "longitude": "-97.706726"
                 }),
@@ -381,7 +381,7 @@ module.exports = {
                 "animal_id": "A792480",
                 "location": JSON.stringify({
                     "latitude": "30.319496",
-                    "human_address": "{\"address\":\"7418 VINTAGE HILLS DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78723\"}",
+                    "human_address": {"address":"7418 VINTAGE HILLS DRIVE","city":"AUSTIN","state":"","zip":"78723"},
                     "needs_recoding": false,
                     "longitude": "-97.666497"
                 }),
@@ -400,7 +400,7 @@ module.exports = {
                 "animal_id": "A792481",
                 "location": JSON.stringify({
                     "latitude": "30.277852",
-                    "human_address": "{\"address\":\"3601 E 12TH\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78721\"}",
+                    "human_address": {"address":"3601 E 12TH","city":"AUSTIN","state":"","zip":"78721"},
                     "needs_recoding": false,
                     "longitude": "-97.694102"
                 }),
@@ -419,7 +419,7 @@ module.exports = {
                 "animal_id": "A792482",
                 "location": JSON.stringify({
                     "latitude": "30.319496",
-                    "human_address": "{\"address\":\"7418 VINTAGE HILLS DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78723\"}",
+                    "human_address": {"address":"7418 VINTAGE HILLS DRIVE","city":"AUSTIN","state":"","zip":"78723"},
                     "needs_recoding": false,
                     "longitude": "-97.666497"
                 }),
@@ -438,7 +438,7 @@ module.exports = {
                 "animal_id": "A792483",
                 "location": JSON.stringify({
                     "latitude": "30.319496",
-                    "human_address": "{\"address\":\"7418 VINTAGE HILLS DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78723\"}",
+                    "human_address": {"address":"7418 VINTAGE HILLS DRIVE","city":"AUSTIN","state":"","zip":"78723"},
                     "needs_recoding": false,
                     "longitude": "-97.666497"
                 }),
@@ -457,7 +457,7 @@ module.exports = {
                 "animal_id": "A792484",
                 "location": JSON.stringify({
                     "latitude": "30.277852",
-                    "human_address": "{\"address\":\"3601 E 12TH\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78721\"}",
+                    "human_address": {"address":"3601 E 12TH","city":"AUSTIN","state":"","zip":"78721"},
                     "needs_recoding": false,
                     "longitude": "-97.694102"
                 }),
@@ -475,7 +475,7 @@ module.exports = {
                 "sex": "Spayed Female",
                 "animal_id": "A792486",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"2210 ONION CREEK\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"2210 ONION CREEK","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -492,7 +492,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792487",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"ANDERSON\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78757\"}",
+                    "human_address": {"address":"ANDERSON","city":"AUSTIN","state":"","zip":"78757"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -510,7 +510,7 @@ module.exports = {
                 "animal_id": "A792494",
                 "location": JSON.stringify({
                     "latitude": "30.158176",
-                    "human_address": "{\"address\":\"7014 ELROY ROAD\",\"city\":\"\",\"state\":\"\",\"zip\":\"78617\"}",
+                    "human_address": {"address":"7014 ELROY ROAD","city":"","state":"","zip":"78617"},
                     "needs_recoding": false,
                     "longitude": "-97.642922"
                 }),
@@ -528,7 +528,7 @@ module.exports = {
                 "sex": "Unknown",
                 "animal_id": "A792498",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"5300 MC\",\"city\":\"CANDLESS AUSTIN\",\"state\":\"\",\"zip\":\"78756\"}",
+                    "human_address": {"address":"5300 MC","city":"CANDLESS AUSTIN","state":"","zip":"78756"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -546,7 +546,7 @@ module.exports = {
                 "animal_id": "A792499",
                 "location": JSON.stringify({
                     "latitude": "30.310158",
-                    "human_address": "{\"address\":\"2002 NORTHRIDGE DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78723\"}",
+                    "human_address": {"address":"2002 NORTHRIDGE DRIVE","city":"AUSTIN","state":"","zip":"78723"},
                     "needs_recoding": false,
                     "longitude": "-97.690281"
                 }),
@@ -564,7 +564,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792500",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"412 EAST WILLIAM\",\"city\":\"CANNON AUSTIN\",\"state\":\"\",\"zip\":\"78745\"}",
+                    "human_address": {"address":"412 EAST WILLIAM","city":"CANNON AUSTIN","state":"","zip":"78745"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -581,7 +581,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792501",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"1156 WEST CESAR\",\"city\":\"CHAVEZ AUSTIN\",\"state\":\"\",\"zip\":\"78703\"}",
+                    "human_address": {"address":"1156 WEST CESAR","city":"CHAVEZ AUSTIN","state":"","zip":"78703"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -598,7 +598,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792502",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"1156 WEST CESAR\",\"city\":\"CHAVEZ AUSTIN\",\"state\":\"\",\"zip\":\"78703\"}",
+                    "human_address": {"address":"1156 WEST CESAR","city":"CHAVEZ AUSTIN","state":"","zip":"78703"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -615,7 +615,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792503",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"1156 WEST CESAR\",\"city\":\"CHAVEZ AUSTIN\",\"state\":\"\",\"zip\":\"78703\"}",
+                    "human_address": {"address":"1156 WEST CESAR","city":"CHAVEZ AUSTIN","state":"","zip":"78703"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -632,7 +632,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792504",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"1156 WEST CESAR\",\"city\":\"CHAVEZ AUSTIN\",\"state\":\"\",\"zip\":\"78703\"}",
+                    "human_address": {"address":"1156 WEST CESAR","city":"CHAVEZ AUSTIN","state":"","zip":"78703"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -649,7 +649,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792505",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"1156 WEST CESAR\",\"city\":\"CHAVEZ AUSTIN\",\"state\":\"\",\"zip\":\"78703\"}",
+                    "human_address": {"address":"1156 WEST CESAR","city":"CHAVEZ AUSTIN","state":"","zip":"78703"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -667,7 +667,7 @@ module.exports = {
                 "animal_id": "A792513",
                 "location": JSON.stringify({
                     "latitude": "30.378511",
-                    "human_address": "{\"address\":\"\",\"city\":\"WALNUT PARK AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"","city":"WALNUT PARK AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.675352"
                 }),
@@ -686,7 +686,7 @@ module.exports = {
                 "animal_id": "A792514",
                 "location": JSON.stringify({
                     "latitude": "30.378511",
-                    "human_address": "{\"address\":\"\",\"city\":\"WALNUT PARK AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"","city":"WALNUT PARK AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.675352"
                 }),
@@ -705,7 +705,7 @@ module.exports = {
                 "animal_id": "A792515",
                 "location": JSON.stringify({
                     "latitude": "30.378511",
-                    "human_address": "{\"address\":\"\",\"city\":\"WALNUT PARK AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"","city":"WALNUT PARK AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.675352"
                 }),
@@ -724,7 +724,7 @@ module.exports = {
                 "animal_id": "A792524",
                 "location": JSON.stringify({
                     "latitude": "30.226736",
-                    "human_address": "{\"address\":\"1430 FRONTIER VALLEY\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78741\"}",
+                    "human_address": {"address":"1430 FRONTIER VALLEY","city":"AUSTIN","state":"","zip":"78741"},
                     "needs_recoding": false,
                     "longitude": "-97.693319"
                 }),
@@ -743,7 +743,7 @@ module.exports = {
                 "animal_id": "A792528",
                 "location": JSON.stringify({
                     "latitude": "30.455486",
-                    "human_address": "{\"address\":\"11500 EL SALIDO PARKWAY\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78750\"}",
+                    "human_address": {"address":"11500 EL SALIDO PARKWAY","city":"AUSTIN","state":"","zip":"78750"},
                     "needs_recoding": false,
                     "longitude": "-97.819308"
                 }),
@@ -762,7 +762,7 @@ module.exports = {
                 "animal_id": "A792531",
                 "location": JSON.stringify({
                     "latitude": "30.274312",
-                    "human_address": "{\"address\":\"1600 EAST 13TH STREET\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78702\"}",
+                    "human_address": {"address":"1600 EAST 13TH STREET","city":"AUSTIN","state":"","zip":"78702"},
                     "needs_recoding": false,
                     "longitude": "-97.723003"
                 }),
@@ -781,7 +781,7 @@ module.exports = {
                 "animal_id": "A792532",
                 "location": JSON.stringify({
                     "latitude": "30.331232",
-                    "human_address": "{\"address\":\"1601 E ANDERSON LN\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78752\"}",
+                    "human_address": {"address":"1601 E ANDERSON LN","city":"AUSTIN","state":"","zip":"78752"},
                     "needs_recoding": false,
                     "longitude": "-97.684107"
                 }),
@@ -800,7 +800,7 @@ module.exports = {
                 "animal_id": "A792533",
                 "location": JSON.stringify({
                     "latitude": "30.169767",
-                    "human_address": "{\"address\":\"7500 S PLEASANT VALLEY RD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"7500 S PLEASANT VALLEY RD","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.754017"
                 }),
@@ -819,7 +819,7 @@ module.exports = {
                 "animal_id": "A792544",
                 "location": JSON.stringify({
                     "latitude": "30.264271",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78702\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78702"},
                     "needs_recoding": false,
                     "longitude": "-97.71608"
                 }),
@@ -838,7 +838,7 @@ module.exports = {
                 "animal_id": "A792563",
                 "location": JSON.stringify({
                     "latitude": "30.410374",
-                    "human_address": "{\"address\":\"12349 METRIC BOULEVARD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78758\"}",
+                    "human_address": {"address":"12349 METRIC BOULEVARD","city":"AUSTIN","state":"","zip":"78758"},
                     "needs_recoding": false,
                     "longitude": "-97.695828"
                 }),
@@ -857,7 +857,7 @@ module.exports = {
                 "animal_id": "A792564",
                 "location": JSON.stringify({
                     "latitude": "30.410374",
-                    "human_address": "{\"address\":\"12349 METRIC BOULEVARD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78758\"}",
+                    "human_address": {"address":"12349 METRIC BOULEVARD","city":"AUSTIN","state":"","zip":"78758"},
                     "needs_recoding": false,
                     "longitude": "-97.695828"
                 }),
@@ -876,7 +876,7 @@ module.exports = {
                 "animal_id": "A769343",
                 "location": JSON.stringify({
                     "latitude": "30.236641",
-                    "human_address": "{\"address\":\"1301 CROSSING PLACE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78741\"}",
+                    "human_address": {"address":"1301 CROSSING PLACE","city":"AUSTIN","state":"","zip":"78741"},
                     "needs_recoding": false,
                     "longitude": "-97.713931"
                 }),
@@ -895,7 +895,7 @@ module.exports = {
                 "animal_id": "A792579",
                 "location": JSON.stringify({
                     "latitude": "30.175293",
-                    "human_address": "{\"address\":\"9708 MANCHACA ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"9708 MANCHACA ROAD","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.823033"
                 }),
@@ -914,7 +914,7 @@ module.exports = {
                 "animal_id": "A792580",
                 "location": JSON.stringify({
                     "latitude": "30.175293",
-                    "human_address": "{\"address\":\"9708 MANCHACA ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"9708 MANCHACA ROAD","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.823033"
                 }),
@@ -933,7 +933,7 @@ module.exports = {
                 "animal_id": "A792581",
                 "location": JSON.stringify({
                     "latitude": "30.175293",
-                    "human_address": "{\"address\":\"9708 MANCHACA ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"9708 MANCHACA ROAD","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.823033"
                 }),
@@ -952,7 +952,7 @@ module.exports = {
                 "animal_id": "A792511",
                 "location": JSON.stringify({
                     "latitude": "30.172639",
-                    "human_address": "{\"address\":\"5555 EL MOLINO CIR\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78617\"}",
+                    "human_address": {"address":"5555 EL MOLINO CIR","city":"AUSTIN","state":"","zip":"78617"},
                     "needs_recoding": false,
                     "longitude": "-97.627882"
                 }),
@@ -971,7 +971,7 @@ module.exports = {
                 "animal_id": "A792590",
                 "location": JSON.stringify({
                     "latitude": "30.261891",
-                    "human_address": "{\"address\":\"2025 EAST 7TH STREET\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78702\"}",
+                    "human_address": {"address":"2025 EAST 7TH STREET","city":"AUSTIN","state":"","zip":"78702"},
                     "needs_recoding": false,
                     "longitude": "-97.719376"
                 }),
@@ -990,7 +990,7 @@ module.exports = {
                 "animal_id": "A792591",
                 "location": JSON.stringify({
                     "latitude": "30.261891",
-                    "human_address": "{\"address\":\"2025 EAST 7TH STREET\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78702\"}",
+                    "human_address": {"address":"2025 EAST 7TH STREET","city":"AUSTIN","state":"","zip":"78702"},
                     "needs_recoding": false,
                     "longitude": "-97.719376"
                 }),
@@ -1009,7 +1009,7 @@ module.exports = {
                 "animal_id": "A792603",
                 "location": JSON.stringify({
                     "latitude": "30.431233",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78726\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78726"},
                     "needs_recoding": false,
                     "longitude": "-97.838431"
                 }),
@@ -1028,7 +1028,7 @@ module.exports = {
                 "animal_id": "A792605",
                 "location": JSON.stringify({
                     "latitude": "30.431233",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78726\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78726"},
                     "needs_recoding": false,
                     "longitude": "-97.838431"
                 }),
@@ -1047,7 +1047,7 @@ module.exports = {
                 "animal_id": "A792606",
                 "location": JSON.stringify({
                     "latitude": "30.431233",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78726\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78726"},
                     "needs_recoding": false,
                     "longitude": "-97.838431"
                 }),
@@ -1066,7 +1066,7 @@ module.exports = {
                 "animal_id": "A792607",
                 "location": JSON.stringify({
                     "latitude": "30.431233",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78726\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78726"},
                     "needs_recoding": false,
                     "longitude": "-97.838431"
                 }),
@@ -1085,7 +1085,7 @@ module.exports = {
                 "animal_id": "A792613",
                 "location": JSON.stringify({
                     "latitude": "30.169486",
-                    "human_address": "{\"address\":\"280 DRY CREEK RD MANOR\",\"city\":\"\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"280 DRY CREEK RD MANOR","city":"","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.990934"
                 }),
@@ -1104,7 +1104,7 @@ module.exports = {
                 "animal_id": "A792620",
                 "location": JSON.stringify({
                     "latitude": "30.456757",
-                    "human_address": "{\"address\":\"8101 LULING LANE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78729\"}",
+                    "human_address": {"address":"8101 LULING LANE","city":"AUSTIN","state":"","zip":"78729"},
                     "needs_recoding": false,
                     "longitude": "-97.759692"
                 }),
@@ -1123,7 +1123,7 @@ module.exports = {
                 "animal_id": "A792621",
                 "location": JSON.stringify({
                     "latitude": "30.352148",
-                    "human_address": "{\"address\":\"13200 MARIE LANE MANOR\",\"city\":\"\",\"state\":\"\",\"zip\":\"78653\"}",
+                    "human_address": {"address":"13200 MARIE LANE MANOR","city":"","state":"","zip":"78653"},
                     "needs_recoding": false,
                     "longitude": "-97.532724"
                 }),
@@ -1142,7 +1142,7 @@ module.exports = {
                 "animal_id": "A790108",
                 "location": JSON.stringify({
                     "latitude": "30.133512",
-                    "human_address": "{\"address\":\"12507 SCISSORTAIL DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78652\"}",
+                    "human_address": {"address":"12507 SCISSORTAIL DRIVE","city":"AUSTIN","state":"","zip":"78652"},
                     "needs_recoding": false,
                     "longitude": "-97.830408"
                 }),
@@ -1161,7 +1161,7 @@ module.exports = {
                 "animal_id": "A792623",
                 "location": JSON.stringify({
                     "latitude": "30.358068",
-                    "human_address": "{\"address\":\"3500 GREYSTONE DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78731\"}",
+                    "human_address": {"address":"3500 GREYSTONE DRIVE","city":"AUSTIN","state":"","zip":"78731"},
                     "needs_recoding": false,
                     "longitude": "-97.749568"
                 }),
@@ -1179,7 +1179,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A744193",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"BURNET ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78759\"}",
+                    "human_address": {"address":"BURNET ROAD","city":"AUSTIN","state":"","zip":"78759"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -1197,7 +1197,7 @@ module.exports = {
                 "animal_id": "A541497",
                 "location": JSON.stringify({
                     "latitude": "30.15489",
-                    "human_address": "{\"address\":\"7224 BLACK PANDA TRAIL\",\"city\":\"\",\"state\":\"\",\"zip\":\"78617\"}",
+                    "human_address": {"address":"7224 BLACK PANDA TRAIL","city":"","state":"","zip":"78617"},
                     "needs_recoding": false,
                     "longitude": "-97.643876"
                 }),
@@ -1216,7 +1216,7 @@ module.exports = {
                 "animal_id": "A792634",
                 "location": JSON.stringify({
                     "latitude": "30.377001",
-                    "human_address": "{\"address\":\"\",\"city\":\"NACHEZ TRAIL\",\"state\":\"\",\"zip\":\"78734\"}",
+                    "human_address": {"address":"","city":"NACHEZ TRAIL","state":"","zip":"78734"},
                     "needs_recoding": false,
                     "longitude": "-97.952751"
                 }),
@@ -1234,7 +1234,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792638",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"BYERS LANE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"BYERS LANE","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -1252,7 +1252,7 @@ module.exports = {
                 "animal_id": "A792639",
                 "location": JSON.stringify({
                     "latitude": "30.190891",
-                    "human_address": "{\"address\":\"6725 CIRCLE S ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78745\"}",
+                    "human_address": {"address":"6725 CIRCLE S ROAD","city":"AUSTIN","state":"","zip":"78745"},
                     "needs_recoding": false,
                     "longitude": "-97.778041"
                 }),
@@ -1271,7 +1271,7 @@ module.exports = {
                 "animal_id": "A792640",
                 "location": JSON.stringify({
                     "latitude": "30.357116",
-                    "human_address": "{\"address\":\"8502 MAINE DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78758\"}",
+                    "human_address": {"address":"8502 MAINE DRIVE","city":"AUSTIN","state":"","zip":"78758"},
                     "needs_recoding": false,
                     "longitude": "-97.711379"
                 }),
@@ -1289,7 +1289,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792641",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"183 AUSTIN\",\"city\":\"\",\"state\":\"\",\"zip\":\"78759\"}",
+                    "human_address": {"address":"183 AUSTIN","city":"","state":"","zip":"78759"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -1306,7 +1306,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792642",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"183 AUSTIN\",\"city\":\"\",\"state\":\"\",\"zip\":\"78728\"}",
+                    "human_address": {"address":"183 AUSTIN","city":"","state":"","zip":"78728"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -1323,7 +1323,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792643",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"183 AUSTIN\",\"city\":\"\",\"state\":\"\",\"zip\":\"78759\"}",
+                    "human_address": {"address":"183 AUSTIN","city":"","state":"","zip":"78759"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -1341,7 +1341,7 @@ module.exports = {
                 "animal_id": "A792645",
                 "location": JSON.stringify({
                     "latitude": "30.186349",
-                    "human_address": "{\"address\":\"\",\"city\":\"ASPEN GLEN DRIVE AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"","city":"ASPEN GLEN DRIVE AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.738673"
                 }),
@@ -1360,7 +1360,7 @@ module.exports = {
                 "animal_id": "A792646",
                 "location": JSON.stringify({
                     "latitude": "30.06663",
-                    "human_address": "{\"address\":\"9100 EVELYN ROAD\",\"city\":\"\",\"state\":\"\",\"zip\":\"78610\"}",
+                    "human_address": {"address":"9100 EVELYN ROAD","city":"","state":"","zip":"78610"},
                     "needs_recoding": false,
                     "longitude": "-97.681258"
                 }),
@@ -1379,7 +1379,7 @@ module.exports = {
                 "animal_id": "A792649",
                 "location": JSON.stringify({
                     "latitude": "30.227985",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78741\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78741"},
                     "needs_recoding": false,
                     "longitude": "-97.716971"
                 }),
@@ -1398,7 +1398,7 @@ module.exports = {
                 "animal_id": "A792650",
                 "location": JSON.stringify({
                     "latitude": "30.191444",
-                    "human_address": "{\"address\":\"6307 BLUFF SPRINGS ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"6307 BLUFF SPRINGS ROAD","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.765715"
                 }),
@@ -1417,7 +1417,7 @@ module.exports = {
                 "animal_id": "A792651",
                 "location": JSON.stringify({
                     "latitude": "30.398419",
-                    "human_address": "{\"address\":\"12138 NORTH LAMAR\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"12138 NORTH LAMAR","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.679479"
                 }),
@@ -1436,7 +1436,7 @@ module.exports = {
                 "animal_id": "A792658",
                 "location": JSON.stringify({
                     "latitude": "30.265038",
-                    "human_address": "{\"address\":\"2131 WILLIAM BARTON DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78746\"}",
+                    "human_address": {"address":"2131 WILLIAM BARTON DRIVE","city":"AUSTIN","state":"","zip":"78746"},
                     "needs_recoding": false,
                     "longitude": "-97.770184"
                 }),
@@ -1455,7 +1455,7 @@ module.exports = {
                 "animal_id": "A792659",
                 "location": JSON.stringify({
                     "latitude": "30.096687",
-                    "human_address": "{\"address\":\"11551 MAHA LOOP ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78734\"}",
+                    "human_address": {"address":"11551 MAHA LOOP ROAD","city":"AUSTIN","state":"","zip":"78734"},
                     "needs_recoding": false,
                     "longitude": "-97.684097"
                 }),
@@ -1473,7 +1473,7 @@ module.exports = {
                 "sex": "Neutered Male",
                 "animal_id": "A782676",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"290 AUSTIN\",\"city\":\"\",\"state\":\"\",\"zip\":\"78752\"}",
+                    "human_address": {"address":"290 AUSTIN","city":"","state":"","zip":"78752"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -1491,7 +1491,7 @@ module.exports = {
                 "animal_id": "A791361",
                 "location": JSON.stringify({
                     "latitude": "30.252204",
-                    "human_address": "{\"address\":\"45 COMAL STREET\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78702\"}",
+                    "human_address": {"address":"45 COMAL STREET","city":"AUSTIN","state":"","zip":"78702"},
                     "needs_recoding": false,
                     "longitude": "-97.731588"
                 }),
@@ -1510,7 +1510,7 @@ module.exports = {
                 "animal_id": "A792660",
                 "location": JSON.stringify({
                     "latitude": "30.096687",
-                    "human_address": "{\"address\":\"11551 MAHA LOOP ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78734\"}",
+                    "human_address": {"address":"11551 MAHA LOOP ROAD","city":"AUSTIN","state":"","zip":"78734"},
                     "needs_recoding": false,
                     "longitude": "-97.684097"
                 }),
@@ -1529,7 +1529,7 @@ module.exports = {
                 "animal_id": "A792663",
                 "location": JSON.stringify({
                     "latitude": "30.449905",
-                    "human_address": "{\"address\":\"\",\"city\":\"SAN CHISOLM AUSTIN\",\"state\":\"\",\"zip\":\"78660\"}",
+                    "human_address": {"address":"","city":"SAN CHISOLM AUSTIN","state":"","zip":"78660"},
                     "needs_recoding": false,
                     "longitude": "-97.613157"
                 }),
@@ -1548,7 +1548,7 @@ module.exports = {
                 "animal_id": "A792666",
                 "location": JSON.stringify({
                     "latitude": "30.262272",
-                    "human_address": "{\"address\":\"1912 E 7TH\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78702\"}",
+                    "human_address": {"address":"1912 E 7TH","city":"AUSTIN","state":"","zip":"78702"},
                     "needs_recoding": false,
                     "longitude": "-97.721066"
                 }),
@@ -1567,7 +1567,7 @@ module.exports = {
                 "animal_id": "A792671",
                 "location": JSON.stringify({
                     "latitude": "30.19201",
-                    "human_address": "{\"address\":\"5801 TERI ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"5801 TERI ROAD","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.731754"
                 }),
@@ -1586,7 +1586,7 @@ module.exports = {
                 "animal_id": "A788990",
                 "location": JSON.stringify({
                     "latitude": "30.173797",
-                    "human_address": "{\"address\":\"1213 WEST SLAUGHTER LANE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"1213 WEST SLAUGHTER LANE","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.814082"
                 }),
@@ -1605,7 +1605,7 @@ module.exports = {
                 "animal_id": "A792676",
                 "location": JSON.stringify({
                     "latitude": "30.341682",
-                    "human_address": "{\"address\":\"8906 WALL STREET\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78754\"}",
+                    "human_address": {"address":"8906 WALL STREET","city":"AUSTIN","state":"","zip":"78754"},
                     "needs_recoding": false,
                     "longitude": "-97.670596"
                 }),
@@ -1624,7 +1624,7 @@ module.exports = {
                 "animal_id": "A792679",
                 "location": JSON.stringify({
                     "latitude": "30.159505",
-                    "human_address": "{\"address\":\"10613 ETTA LANE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"10613 ETTA LANE","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.81841"
                 }),
@@ -1643,7 +1643,7 @@ module.exports = {
                 "animal_id": "A792680",
                 "location": JSON.stringify({
                     "latitude": "30.159505",
-                    "human_address": "{\"address\":\"10613 ETTA LANE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"10613 ETTA LANE","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.81841"
                 }),
@@ -1662,7 +1662,7 @@ module.exports = {
                 "animal_id": "A792681",
                 "location": JSON.stringify({
                     "latitude": "30.159505",
-                    "human_address": "{\"address\":\"10613 ETTA LANE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"10613 ETTA LANE","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.81841"
                 }),
@@ -1681,7 +1681,7 @@ module.exports = {
                 "animal_id": "A792682",
                 "location": JSON.stringify({
                     "latitude": "30.345865",
-                    "human_address": "{\"address\":\"\",\"city\":\"GREAT FALLS MANOR\",\"state\":\"\",\"zip\":\"78653\"}",
+                    "human_address": {"address":"","city":"GREAT FALLS MANOR","state":"","zip":"78653"},
                     "needs_recoding": false,
                     "longitude": "-97.531473"
                 }),
@@ -1700,7 +1700,7 @@ module.exports = {
                 "animal_id": "A792683",
                 "location": JSON.stringify({
                     "latitude": "30.332056",
-                    "human_address": "{\"address\":\"7215 BENNETT\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78752\"}",
+                    "human_address": {"address":"7215 BENNETT","city":"AUSTIN","state":"","zip":"78752"},
                     "needs_recoding": false,
                     "longitude": "-97.699814"
                 }),
@@ -1718,7 +1718,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792691",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"6607 WEST WILLIAM\",\"city\":\"CANNON AUSTIN\",\"state\":\"\",\"zip\":\"78745\"}",
+                    "human_address": {"address":"6607 WEST WILLIAM","city":"CANNON AUSTIN","state":"","zip":"78745"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -1735,7 +1735,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792693",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"THISTLE HILL WAY\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78754\"}",
+                    "human_address": {"address":"THISTLE HILL WAY","city":"AUSTIN","state":"","zip":"78754"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -1753,7 +1753,7 @@ module.exports = {
                 "animal_id": "A792694",
                 "location": JSON.stringify({
                     "latitude": "30.421307",
-                    "human_address": "{\"address\":\"13308 KIRKGLEN ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78727\"}",
+                    "human_address": {"address":"13308 KIRKGLEN ROAD","city":"AUSTIN","state":"","zip":"78727"},
                     "needs_recoding": false,
                     "longitude": "-97.679729"
                 }),
@@ -1772,7 +1772,7 @@ module.exports = {
                 "animal_id": "A792695",
                 "location": JSON.stringify({
                     "latitude": "30.295025",
-                    "human_address": "{\"address\":\"\",\"city\":\"NELSON OAKS DRIVE AUSTIN\",\"state\":\"\",\"zip\":\"78724\"}",
+                    "human_address": {"address":"","city":"NELSON OAKS DRIVE AUSTIN","state":"","zip":"78724"},
                     "needs_recoding": false,
                     "longitude": "-97.622435"
                 }),
@@ -1790,7 +1790,7 @@ module.exports = {
                 "sex": "Unknown",
                 "animal_id": "A792696",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"CAMERON\",\"city\":\"LEAF AUSTIN\",\"state\":\"\",\"zip\":\"78723\"}",
+                    "human_address": {"address":"CAMERON","city":"LEAF AUSTIN","state":"","zip":"78723"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -1808,7 +1808,7 @@ module.exports = {
                 "animal_id": "A792697",
                 "location": JSON.stringify({
                     "latitude": "30.166107",
-                    "human_address": "{\"address\":\"\",\"city\":\"NIGHTJAR DRIVE AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"","city":"NIGHTJAR DRIVE AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.825259"
                 }),
@@ -1827,7 +1827,7 @@ module.exports = {
                 "animal_id": "A792699",
                 "location": JSON.stringify({
                     "latitude": "30.374102",
-                    "human_address": "{\"address\":\"2018 WEST RUNDBERG LANE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78758\"}",
+                    "human_address": {"address":"2018 WEST RUNDBERG LANE","city":"AUSTIN","state":"","zip":"78758"},
                     "needs_recoding": false,
                     "longitude": "-97.719404"
                 }),
@@ -1846,7 +1846,7 @@ module.exports = {
                 "animal_id": "A792700",
                 "location": JSON.stringify({
                     "latitude": "30.374102",
-                    "human_address": "{\"address\":\"2018 WEST RUNDBERG LANE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78758\"}",
+                    "human_address": {"address":"2018 WEST RUNDBERG LANE","city":"AUSTIN","state":"","zip":"78758"},
                     "needs_recoding": false,
                     "longitude": "-97.719404"
                 }),
@@ -1865,7 +1865,7 @@ module.exports = {
                 "animal_id": "A792704",
                 "location": JSON.stringify({
                     "latitude": "30.359403",
-                    "human_address": "{\"address\":\"3604 SAVAGE SPRINGS DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78754\"}",
+                    "human_address": {"address":"3604 SAVAGE SPRINGS DRIVE","city":"AUSTIN","state":"","zip":"78754"},
                     "needs_recoding": false,
                     "longitude": "-97.639093"
                 }),
@@ -1884,7 +1884,7 @@ module.exports = {
                 "animal_id": "A792708",
                 "location": JSON.stringify({
                     "latitude": "30.440938",
-                    "human_address": "{\"address\":\"1420 WEST WELLS BRANCH PARKWAY\",\"city\":\"PFLUGERVILLE\",\"state\":\"\",\"zip\":\"78660\"}",
+                    "human_address": {"address":"1420 WEST WELLS BRANCH PARKWAY","city":"PFLUGERVILLE","state":"","zip":"78660"},
                     "needs_recoding": false,
                     "longitude": "-97.663588"
                 }),
@@ -1903,7 +1903,7 @@ module.exports = {
                 "animal_id": "A722024",
                 "location": JSON.stringify({
                     "latitude": "30.133523",
-                    "human_address": "{\"address\":\"\",\"city\":\"THAXTON ROAD AUSTIN\",\"state\":\"\",\"zip\":\"78747\"}",
+                    "human_address": {"address":"","city":"THAXTON ROAD AUSTIN","state":"","zip":"78747"},
                     "needs_recoding": false,
                     "longitude": "-97.757228"
                 }),
@@ -1921,7 +1921,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792713",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"2955 HIGHWAY\",\"city\":\"\",\"state\":\"\",\"zip\":\"78617\"}",
+                    "human_address": {"address":"2955 HIGHWAY","city":"","state":"","zip":"78617"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -1939,7 +1939,7 @@ module.exports = {
                 "animal_id": "A792720",
                 "location": JSON.stringify({
                     "latitude": "30.359682",
-                    "human_address": "{\"address\":\"1402 MEADOWMEAR\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"1402 MEADOWMEAR","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.672003"
                 }),
@@ -1958,7 +1958,7 @@ module.exports = {
                 "animal_id": "A792721",
                 "location": JSON.stringify({
                     "latitude": "30.381327",
-                    "human_address": "{\"address\":\"11511 NORTH OAKS DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"11511 NORTH OAKS DRIVE","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.673154"
                 }),
@@ -1977,7 +1977,7 @@ module.exports = {
                 "animal_id": "A792722",
                 "location": JSON.stringify({
                     "latitude": "30.39307",
-                    "human_address": "{\"address\":\"12118 WALNUT PARK\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"12118 WALNUT PARK","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.676452"
                 }),
@@ -1996,7 +1996,7 @@ module.exports = {
                 "animal_id": "A792723",
                 "location": JSON.stringify({
                     "latitude": "30.39307",
-                    "human_address": "{\"address\":\"12118 WALNUT PARK\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"12118 WALNUT PARK","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.676452"
                 }),
@@ -2015,7 +2015,7 @@ module.exports = {
                 "animal_id": "A792725",
                 "location": JSON.stringify({
                     "latitude": "30.415409",
-                    "human_address": "{\"address\":\"7405 CARISSA COVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78759\"}",
+                    "human_address": {"address":"7405 CARISSA COVE","city":"AUSTIN","state":"","zip":"78759"},
                     "needs_recoding": false,
                     "longitude": "-97.776047"
                 }),
@@ -2034,7 +2034,7 @@ module.exports = {
                 "animal_id": "A792726",
                 "location": JSON.stringify({
                     "latitude": "30.415409",
-                    "human_address": "{\"address\":\"7405 CARISSA COVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78759\"}",
+                    "human_address": {"address":"7405 CARISSA COVE","city":"AUSTIN","state":"","zip":"78759"},
                     "needs_recoding": false,
                     "longitude": "-97.776047"
                 }),
@@ -2053,7 +2053,7 @@ module.exports = {
                 "animal_id": "A792727",
                 "location": JSON.stringify({
                     "latitude": "30.415409",
-                    "human_address": "{\"address\":\"7405 CARISSA COVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78759\"}",
+                    "human_address": {"address":"7405 CARISSA COVE","city":"AUSTIN","state":"","zip":"78759"},
                     "needs_recoding": false,
                     "longitude": "-97.776047"
                 }),
@@ -2072,7 +2072,7 @@ module.exports = {
                 "animal_id": "A792728",
                 "location": JSON.stringify({
                     "latitude": "30.415409",
-                    "human_address": "{\"address\":\"7405 CARISSA COVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78759\"}",
+                    "human_address": {"address":"7405 CARISSA COVE","city":"AUSTIN","state":"","zip":"78759"},
                     "needs_recoding": false,
                     "longitude": "-97.776047"
                 }),
@@ -2091,7 +2091,7 @@ module.exports = {
                 "animal_id": "A792730",
                 "location": JSON.stringify({
                     "latitude": "30.243217",
-                    "human_address": "{\"address\":\"\",\"city\":\"FLETCHER LANE AUSTIN\",\"state\":\"\",\"zip\":\"78704\"}",
+                    "human_address": {"address":"","city":"FLETCHER LANE AUSTIN","state":"","zip":"78704"},
                     "needs_recoding": false,
                     "longitude": "-97.76448"
                 }),
@@ -2110,7 +2110,7 @@ module.exports = {
                 "animal_id": "A744019",
                 "location": JSON.stringify({
                     "latitude": "30.206782",
-                    "human_address": "{\"address\":\"\",\"city\":\"WOODHUE DRIVE AUSTIN\",\"state\":\"\",\"zip\":\"78745\"}",
+                    "human_address": {"address":"","city":"WOODHUE DRIVE AUSTIN","state":"","zip":"78745"},
                     "needs_recoding": false,
                     "longitude": "-97.798214"
                 }),
@@ -2129,7 +2129,7 @@ module.exports = {
                 "animal_id": "A792733",
                 "location": JSON.stringify({
                     "latitude": "30.16988",
-                    "human_address": "{\"address\":\"7316 FIREFLY DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"7316 FIREFLY DRIVE","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.74963"
                 }),
@@ -2148,7 +2148,7 @@ module.exports = {
                 "animal_id": "A792734",
                 "location": JSON.stringify({
                     "latitude": "30.250468",
-                    "human_address": "{\"address\":\"2627 BARTON HILLS DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78704\"}",
+                    "human_address": {"address":"2627 BARTON HILLS DRIVE","city":"AUSTIN","state":"","zip":"78704"},
                     "needs_recoding": false,
                     "longitude": "-97.795274"
                 }),
@@ -2167,7 +2167,7 @@ module.exports = {
                 "animal_id": "A792735",
                 "location": JSON.stringify({
                     "latitude": "30.491995",
-                    "human_address": "{\"address\":\"106 BRUSHY CREEK TRAIL\",\"city\":\"PFLUGERVILLE\",\"state\":\"\",\"zip\":\"78634\"}",
+                    "human_address": {"address":"106 BRUSHY CREEK TRAIL","city":"PFLUGERVILLE","state":"","zip":"78634"},
                     "needs_recoding": false,
                     "longitude": "-97.535981"
                 }),
@@ -2185,7 +2185,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792737",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"2810 W PARMER LANE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78727\"}",
+                    "human_address": {"address":"2810 W PARMER LANE","city":"AUSTIN","state":"","zip":"78727"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -2203,7 +2203,7 @@ module.exports = {
                 "animal_id": "A700551",
                 "location": JSON.stringify({
                     "latitude": "30.316452",
-                    "human_address": "{\"address\":\"1106 REINLI STREET\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78723\"}",
+                    "human_address": {"address":"1106 REINLI STREET","city":"AUSTIN","state":"","zip":"78723"},
                     "needs_recoding": false,
                     "longitude": "-97.702912"
                 }),
@@ -2221,7 +2221,7 @@ module.exports = {
                 "sex": "Neutered Male",
                 "animal_id": "A775940",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"SOUTH PLEASANT VALLEY ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"SOUTH PLEASANT VALLEY ROAD","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -2239,7 +2239,7 @@ module.exports = {
                 "animal_id": "A792745",
                 "location": JSON.stringify({
                     "latitude": "30.445495",
-                    "human_address": "{\"address\":\"14603 TOWN HILL DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78728\"}",
+                    "human_address": {"address":"14603 TOWN HILL DRIVE","city":"AUSTIN","state":"","zip":"78728"},
                     "needs_recoding": false,
                     "longitude": "-97.685005"
                 }),
@@ -2258,7 +2258,7 @@ module.exports = {
                 "animal_id": "A792746",
                 "location": JSON.stringify({
                     "latitude": "30.178706",
-                    "human_address": "{\"address\":\"4505 MAGIN MEADOW DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"4505 MAGIN MEADOW DRIVE","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.75814"
                 }),
@@ -2277,7 +2277,7 @@ module.exports = {
                 "animal_id": "A792758",
                 "location": JSON.stringify({
                     "latitude": "30.270035",
-                    "human_address": "{\"address\":\"1137 GUNTER STREET\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78721\"}",
+                    "human_address": {"address":"1137 GUNTER STREET","city":"AUSTIN","state":"","zip":"78721"},
                     "needs_recoding": false,
                     "longitude": "-97.69652"
                 }),
@@ -2295,7 +2295,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792759",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"EAST 2ND\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78702\"}",
+                    "human_address": {"address":"EAST 2ND","city":"AUSTIN","state":"","zip":"78702"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -2313,7 +2313,7 @@ module.exports = {
                 "animal_id": "A792762",
                 "location": JSON.stringify({
                     "latitude": "30.169272",
-                    "human_address": "{\"address\":\"12320 SKY HARBOR\",\"city\":\"\",\"state\":\"\",\"zip\":\"78617\"}",
+                    "human_address": {"address":"12320 SKY HARBOR","city":"","state":"","zip":"78617"},
                     "needs_recoding": false,
                     "longitude": "-97.62959"
                 }),
@@ -2332,7 +2332,7 @@ module.exports = {
                 "animal_id": "A792765",
                 "location": JSON.stringify({
                     "latitude": "30.239265",
-                    "human_address": "{\"address\":\"2515 ELMONT ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78741\"}",
+                    "human_address": {"address":"2515 ELMONT ROAD","city":"AUSTIN","state":"","zip":"78741"},
                     "needs_recoding": false,
                     "longitude": "-97.720548"
                 }),
@@ -2351,7 +2351,7 @@ module.exports = {
                 "animal_id": "A792766",
                 "location": JSON.stringify({
                     "latitude": "30.243463",
-                    "human_address": "{\"address\":\"604 FLETCHER\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78704\"}",
+                    "human_address": {"address":"604 FLETCHER","city":"AUSTIN","state":"","zip":"78704"},
                     "needs_recoding": false,
                     "longitude": "-97.75888"
                 }),
@@ -2370,7 +2370,7 @@ module.exports = {
                 "animal_id": "A792768",
                 "location": JSON.stringify({
                     "latitude": "30.356752",
-                    "human_address": "{\"address\":\"9805 HALIFAX DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"9805 HALIFAX DRIVE","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.673957"
                 }),
@@ -2389,7 +2389,7 @@ module.exports = {
                 "animal_id": "A792773",
                 "location": JSON.stringify({
                     "latitude": "30.356752",
-                    "human_address": "{\"address\":\"9805 HALIFAX DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"9805 HALIFAX DRIVE","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.673957"
                 }),
@@ -2408,7 +2408,7 @@ module.exports = {
                 "animal_id": "A792774",
                 "location": JSON.stringify({
                     "latitude": "30.356752",
-                    "human_address": "{\"address\":\"9805 HALIFAX DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"9805 HALIFAX DRIVE","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.673957"
                 }),
@@ -2427,7 +2427,7 @@ module.exports = {
                 "animal_id": "A792775",
                 "location": JSON.stringify({
                     "latitude": "30.356752",
-                    "human_address": "{\"address\":\"9805 HALIFAX DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"9805 HALIFAX DRIVE","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.673957"
                 }),
@@ -2446,7 +2446,7 @@ module.exports = {
                 "animal_id": "A792776",
                 "location": JSON.stringify({
                     "latitude": "30.356752",
-                    "human_address": "{\"address\":\"9805 HALIFAX DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"9805 HALIFAX DRIVE","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.673957"
                 }),
@@ -2465,7 +2465,7 @@ module.exports = {
                 "animal_id": "A792777",
                 "location": JSON.stringify({
                     "latitude": "30.356752",
-                    "human_address": "{\"address\":\"9805 HALIFAX DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"9805 HALIFAX DRIVE","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.673957"
                 }),
@@ -2484,7 +2484,7 @@ module.exports = {
                 "animal_id": "A792778",
                 "location": JSON.stringify({
                     "latitude": "30.223883",
-                    "human_address": "{\"address\":\"1401 S 973\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78725\"}",
+                    "human_address": {"address":"1401 S 973","city":"AUSTIN","state":"","zip":"78725"},
                     "needs_recoding": false,
                     "longitude": "-97.632827"
                 }),
@@ -2503,7 +2503,7 @@ module.exports = {
                 "animal_id": "A792779",
                 "location": JSON.stringify({
                     "latitude": "30.356752",
-                    "human_address": "{\"address\":\"9805 HALIFAX DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"9805 HALIFAX DRIVE","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false,
                     "longitude": "-97.673957"
                 }),
@@ -2521,7 +2521,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792780",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"9311 N 620 RD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78726\"}",
+                    "human_address": {"address":"9311 N 620 RD","city":"AUSTIN","state":"","zip":"78726"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -2538,7 +2538,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792783",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"9300 S IH\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"9300 S IH","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -2555,7 +2555,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792784",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"9300 S IH\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"9300 S IH","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -2572,7 +2572,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792785",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"9300 S IH\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"9300 S IH","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -2589,7 +2589,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792786",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"9300 S IH\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"9300 S IH","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -2606,7 +2606,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792788",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"3421 W WILLIAM\",\"city\":\"CANNON AUSTIN\",\"state\":\"\",\"zip\":\"78745\"}",
+                    "human_address": {"address":"3421 W WILLIAM","city":"CANNON AUSTIN","state":"","zip":"78745"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -2623,7 +2623,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792789",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"9300 S IH\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"9300 S IH","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -2640,7 +2640,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792790",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"9300 S IH\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"9300 S IH","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -2657,7 +2657,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792795",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"9300 S IH\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"9300 S IH","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -2675,7 +2675,7 @@ module.exports = {
                 "animal_id": "A792799",
                 "location": JSON.stringify({
                     "latitude": "30.426879",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78727\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78727"},
                     "needs_recoding": false,
                     "longitude": "-97.713462"
                 }),
@@ -2694,7 +2694,7 @@ module.exports = {
                 "animal_id": "A792800",
                 "location": JSON.stringify({
                     "latitude": "30.243993",
-                    "human_address": "{\"address\":\"117 KIMBLE LN\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78742\"}",
+                    "human_address": {"address":"117 KIMBLE LN","city":"AUSTIN","state":"","zip":"78742"},
                     "needs_recoding": false,
                     "longitude": "-97.685495"
                 }),
@@ -2712,7 +2712,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792801",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"4557 EAST HIGHWAY\",\"city\":\"\",\"state\":\"\",\"zip\":\"78617\"}",
+                    "human_address": {"address":"4557 EAST HIGHWAY","city":"","state":"","zip":"78617"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -2729,7 +2729,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792802",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"4557 EAST HIWAY\",\"city\":\"\",\"state\":\"\",\"zip\":\"78617\"}",
+                    "human_address": {"address":"4557 EAST HIWAY","city":"","state":"","zip":"78617"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -2746,7 +2746,7 @@ module.exports = {
                 "sex": "Spayed Female",
                 "animal_id": "A792803",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"NORTH LAMAR\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"NORTH LAMAR","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -2764,7 +2764,7 @@ module.exports = {
                 "animal_id": "A792807",
                 "location": JSON.stringify({
                     "latitude": "30.212873",
-                    "human_address": "{\"address\":\"3312 WESTERN DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78745\"}",
+                    "human_address": {"address":"3312 WESTERN DRIVE","city":"AUSTIN","state":"","zip":"78745"},
                     "needs_recoding": false,
                     "longitude": "-97.826837"
                 }),
@@ -2783,7 +2783,7 @@ module.exports = {
                 "animal_id": "A792808",
                 "location": JSON.stringify({
                     "latitude": "30.367467",
-                    "human_address": "{\"address\":\"11806 SAMSUNG\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78754\"}",
+                    "human_address": {"address":"11806 SAMSUNG","city":"AUSTIN","state":"","zip":"78754"},
                     "needs_recoding": false,
                     "longitude": "-97.635104"
                 }),
@@ -2801,7 +2801,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792810",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"183 AND\",\"city\":\"GEORGIAN AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"183 AND","city":"GEORGIAN AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -2818,7 +2818,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792811",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"8220 SOUTH IH\",\"city\":\"\",\"state\":\"\",\"zip\":\"78739\"}",
+                    "human_address": {"address":"8220 SOUTH IH","city":"","state":"","zip":"78739"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -2836,7 +2836,7 @@ module.exports = {
                 "animal_id": "A792812",
                 "location": JSON.stringify({
                     "latitude": "30.423759",
-                    "human_address": "{\"address\":\"13208 RAMPART STREET\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78727\"}",
+                    "human_address": {"address":"13208 RAMPART STREET","city":"AUSTIN","state":"","zip":"78727"},
                     "needs_recoding": false,
                     "longitude": "-97.68633"
                 }),
@@ -2854,7 +2854,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792822",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"969 AND BULLACE STREET\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78725\"}",
+                    "human_address": {"address":"969 AND BULLACE STREET","city":"AUSTIN","state":"","zip":"78725"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -2872,7 +2872,7 @@ module.exports = {
                 "animal_id": "A792823",
                 "location": JSON.stringify({
                     "latitude": "30.300258",
-                    "human_address": "{\"address\":\"5613 SPRINGDALE ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78723\"}",
+                    "human_address": {"address":"5613 SPRINGDALE ROAD","city":"AUSTIN","state":"","zip":"78723"},
                     "needs_recoding": false,
                     "longitude": "-97.673438"
                 }),
@@ -2890,7 +2890,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792826",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"400 WEST SAINT\",\"city\":\"ELMO AUSTIN\",\"state\":\"\",\"zip\":\"78745\"}",
+                    "human_address": {"address":"400 WEST SAINT","city":"ELMO AUSTIN","state":"","zip":"78745"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -2908,7 +2908,7 @@ module.exports = {
                 "animal_id": "A792827",
                 "location": JSON.stringify({
                     "latitude": "30.298444",
-                    "human_address": "{\"address\":\"621 WEST 31ST STREET\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78705\"}",
+                    "human_address": {"address":"621 WEST 31ST STREET","city":"AUSTIN","state":"","zip":"78705"},
                     "needs_recoding": false,
                     "longitude": "-97.742393"
                 }),
@@ -2927,7 +2927,7 @@ module.exports = {
                 "animal_id": "A792828",
                 "location": JSON.stringify({
                     "latitude": "30.300258",
-                    "human_address": "{\"address\":\"5613 SPRINGDALE ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78723\"}",
+                    "human_address": {"address":"5613 SPRINGDALE ROAD","city":"AUSTIN","state":"","zip":"78723"},
                     "needs_recoding": false,
                     "longitude": "-97.673438"
                 }),
@@ -2945,7 +2945,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792829",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"8014 RUNNING\",\"city\":\"WATER AUSTIN\",\"state\":\"\",\"zip\":\"78747\"}",
+                    "human_address": {"address":"8014 RUNNING","city":"WATER AUSTIN","state":"","zip":"78747"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -2963,7 +2963,7 @@ module.exports = {
                 "animal_id": "A792830",
                 "location": JSON.stringify({
                     "latitude": "30.399451",
-                    "human_address": "{\"address\":\"13021 DESSAU ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78754\"}",
+                    "human_address": {"address":"13021 DESSAU ROAD","city":"AUSTIN","state":"","zip":"78754"},
                     "needs_recoding": false,
                     "longitude": "-97.641014"
                 }),
@@ -2981,7 +2981,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792832",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"NORTH LAMAR\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78759\"}",
+                    "human_address": {"address":"NORTH LAMAR","city":"AUSTIN","state":"","zip":"78759"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -2999,7 +2999,7 @@ module.exports = {
                 "animal_id": "A792836",
                 "location": JSON.stringify({
                     "latitude": "30.184561",
-                    "human_address": "{\"address\":\"2400 LAKEHURST DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"2400 LAKEHURST DRIVE","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.756782"
                 }),
@@ -3018,7 +3018,7 @@ module.exports = {
                 "animal_id": "A792839",
                 "location": JSON.stringify({
                     "latitude": "30.237892",
-                    "human_address": "{\"address\":\"2103 GLENDALE PLACE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78704\"}",
+                    "human_address": {"address":"2103 GLENDALE PLACE","city":"AUSTIN","state":"","zip":"78704"},
                     "needs_recoding": false,
                     "longitude": "-97.742741"
                 }),
@@ -3036,7 +3036,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792840",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"1826 AUSTIN\",\"city\":\"\",\"state\":\"\",\"zip\":\"78739\"}",
+                    "human_address": {"address":"1826 AUSTIN","city":"","state":"","zip":"78739"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -3054,7 +3054,7 @@ module.exports = {
                 "animal_id": "A792845",
                 "location": JSON.stringify({
                     "latitude": "30.470274",
-                    "human_address": "{\"address\":\"11066 PECAN PARK CEDAR PARK\",\"city\":\"\",\"state\":\"\",\"zip\":\"78613\"}",
+                    "human_address": {"address":"11066 PECAN PARK CEDAR PARK","city":"","state":"","zip":"78613"},
                     "needs_recoding": false,
                     "longitude": "-97.802145"
                 }),
@@ -3073,7 +3073,7 @@ module.exports = {
                 "animal_id": "A792846",
                 "location": JSON.stringify({
                     "latitude": "30.170803",
-                    "human_address": "{\"address\":\"10025 MANCHACA ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"10025 MANCHACA ROAD","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.82479"
                 }),
@@ -3092,7 +3092,7 @@ module.exports = {
                 "animal_id": "A792847",
                 "location": JSON.stringify({
                     "latitude": "30.170803",
-                    "human_address": "{\"address\":\"10025 MANCHACA ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"10025 MANCHACA ROAD","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.82479"
                 }),
@@ -3111,7 +3111,7 @@ module.exports = {
                 "animal_id": "A792848",
                 "location": JSON.stringify({
                     "latitude": "30.170803",
-                    "human_address": "{\"address\":\"10025 MANCHACA ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"10025 MANCHACA ROAD","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.82479"
                 }),
@@ -3130,7 +3130,7 @@ module.exports = {
                 "animal_id": "A792849",
                 "location": JSON.stringify({
                     "latitude": "30.170803",
-                    "human_address": "{\"address\":\"10025 MANCHACA ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"10025 MANCHACA ROAD","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.82479"
                 }),
@@ -3149,7 +3149,7 @@ module.exports = {
                 "animal_id": "A792850",
                 "location": JSON.stringify({
                     "latitude": "30.294101",
-                    "human_address": "{\"address\":\"3714 ROBINSON AVENUE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78722\"}",
+                    "human_address": {"address":"3714 ROBINSON AVENUE","city":"AUSTIN","state":"","zip":"78722"},
                     "needs_recoding": false,
                     "longitude": "-97.718719"
                 }),
@@ -3168,7 +3168,7 @@ module.exports = {
                 "animal_id": "A792851",
                 "location": JSON.stringify({
                     "latitude": "30.470274",
-                    "human_address": "{\"address\":\"11066 PECAN PARK CEDAR PARK\",\"city\":\"\",\"state\":\"\",\"zip\":\"78613\"}",
+                    "human_address": {"address":"11066 PECAN PARK CEDAR PARK","city":"","state":"","zip":"78613"},
                     "needs_recoding": false,
                     "longitude": "-97.802145"
                 }),
@@ -3187,7 +3187,7 @@ module.exports = {
                 "animal_id": "A792852",
                 "location": JSON.stringify({
                     "latitude": "30.470274",
-                    "human_address": "{\"address\":\"11066 PECAN PARK CEDAR PARK\",\"city\":\"\",\"state\":\"\",\"zip\":\"78613\"}",
+                    "human_address": {"address":"11066 PECAN PARK CEDAR PARK","city":"","state":"","zip":"78613"},
                     "needs_recoding": false,
                     "longitude": "-97.802145"
                 }),
@@ -3206,7 +3206,7 @@ module.exports = {
                 "animal_id": "A792853",
                 "location": JSON.stringify({
                     "latitude": "30.470274",
-                    "human_address": "{\"address\":\"11066 PECAN PARK CEDAR PARK\",\"city\":\"\",\"state\":\"\",\"zip\":\"78613\"}",
+                    "human_address": {"address":"11066 PECAN PARK CEDAR PARK","city":"","state":"","zip":"78613"},
                     "needs_recoding": false,
                     "longitude": "-97.802145"
                 }),
@@ -3225,7 +3225,7 @@ module.exports = {
                 "animal_id": "A738561",
                 "location": JSON.stringify({
                     "latitude": "30.203633",
-                    "human_address": "{\"address\":\"1650 CHIPPEWAY LANE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78745\"}",
+                    "human_address": {"address":"1650 CHIPPEWAY LANE","city":"AUSTIN","state":"","zip":"78745"},
                     "needs_recoding": false,
                     "longitude": "-97.799671"
                 }),
@@ -3243,7 +3243,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792424",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"WILLIAMSON ROAD\",\"city\":\"\",\"state\":\"\",\"zip\":\"78610\"}",
+                    "human_address": {"address":"WILLIAMSON ROAD","city":"","state":"","zip":"78610"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -3260,7 +3260,7 @@ module.exports = {
                 "sex": "Neutered Male",
                 "animal_id": "A792767",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"38 AND HALF STREET\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78722\"}",
+                    "human_address": {"address":"38 AND HALF STREET","city":"AUSTIN","state":"","zip":"78722"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -3277,7 +3277,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792791",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"9300 S IH\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"9300 S IH","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -3295,7 +3295,7 @@ module.exports = {
                 "animal_id": "A792856",
                 "location": JSON.stringify({
                     "latitude": "30.173706",
-                    "human_address": "{\"address\":\"4503 QUICKSILVER\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"4503 QUICKSILVER","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.761319"
                 }),
@@ -3314,7 +3314,7 @@ module.exports = {
                 "animal_id": "A792859",
                 "location": JSON.stringify({
                     "latitude": "30.188614",
-                    "human_address": "{\"address\":\"2809 KENTISH DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"2809 KENTISH DRIVE","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.831002"
                 }),
@@ -3333,7 +3333,7 @@ module.exports = {
                 "animal_id": "A792860",
                 "location": JSON.stringify({
                     "latitude": "30.238771",
-                    "human_address": "{\"address\":\"2613 SOUTH FIRST\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78704\"}",
+                    "human_address": {"address":"2613 SOUTH FIRST","city":"AUSTIN","state":"","zip":"78704"},
                     "needs_recoding": false,
                     "longitude": "-97.761748"
                 }),
@@ -3352,7 +3352,7 @@ module.exports = {
                 "animal_id": "A792861",
                 "location": JSON.stringify({
                     "latitude": "30.188614",
-                    "human_address": "{\"address\":\"2809 KENTISH DRIVE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"2809 KENTISH DRIVE","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.831002"
                 }),
@@ -3371,7 +3371,7 @@ module.exports = {
                 "animal_id": "A792862",
                 "location": JSON.stringify({
                     "latitude": "30.196795",
-                    "human_address": "{\"address\":\"2001 LEAR LANE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78745\"}",
+                    "human_address": {"address":"2001 LEAR LANE","city":"AUSTIN","state":"","zip":"78745"},
                     "needs_recoding": false,
                     "longitude": "-97.8098"
                 }),
@@ -3389,7 +3389,7 @@ module.exports = {
                 "sex": "Intact Female",
                 "animal_id": "A792863",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"BATTLE BEND BOULEVARD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78745\"}",
+                    "human_address": {"address":"BATTLE BEND BOULEVARD","city":"AUSTIN","state":"","zip":"78745"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
@@ -3407,7 +3407,7 @@ module.exports = {
                 "animal_id": "A792864",
                 "location": JSON.stringify({
                     "latitude": "30.175226",
-                    "human_address": "{\"address\":\"5401 ROSS RD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78617\"}",
+                    "human_address": {"address":"5401 ROSS RD","city":"AUSTIN","state":"","zip":"78617"},
                     "needs_recoding": false,
                     "longitude": "-97.619515"
                 }),
@@ -3425,7 +3425,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792865",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"ROSEWOOD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"ROSEWOOD","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -3443,7 +3443,7 @@ module.exports = {
                 "animal_id": "A792866",
                 "location": JSON.stringify({
                     "latitude": "30.194269",
-                    "human_address": "{\"address\":\"5106 NUCKOLS CROSSING\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"5106 NUCKOLS CROSSING","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.738204"
                 }),
@@ -3462,7 +3462,7 @@ module.exports = {
                 "animal_id": "A792867",
                 "location": JSON.stringify({
                     "latitude": "30.194269",
-                    "human_address": "{\"address\":\"5106 NUCKOLS CROSSING\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"5106 NUCKOLS CROSSING","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.738204"
                 }),
@@ -3480,7 +3480,7 @@ module.exports = {
                 "sex": "Unknown",
                 "animal_id": "A792871",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"715 KING\",\"city\":\"EDWARDS AUSTIN\",\"state\":\"\",\"zip\":\"78745\"}",
+                    "human_address": {"address":"715 KING","city":"EDWARDS AUSTIN","state":"","zip":"78745"},
                     "needs_recoding": false
                 }),
                 "type": "Cat",
@@ -3498,7 +3498,7 @@ module.exports = {
                 "animal_id": "A792872",
                 "location": JSON.stringify({
                     "latitude": "30.270035",
-                    "human_address": "{\"address\":\"1137 GUNTER\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78721\"}",
+                    "human_address": {"address":"1137 GUNTER","city":"AUSTIN","state":"","zip":"78721"},
                     "needs_recoding": false,
                     "longitude": "-97.69652"
                 }),
@@ -3517,7 +3517,7 @@ module.exports = {
                 "animal_id": "A792873",
                 "location": JSON.stringify({
                     "latitude": "30.22772",
-                    "human_address": "{\"address\":\"121 PICKLE ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78704\"}",
+                    "human_address": {"address":"121 PICKLE ROAD","city":"AUSTIN","state":"","zip":"78704"},
                     "needs_recoding": false,
                     "longitude": "-97.762786"
                 }),
@@ -3536,7 +3536,7 @@ module.exports = {
                 "animal_id": "A792874",
                 "location": JSON.stringify({
                     "latitude": "30.22772",
-                    "human_address": "{\"address\":\"121 PICKLE ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78704\"}",
+                    "human_address": {"address":"121 PICKLE ROAD","city":"AUSTIN","state":"","zip":"78704"},
                     "needs_recoding": false,
                     "longitude": "-97.762786"
                 }),
@@ -3555,7 +3555,7 @@ module.exports = {
                 "animal_id": "A447792",
                 "location": JSON.stringify({
                     "latitude": "30.206782",
-                    "human_address": "{\"address\":\"\",\"city\":\"WESTMORELAND AUSTIN\",\"state\":\"\",\"zip\":\"78745\"}",
+                    "human_address": {"address":"","city":"WESTMORELAND AUSTIN","state":"","zip":"78745"},
                     "needs_recoding": false,
                     "longitude": "-97.798214"
                 }),
@@ -3574,7 +3574,7 @@ module.exports = {
                 "animal_id": "A675336",
                 "location": JSON.stringify({
                     "latitude": "30.299444",
-                    "human_address": "{\"address\":\"5605 SPRINGDALE ROAD\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78723\"}",
+                    "human_address": {"address":"5605 SPRINGDALE ROAD","city":"AUSTIN","state":"","zip":"78723"},
                     "needs_recoding": false,
                     "longitude": "-97.673969"
                 }),
@@ -3593,7 +3593,7 @@ module.exports = {
                 "animal_id": "A792397",
                 "location": JSON.stringify({
                     "latitude": "30.131655",
-                    "human_address": "{\"address\":\"8501 LINDON ROAD\",\"city\":\"\",\"state\":\"\",\"zip\":\"78617\"}",
+                    "human_address": {"address":"8501 LINDON ROAD","city":"","state":"","zip":"78617"},
                     "needs_recoding": false,
                     "longitude": "-97.591404"
                 }),
@@ -3612,7 +3612,7 @@ module.exports = {
                 "animal_id": "A792894",
                 "location": JSON.stringify({
                     "latitude": "30.166107",
-                    "human_address": "{\"address\":\"\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78748\"}",
+                    "human_address": {"address":"","city":"AUSTIN","state":"","zip":"78748"},
                     "needs_recoding": false,
                     "longitude": "-97.825259"
                 }),
@@ -3631,7 +3631,7 @@ module.exports = {
                 "animal_id": "A792896",
                 "location": JSON.stringify({
                     "latitude": "30.254526",
-                    "human_address": "{\"address\":\"730 SHADY LANE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78702\"}",
+                    "human_address": {"address":"730 SHADY LANE","city":"AUSTIN","state":"","zip":"78702"},
                     "needs_recoding": false,
                     "longitude": "-97.696805"
                 }),
@@ -3650,7 +3650,7 @@ module.exports = {
                 "animal_id": "A792897",
                 "location": JSON.stringify({
                     "latitude": "30.182179",
-                    "human_address": "{\"address\":\"2412 BITTER CREEK\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"2412 BITTER CREEK","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.757294"
                 }),
@@ -3669,7 +3669,7 @@ module.exports = {
                 "animal_id": "A792898",
                 "location": JSON.stringify({
                     "latitude": "30.182179",
-                    "human_address": "{\"address\":\"2412 BITTER CREEK\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"2412 BITTER CREEK","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.757294"
                 }),
@@ -3688,7 +3688,7 @@ module.exports = {
                 "animal_id": "A792899",
                 "location": JSON.stringify({
                     "latitude": "30.182179",
-                    "human_address": "{\"address\":\"2412 BITTER CREEK\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"2412 BITTER CREEK","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.757294"
                 }),
@@ -3707,7 +3707,7 @@ module.exports = {
                 "animal_id": "A792900",
                 "location": JSON.stringify({
                     "latitude": "30.356927",
-                    "human_address": "{\"address\":\"\",\"city\":\"PAYTON FALLS DRIVE AUSTIN\",\"state\":\"\",\"zip\":\"78754\"}",
+                    "human_address": {"address":"","city":"PAYTON FALLS DRIVE AUSTIN","state":"","zip":"78754"},
                     "needs_recoding": false,
                     "longitude": "-97.643722"
                 }),
@@ -3726,7 +3726,7 @@ module.exports = {
                 "animal_id": "A792901",
                 "location": JSON.stringify({
                     "latitude": "30.182179",
-                    "human_address": "{\"address\":\"2412 BITTER CREEK\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"2412 BITTER CREEK","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.757294"
                 }),
@@ -3745,7 +3745,7 @@ module.exports = {
                 "animal_id": "A792902",
                 "location": JSON.stringify({
                     "latitude": "30.182179",
-                    "human_address": "{\"address\":\"2412 BITTER CREEK\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"2412 BITTER CREEK","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.757294"
                 }),
@@ -3764,7 +3764,7 @@ module.exports = {
                 "animal_id": "A792903",
                 "location": JSON.stringify({
                     "latitude": "30.182179",
-                    "human_address": "{\"address\":\"2412 BITTER CREEK\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78744\"}",
+                    "human_address": {"address":"2412 BITTER CREEK","city":"AUSTIN","state":"","zip":"78744"},
                     "needs_recoding": false,
                     "longitude": "-97.757294"
                 }),
@@ -3782,7 +3782,7 @@ module.exports = {
                 "sex": "Intact Male",
                 "animal_id": "A792904",
                 "location": JSON.stringify({
-                    "human_address": "{\"address\":\"9808 CROWNRIDGE\",\"city\":\"AUSTIN\",\"state\":\"\",\"zip\":\"78753\"}",
+                    "human_address": {"address":"9808 CROWNRIDGE","city":"AUSTIN","state":"","zip":"78753"},
                     "needs_recoding": false
                 }),
                 "type": "Dog",
