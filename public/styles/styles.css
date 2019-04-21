@@ -1,9 +1,15 @@
+/* Main Page Elements */
+
 html {
   height: 100%;
 }
 
 body {
   height: 100%;
+}
+
+.container {
+  margin-top: 20px;
 }
 
 /* Landing Page Body */
@@ -24,6 +30,14 @@ body {
 
 .topnav {
   border-bottom: 10px solid blue;
+}
+
+.topnav a {
+  float: left;
+}
+
+.topnav-right {
+  float: right;
 }
 
 .card-header {
@@ -84,7 +98,8 @@ hr {
 
 #createAccountDropdown:hover, 
 #signInDropdown:hover {
-  border: 1px solid #ffbe67;
+  color: blue;
+  background-color: rgb(221, 221, 216);
 }
 
 /* Modal Styling */
@@ -118,7 +133,8 @@ hr {
 }
 
 #createAccountSubmit:hover, #signInSubmit:hover {
-  border: 1px solid #ffbe67;
+  color: blue;
+  background-color: #f8f9fa;
 }
 
 /* The Close Button */
@@ -137,16 +153,73 @@ hr {
   cursor: pointer;
 }
 
-
 /*Search page */
+
+#searchDiv {
+  margin-top: 20px;
+}
 
 #searchBar {
   margin-top: 20px;
   text-align: center;
 }
 
+#beforeSearch {
+  justify-content: center;
+}
+
+#tableDiv {
+  overflow-x: auto;
+}
+
 #searchTable {
-  margin-top: 20px;
+  margin: 20px 0px 60px 0px;
+}
+
+#savedSearches {
+  margin-left: 8px;
+}
+
+#savedSearches, #searchSubmit {
+  background-color: blue;
+  width: 152px;
+}
+
+#savedSearches:hover, #searchSubmit:hover {
+  color: blue;
+  background-color: #f8f9fa;
+}
+
+#savedSearch {
+  margin: 0px 20px;
+}
+
+#savedSearch, #newSearch {
+  background-color: blue;
+}
+
+#afterSearch {
+  justify-content: center;
+}
+
+th {
+  font-family: 'Montserrat', sans-serif;
+  color: blue;
+}
+
+td {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.claimButton {
+  background-color: blue;
+  color: #f8f9fa;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.claimButton:hover {
+  color: blue;
+  background-color: #f8f9fa;
 }
 
 /* Lost/Found Pet Forms */
@@ -185,18 +258,21 @@ hr {
 }
 
 #lostSubmit:hover, #foundSubmit:hover {
-  border: 1px solid #ffbe67;
+  color: blue;
+  background-color: #f8f9fa;
 }
 
-/* End Lost/Found Pet Form Styling */
-
-#searchDiv {
-  margin-top: 20px;
+#searchPageButton {
+  width: 30%;
+  color: blue;
 }
 
-.container {
-  margin-top: 20px;
+#searchPageButton:hover {
+  color: blue;
+  background-color: #f8f9fa;
 }
+
+/* End of Lost/Found Modals */
 
 h5 {
   font-family: 'Montserrat', sans-serif;
@@ -206,7 +282,6 @@ h5 {
 p {
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
-
 }
 
 #searchForm {
@@ -236,13 +311,6 @@ p {
 
 .card-body {
   padding: 10px;
-}
-
-.topnav a {
-  float: left;
-}
-.topnav-right {
-  float: right;
 }
 
 .card-text {
@@ -312,6 +380,26 @@ footer {
   padding: 15px;
 }
 
+/* 404 page */
+
+.bg {
+  background-image: url(https://images.unsplash.com/photo-1455380579765-810023662ea2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+  position: fixed;
+  width: 100%;
+  height: 450px; /*same height as jumbotron */
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
+#jumboError {
+  margin-bottom: 0px;
+  height: 350px;
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  background:transparent;
+  }
+
 /* Media Queries */
 
 @media only screen and (max-width: 360px) {
@@ -323,8 +411,6 @@ footer {
   .nav-item {
     font-size: 13px;
   }
-
-  
 }
 
 @media only screen and (max-width: 415px) {
@@ -374,22 +460,3 @@ footer {
   }
 }
   
-/* 404 page */
-
-.bg {
-  background-image: url(https://images.unsplash.com/photo-1455380579765-810023662ea2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
-  position: fixed;
-  width: 100%;
-  height: 450px; /*same height as jumbotron */
-  top:0;
-  left:0;
-  z-index: -1;
-}
-
-#jumboError {
-  margin-bottom: 0px;
-  height: 350px;
-  color: white;
-  text-shadow: black 0.3em 0.3em 0.3em;
-  background:transparent;
-  }
