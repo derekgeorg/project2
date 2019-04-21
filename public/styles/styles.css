@@ -190,9 +190,36 @@ hr {
   background-color: #f8f9fa;
 }
 
+#savedSearch {
+  margin: 0px 20px;
+}
+
+#savedSearch, #newSearch {
+  background-color: blue;
+}
+
+#afterSearch {
+  justify-content: center;
+}
+
 th {
   font-family: 'Montserrat', sans-serif;
   color: blue;
+}
+
+td {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.claimButton {
+  background-color: blue;
+  color: #f8f9fa;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.claimButton:hover {
+  color: blue;
+  background-color: #f8f9fa;
 }
 
 /* Lost/Found Pet Forms */
