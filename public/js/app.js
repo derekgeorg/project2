@@ -175,7 +175,7 @@ $(document).ready(function () {
             $("tr").on("click", ".claimButton", function (event) {
                 event.preventDefault();
 
-                var owner = confirm("Click OK to continue only if you are reasonably sure that this is your pet, because by claiming this one you will remove the entry from our database, meaning other people looking for their loved one will not see it in the search results.");
+                var owner = confirm("Are you sure this is your pet? Clicking OK will remove it from our database of lost pets.");
 
                 // get data-id of clicked row
                 var petId = $(this).attr("data-id");

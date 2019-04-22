@@ -268,9 +268,7 @@ td {
 
 #lostSubmit:hover, 
 #foundSubmit:hover, 
-#searchPageButton:hover,
-.saveSearch:hover,
-.badge:hover {
+#searchPageButton:hover {
   color: blue;
   background-color: #f8f9fa;
 }
@@ -283,6 +281,10 @@ td {
 
 #savedSearchesContainer {
   justify-content: center;
+}
+
+#searchName {
+  margin-bottom: 10px;
 }
 
 .saveSearch {
