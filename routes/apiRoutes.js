@@ -22,7 +22,7 @@ module.exports = function (app) {
                     [Op.like]: `%${req.query.color}%`
                 },
                 sex: {
-                    [Op.like]: `%${req.query.sex}%`
+                    [Op.like]: `% ${req.query.sex}%`
                 }
                 /*
                 [Op.or]: {
