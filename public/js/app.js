@@ -1,6 +1,6 @@
-function displaySavedSearches(res){
+function displaySavedSearches(res) {
     $("#savedSearchesContainer").empty();
-    for (let i = 0; i<res.length; i++) {
+    for (let i = 0; i < res.length; i++) {
         //for every result make a button
         let badge = $("<button>").addClass("saveSearch btn btn-primary");
         let name = $("<span>").addClass("badge badge-info").text(res[i].search_name);
@@ -89,7 +89,7 @@ $(document).ready(function () {
 
     $("#newSearch").on("click", function (e) {
         e.preventDefault();
-        
+
         $("#afterSearch").hide();
         $("#beforeSearch").show();
     });
@@ -110,17 +110,17 @@ $(document).ready(function () {
         $.ajax("/api/search", {
             type: "GET",
             data: search
-        }).then(function(res){
+        }).then(function (res) {
             console.log(res);
             displaySearchResults(res);
         });
 
-    
+
     });
 
     $("#savedSearches").on("click", function (e) {
         e.preventDefault();
-    
+
         $.ajax("/saved/searches", {
             type: "GET"
         }).then(function (res) {
@@ -129,7 +129,7 @@ $(document).ready(function () {
         });
 
     });
-    
+
     $("#saveSearch").on("click", function (e) {
         e.preventDefault();
 
@@ -146,7 +146,7 @@ $(document).ready(function () {
         $.ajax("api/save/search", {
             type: "POST",
             data: search
-        }).then(function(res){
+        }).then(function (res) {
             console.log(res);
         });
 
@@ -171,27 +171,33 @@ $(document).ready(function () {
             console.log(res);
             displaySearchResults(res);
 
-            $("tr").click(".claimButton",function(event) {
+            // Claim a pet
+            $("tr").on("click", ".claimButton", function (event) {
                 event.preventDefault();
-        
-                alert("Click");
-        
+
+                var owner = confirm("Click OK to continue only if you are reasonably sure that this is your pet, because by claiming this one you will remove the entry from our database, meaning other people looking for their loved one will not see it in the search results.");
+
                 // get data-id of clicked row
                 var petId = $(this).attr("data-id");
-                
-                console.log(petId);
 
-                // send pet id data in put to update reunited value
-                $.ajax("/api/reunited", {
-                    type: "PUT",
-                    data: {id: petId}
-                }).then(function(res) {
-                    console.log(res);
-                });
-        
+                if (owner) {
+                    // send pet id data in put to update reunited value
+                    $.ajax("/api/reunited", {
+                        type: "PUT",
+                        data: { id: petId }
+                    }).then(function (res) {
+                        alert("Congrats! StrayTX is happy we were able help reunite y'all.");
+                        document.location.replace("/search");
+                    });
+
+                } else {
+
+                    document.location.replace("/search");
+                }
+
             });
         });
-        
+
     });
 
     //submit lost pet
@@ -208,7 +214,7 @@ $(document).ready(function () {
         console.log($("#ageLost").val().trim());
         console.log($("#zipLost").val().trim());
         console.log($("#imgLost").val().trim());
-        
+
         if (!$("#lostType").val().trim() || !$("#breedLost").val().trim() || !$("#colorLost").val().trim() || !$("#zipLost").val().trim() || !$("#imgLost").val().trim()) {
             $("#error-message").text("Please fill in all fields");
             return;
@@ -262,7 +268,7 @@ $(document).ready(function () {
             $("#error-message").text("Please fill in all fields");
             return;
         }
-        
+
 
         var foundSearch = {
             pet_type: $("#foundType").val().trim(),
