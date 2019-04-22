@@ -283,13 +283,14 @@ td {
   justify-content: center;
 }
 
-#searchName {
-  margin-bottom: 10px;
-}
-
 .saveSearch {
   background-color: blue;
   margin: 0px 10px 20px 10px;
+  font-size: 16px;
+}
+
+.saveSeach:hover {
+  background-color: blue;
 }
 
 .badge {
