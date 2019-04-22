@@ -269,7 +269,8 @@ td {
 #lostSubmit:hover, 
 #foundSubmit:hover, 
 #searchPageButton:hover,
-.saveSearch:hover {
+.saveSearch:hover,
+.badge:hover {
   color: blue;
   background-color: #f8f9fa;
 }
@@ -286,7 +287,11 @@ td {
 
 .saveSearch {
   background-color: blue;
-  margin: 0px 10px;
+  margin: 0px 10px 20px 10px;
+}
+
+.badge {
+  background-color: blue;
 }
 
 /* End of search forms */
