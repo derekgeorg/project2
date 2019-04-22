@@ -8,5 +8,18 @@ Compared to our com-pet-itors, "strayTX" focuses on usability. From the login, t
 
 ![login](./images/login.png "login")
 
+Once a user has created an account or logged in they can search our database for their lost pet.
+
+![search](./images/search.png "search")
+
+![result](./images/result.png "result")
+
+
+Then have the option to save their searches as well that appears as buttons for an easy search again. 
+
+![saved search](./images/savedSearch.png "saved search")
+
+
+
 
 
