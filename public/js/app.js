@@ -18,14 +18,14 @@ function displaySearchResults(res) {
     $("#tbody").empty();
 
     for (let i = 0; i < res.length; i++) {
-        let newEntry = $("<tr>").attr("data-id", res[i].id);
+        let newEntry = $("<tr>");
         let location = $("<td>").text(res[i].location.human_address.zip);
         let sex = $("<td>").attr("scope", "row").text(res[i].sex);
         let looks_like = $("<td>").text(res[i].looks_like);
         let color = $("<td>").text(res[i].color);
         let imagelink = $("<a>").attr("href", res[i].image.url).attr("target", "_blank").text("Details");
         let image = $("<td>").append(imagelink);
-        let claim = $("<td>").append("<button class = 'btn btn-success claimButton'>Claim</button>");
+        let claim = $("<td>").attr("data-id", res[i].id).append("<button class = 'btn btn-success claimButton'>Claim</button>");
 
         newEntry.append(location, sex, looks_like, color, image, claim);
 
@@ -131,6 +131,7 @@ $(document).ready(function () {
     });
 
     $("#saveSearch").on("click", function (e) {
+        e.stopImmediatePropagation();
         e.preventDefault();
 
         $("#afterSearch").hide();
@@ -172,24 +173,21 @@ $(document).ready(function () {
             displaySearchResults(res);
 
             // Claim a pet
-            $("tr").on("click", ".claimButton", function (event) {
+            $("td").on("click", ".claimButton", function(event) {
                 event.preventDefault();
-
-                var owner = confirm("Click OK to continue only if you are reasonably sure that this is your pet, because by claiming this one you will remove the entry from our database, meaning other people looking for their loved one will not see it in the search results.");
-
+                
                 // get data-id of clicked row
-                var petId = $(this).attr("data-id");
-
+                var petId = $(this).parent().attr("data-id");
+                
+                var owner = confirm("Click OK to continue only if you are reasonably sure that this is your pet, because by claiming this one you will remove the entry from our database, meaning other people looking for their loved one will not see it in the search results.");
                 if (owner) {
                     // send pet id data in put to update reunited value
                     $.ajax("/api/reunited", {
                         type: "PUT",
                         data: { id: petId }
-                    }).then(function (res) {
-                        alert("Congrats! StrayTX is happy we were able help reunite y'all.");
-                        document.location.replace("/search");
                     });
-
+                    
+                    document.location.replace("/search");
                 } else {
 
                     document.location.replace("/search");
