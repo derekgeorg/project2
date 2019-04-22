@@ -1,7 +1,8 @@
-function displaySavedSearches(res){
-    for (let i = 0; i<res.length; i++) {
+function displaySavedSearches(res) {
+    $("#savedSearchesContainer").empty();
+    for (let i = 0; i < res.length; i++) {
         //for every result make a button
-        let badge = $("<button>").addClass("saveSearch");
+        let badge = $("<button>").addClass("saveSearch btn btn-primary");
         let name = $("<span>").addClass("badge badge-info").text(res[i].search_name);
         let type = $("<span>").attr("id", "type").text(res[i].pet_type).css("display", "none");
         let color = $("<span>").attr("id", "color").text(res[i].color).css("display", "none");
@@ -17,12 +18,13 @@ function displaySearchResults(res) {
     $("#tbody").empty();
 
     for (let i = 0; i < res.length; i++) {
-        let newEntry = $("<tr>");
+        let newEntry = $("<tr>").attr("data-id", res[i].id);
         let location = $("<td>").text(res[i].location.human_address.zip);
         let sex = $("<td>").attr("scope", "row").text(res[i].sex);
         let looks_like = $("<td>").text(res[i].looks_like);
         let color = $("<td>").text(res[i].color);
-        let image = $("<td>").text(res[i].image.url);
+        let imagelink = $("<a>").attr("href", res[i].image.url).attr("target", "_blank").text("Details");
+        let image = $("<td>").append(imagelink);
         let claim = $("<td>").append("<button class = 'btn btn-success claimButton'>Claim</button>");
 
         newEntry.append(location, sex, looks_like, color, image, claim);
@@ -31,7 +33,7 @@ function displaySearchResults(res) {
     }
 }
 
-$(document).ready((function () {
+$(document).ready(function () {
 
     $(".logout").on("click", function (e) {
 
@@ -87,10 +89,12 @@ $(document).ready((function () {
 
     $("#newSearch").on("click", function (e) {
         e.preventDefault();
-        
+
         $("#afterSearch").hide();
         $("#beforeSearch").show();
     });
+
+
 
     $(document).on("click", ".saveSearch", function (e) {
         e.preventDefault();
@@ -106,17 +110,17 @@ $(document).ready((function () {
         $.ajax("/api/search", {
             type: "GET",
             data: search
-        }).then(function(res){
+        }).then(function (res) {
             console.log(res);
             displaySearchResults(res);
         });
 
-    
+
     });
 
     $("#savedSearches").on("click", function (e) {
         e.preventDefault();
-    
+
         $.ajax("/saved/searches", {
             type: "GET"
         }).then(function (res) {
@@ -125,7 +129,7 @@ $(document).ready((function () {
         });
 
     });
-    
+
     $("#saveSearch").on("click", function (e) {
         e.preventDefault();
 
@@ -142,7 +146,7 @@ $(document).ready((function () {
         $.ajax("api/save/search", {
             type: "POST",
             data: search
-        }).then(function(res){
+        }).then(function (res) {
             console.log(res);
         });
 
@@ -166,8 +170,34 @@ $(document).ready((function () {
         }).then(function (res) {
             console.log(res);
             displaySearchResults(res);
+
+            // Claim a pet
+            $("tr").on("click", ".claimButton", function (event) {
+                event.preventDefault();
+
+                var owner = confirm("Click OK to continue only if you are reasonably sure that this is your pet, because by claiming this one you will remove the entry from our database, meaning other people looking for their loved one will not see it in the search results.");
+
+                // get data-id of clicked row
+                var petId = $(this).attr("data-id");
+
+                if (owner) {
+                    // send pet id data in put to update reunited value
+                    $.ajax("/api/reunited", {
+                        type: "PUT",
+                        data: { id: petId }
+                    }).then(function (res) {
+                        alert("Congrats! StrayTX is happy we were able help reunite y'all.");
+                        document.location.replace("/search");
+                    });
+
+                } else {
+
+                    document.location.replace("/search");
+                }
+
+            });
         });
-        
+
     });
 
     //submit lost pet
@@ -184,7 +214,7 @@ $(document).ready((function () {
         console.log($("#ageLost").val().trim());
         console.log($("#zipLost").val().trim());
         console.log($("#imgLost").val().trim());
-        
+
         if (!$("#lostType").val().trim() || !$("#breedLost").val().trim() || !$("#colorLost").val().trim() || !$("#zipLost").val().trim() || !$("#imgLost").val().trim()) {
             $("#error-message").text("Please fill in all fields");
             return;
@@ -238,7 +268,7 @@ $(document).ready((function () {
             $("#error-message").text("Please fill in all fields");
             return;
         }
-        
+
 
         var foundSearch = {
             pet_type: $("#foundType").val().trim(),
@@ -266,4 +296,6 @@ $(document).ready((function () {
             $("#submitModal").modal();
         });
     });
-}));
+
+
+});

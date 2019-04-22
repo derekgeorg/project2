@@ -16,6 +16,7 @@ module.exports = function (app) {
     app.get("/api/search*", authCheck, function (req, res) {
         db.Stray.findAll({
             where: {
+                reunited: false || null,
                 type: req.query.pet_type,
                 color: {
                     [Op.like]: `%${req.query.color}%`
@@ -54,6 +55,19 @@ module.exports = function (app) {
             where: {
                 id: req.body.id
             }
+        });
+    });
+
+    // modify a report
+    app.put("/api/reunited", function (req, res) {
+        db.Stray.findOne({
+            where: {
+                id: req.body.id
+            }
+        }).then(stray => {
+            stray.updateAttributes({
+                reunited: true
+            });
         });
     });
 
