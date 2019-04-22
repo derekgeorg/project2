@@ -19,6 +19,11 @@ Then have the option to save their searches as well that appears as buttons for 
 
 ![saved search](./images/savedSearch.png "saved search")
 
+Lastly, the user has an option to submit a new pet that they have lost or if they would like to submit a pet that they have found but is no theirs, they can submit a "found" pet so that the original owner may see it appear in our database. 
+
+![submit](./images/submit.png "submit")
+
+
 
 
 
